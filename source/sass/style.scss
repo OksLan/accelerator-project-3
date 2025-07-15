@@ -1,4 +1,11 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+@import "common/mixins";
+@import "common/fonts";
+
+
+body {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

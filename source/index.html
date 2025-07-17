@@ -5,12 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest.json">
+
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
   <body class="page-body">
 
-    <div data-test="hero">hero</div>
+    <h1 class="visually-hidden">
+      Internship - обучение за рубежом
+    </h1>
+
+    <div class="hero" data-test="hero">
+      <div class="hero header">
+        <div class="container">
+          <a class="header__logo" href="#"></a>
+          
+          <button class="header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <div class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">О проекте</li>
+              <li class="header__nav-item">Как проехать</li>
+              <li class="header__nav-item">Отзывы</li>
+              <li class="header__nav-item">Новости</li>
+              <li class="header__nav-item">Контакты</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero slider">
+        <div class="slides-wrapper">
+          <div class="slide slide--one"></div>
+          <div class="slide slide--two"></div>
+          <div class="slide slide--tree"></div>
+        </div>
+      </div>
+    </div>
+
+
+
     <div data-test="about">about</div>
     <div data-test="programs">programs</div>
     <div data-test="grant">grant</div>

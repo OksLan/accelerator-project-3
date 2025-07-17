@@ -1,6 +1,7 @@
 @import "vendor/normalize";
 @import "common/mixins";
 @import "common/fonts";
+@import "common/variables.scss";
 
 
 body {
@@ -8,4 +9,172 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 62px;
+
+  @media screen and (width < 1439px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+
+  @media screen and (width < 1439px) {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+
+  @media screen and (width < 1439px) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+
+  @media screen and (width < 1439px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+
+  @media screen and (width < 1439px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+
+  @media screen and (width < 1439px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.button {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  color: $primary;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 2%;
+  border: 1px solid $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+    border: 1px solid $primary;
+  }
+
+  &:active {
+    background-color: $primary;
+    // color: $white;
+    border: 1px solid $primary;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: $grey;
+    border: 1px solid $grey;
+  }
+  
+  &:focus {
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+  }
 }

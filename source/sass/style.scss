@@ -97,7 +97,7 @@ h6 {
   font-size: 26px;
   line-height: 30px;
   text-transform: uppercase;
-  letter-spacing: 1%;
+  letter-spacing: 0.26px;
 
   @media screen and (width < 1439px) {
     font-size: 20px;
@@ -148,6 +148,7 @@ ul {
   font-family: "Manrope", "Arial", sans-serif;
   font-weight: 500;
   background-color: transparent;
+  text-transform: uppercase;
   color: $primary;
   border: none;
   cursor: pointer;
@@ -174,10 +175,24 @@ ul {
     color: $grey;
     border: 1px solid $grey;
   }
-  
+
   &:focus {
     background-color: transparent;
     color: $primary;
     border: 1px solid $primary;
+  }
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1px 0;
+
+  @media screen and (width < 1439px) {
+    max-width: 638px;
+  }
+
+  @media screen and (width < 767px) {
+    max-width: 290px;
   }
 }

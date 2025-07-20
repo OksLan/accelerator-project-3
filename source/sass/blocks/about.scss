@@ -1,4 +1,9 @@
+.about-wrapper {
+  margin: 60px 0;
+}
+
 .about__main-text {
+  margin-bottom: 60px;
 
 & h3 {
   color: $primary;
@@ -11,14 +16,65 @@
 
 .about__grid {
   background-color: $primary;
+  padding: 72px 120px 50px;
+  border-radius: 20px;
 }
 
 .about__grid-item {
   & h6 {
     color: $white;
+    align-self: center;
   }
 
   & p {
-    color: $white;
+    color: $beige;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    align-self: center;
+    padding-right: 41px;
+  }
+}
+
+.about__grid-list {
+  display: grid;
+  gap: 54px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__grid-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  border: 1px solid $white;
+  border-radius: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("/img/sprite/star.svg");
+    height: 42px;
+    width: 42px;
+    top: -20px;
+    left: -20px;
+  }
+}
+
+.about__grid-item--one,
+.about__grid-item--two {
+  & h6 {
+    padding: 51px 0 51px 41px;
+  }
+}
+
+.about__grid-item--three,
+.about__grid-item--four {
+  & h6 {
+    padding: 41px 0 41px 41px;
   }
 }

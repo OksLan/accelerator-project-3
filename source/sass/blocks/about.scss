@@ -1,5 +1,5 @@
 .about-wrapper {
-  margin: 60px 0;
+  padding: 60px 0;
 }
 
 .about__main-text {
@@ -16,23 +16,15 @@
 
 .about__grid {
   background-color: $primary;
-  padding: 72px 120px 50px;
+  padding: 72px 70px 50px;
   border-radius: 20px;
-}
 
-.about__grid-item {
-  & h6 {
-    color: $white;
-    align-self: center;
+  @media screen and (width < 1439px) {
+    padding: 72px 50px 50px 70px;
   }
 
-  & p {
-    color: $beige;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
-    align-self: center;
-    padding-right: 41px;
+  @media screen and (width < 767px) {
+    padding: 42px 20px 40px;
   }
 }
 
@@ -41,8 +33,13 @@
   gap: 54px;
   grid-template-columns: repeat(2, 1fr);
 
-  @media (max-width: 767px) {
+  @media screen and (width < 1439px) {
+    gap: 54px 52px;
+  }
+
+  @media screen and (width < 767px) {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 }
 
@@ -53,6 +50,37 @@
   border: 1px solid $white;
   border-radius: 16px;
   position: relative;
+
+  @media screen and (width < 1439px) {
+    grid-template-columns: 1fr;
+  }
+
+  & h6 {
+    color: $white;
+    align-self: center;
+
+    @media screen and (width < 1439px) {
+      align-self: auto;
+    }
+  }
+
+  & p {
+    color: $beige;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    align-self: center;
+    padding-right: 41px;
+
+    @media screen and (width < 1439px) {
+      padding: 0 21px 16px;
+      align-self: auto;
+    }
+
+    @media screen and (width < 767px) {
+      font-size: 14px;
+    }
+  }
 
   &::before {
     content: "";
@@ -69,6 +97,14 @@
 .about__grid-item--two {
   & h6 {
     padding: 51px 0 51px 41px;
+
+    @media screen and (width < 1439px) {
+      padding: 16px 21px 15px;
+    }
+
+    @media screen and (width < 768px) {
+      padding: 16px 21px 15px;
+    }
   }
 }
 
@@ -76,5 +112,9 @@
 .about__grid-item--four {
   & h6 {
     padding: 41px 0 41px 41px;
+
+    @media screen and (width < 1439px) {
+      padding: 16px 21px 15px;
+    }
   }
 }

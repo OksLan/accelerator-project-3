@@ -5,6 +5,7 @@
 
 
 @import "blocks/about";
+@import "blocks/grant";
 
 body {
   font-family: "Manrope", "Arial", sans-serif;
@@ -166,7 +167,7 @@ ul {
 
   &:active {
     background-color: $primary;
-    // color: $white;
+    color: $overlay-blue;
     border: 1px solid $primary;
   }
 

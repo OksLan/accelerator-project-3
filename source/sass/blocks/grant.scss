@@ -1,13 +1,8 @@
 .grant {
   background-color: $primary;
-
-  & h3,
-  h4 {
-    color: $white;
-  }
+  color: $white;
 
   & p {
-    color: $white;
     font-size: 16px;
     line-height: 26px;
   }
@@ -15,4 +10,31 @@
 
 .grant-wrapper {
   padding: 120px 0;
+  display: grid;
+  grid-template-columns: 498px 498px;
+  column-gap: 138px;
+
+  h3 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  }
+
+  h4 {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  span {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  .grant__list {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+  }
 }

@@ -1,48 +1,87 @@
 .about-wrapper {
   padding: 60px 0;
-}
 
-.about__main-text {
-  margin-bottom: 60px;
-
-& h3 {
-  color: $primary;
-}
-
-& h4 {
-  color: $primary;
+  @media screen and (width < 1439px) {
+    padding: 50px 0;
   }
 }
 
 .about__main-text {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 702px 1fr;
   column-gap: 40px;
+  margin-bottom: 60px;
+
+  @media screen and (width < 767px) {
+    margin-bottom: 40px;
+  }
 
   h3 {
     grid-column: 1 / 2;
     grid-row: 1;
+    margin-bottom: 30px;
+    color: $primary;
+
+    @media screen and (width < 767px) {
+      margin-bottom: 15px;
+    }
    }
 
   span {
     grid-column: 1 / 2;
     grid-row: 2;
+    font-size: 22px;
+    line-height: 32px;
+
+    @media screen and (width < 1439px) {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (width < 767px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
    }
 
   h4 {
     grid-column: 2 / 3;
     grid-row: 1;
+    margin-bottom: 40px;
+    color: $primary;
+
+    @media screen and (width < 767px) {
+      margin-bottom: 20px;
+    }
    }
 
   p {
     grid-column: 2 / 3;
     grid-row: 2;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 50px;
+
+    @media screen and (width < 1439px) {
+      line-height: 20px;
+      margin-bottom: 40px;
+      max-width: 498px;
+    }
+
+    @media screen and (width < 767px) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
   }
 
-  .slide__button {
+  .about__button {
     grid-column: 2 / 3;
     grid-row: 3;
     align-self: start;
+    max-width: 279px;
+    padding: 21px 31px;
   }
 
   @media screen and (width < 1439px) {
@@ -52,7 +91,7 @@
     h4,
     span,
     p,
-    .slide__button {
+    .about__button {
       grid-column: 1 / -1;
       grid-row: auto;
     }

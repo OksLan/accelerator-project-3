@@ -9,13 +9,7 @@
 }
 
 .grant-wrapper {
-  // padding: 120px 0;
-  // display: grid;
-  // grid-template-columns: 498px 498px;
-  // column-gap: 138px;
-
   display: flex;
-  justify-content: space-between;
   gap: 138px;
   padding: 120px 0;
 
@@ -25,20 +19,14 @@
   }
 
   h3 {
-  // grid-column: 1 / 2;
-  // grid-row: 1;
   margin-bottom: 30px;
   }
 
   h4 {
-    // grid-column: 2 / 3;
-    // grid-row: 1;
     margin-bottom: 40px;
   }
 
   span {
-    // grid-column: 1 / 2;
-    // grid-row: 2;
     color: $beige;
     font-size: 16px;
     line-height: 26px;
@@ -47,8 +35,6 @@
   }
 
   .grant__list {
-    // grid-column: 2 / 3;
-    // grid-row: 2;
     display: grid;
     gap: 23px;
     list-style: none;
@@ -57,15 +43,9 @@
 
 .grant__col-left,
 .grant__col-right {
-  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.grant__image {
-  width: 498px;
-  height: 363px;
+  max-width: 498px;
 }
 
 .grant__item {

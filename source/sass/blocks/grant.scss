@@ -38,6 +38,7 @@
     display: grid;
     gap: 23px;
     list-style: none;
+    counter-reset: feature;
   }
 }
 
@@ -68,7 +69,7 @@
 
   &::after {
     position: absolute;
-    content: counter(feature);
+    content: counter(feature) "";
     counter-increment: feature;
     font-size: 22px;
     line-height: 22px;

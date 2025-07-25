@@ -13,17 +13,35 @@
   gap: 138px;
   padding: 120px 0;
 
-  @media (max-width: 1439px) {
+  @media screen and (width < 1439px) {
     flex-direction: column;
     gap: 40px;
+    padding: 100px 0;
+  }
+
+  @media screen and (width < 767px) {
+    padding: 70px 0;
+    gap: 30px;
   }
 
   h3 {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (width < 767px) {
+      margin-bottom: 15px;
+    }
   }
 
   h4 {
     margin-bottom: 40px;
+
+    @media screen and (width < 1439px) {
+      margin-bottom: 35px;
+    }
+
+    @media screen and (width < 767px) {
+      margin-bottom: 25px;
+    }
   }
 
   span {
@@ -32,6 +50,16 @@
     line-height: 26px;
     margin-bottom: 40px;
     padding: 0;
+
+    @media screen and (width < 1439px) {
+      max-width: 498px;
+    }
+
+    @media screen and (width < 767px) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
   }
 
   .grant__list {
@@ -39,6 +67,19 @@
     gap: 23px;
     list-style: none;
     counter-reset: feature;
+    padding-left: 20px;
+
+    @media screen and (width < 1439px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 48px;
+      row-gap: 25px;
+    }
+
+    @media screen and (width < 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 15px;
+      padding-left: 15px;
+    }
   }
 }
 
@@ -47,6 +88,10 @@
   display: flex;
   flex-direction: column;
   max-width: 498px;
+
+  @media screen and (width < 1439px) {
+    max-width: 100%;
+  }
 }
 
 .grant__item {
@@ -55,6 +100,10 @@
   border-radius: 16px;
   color: $beige;
   padding: 31px 26px;
+
+  @media screen and (width < 767px) {
+    padding: 25px 26px;
+  }
 
   &::before {
     content: "";
@@ -65,16 +114,31 @@
     border-radius: 50%;
     top: -20px;
     left: -20px;
+
+    @media screen and (width < 767px) {
+      width: 32px;
+      height: 32px;
+      top: -10px;
+      left: -10px;
+    }
   }
 
   &::after {
     position: absolute;
     content: counter(feature) "";
     counter-increment: feature;
+    font-weight: 500;
     font-size: 22px;
     line-height: 22px;
     color: $white;
     top: -10px;
     left: -4px;
+
+    @media screen and (width < 767px) {
+      font-size: 18px;
+      line-height: 18px;
+      top: -3px;
+      left: -3px;
+    }
   }
 }

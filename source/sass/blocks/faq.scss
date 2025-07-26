@@ -1,0 +1,35 @@
+.faq-wrapper {
+  padding: 71px 206px 60px;
+
+  & h3 {
+    color: $primary;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq__details {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  padding: 45px 42px;
+  border: 1px solid $primary;
+  border-radius: 16px;
+  color: $primary;
+}
+
+.faq__question {
+  font-size: 28px;
+  line-height: 34px;
+  list-style-type: none;
+}
+
+.faq__answer {
+  margin-top: 20px;
+}

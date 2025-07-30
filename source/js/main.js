@@ -5,8 +5,8 @@
 
 
 /* FAQ */
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.faq__details').forEach((el, i) => {
-    el.open = (i === 2);
-  });
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   document.querySelectorAll('.faq__details').forEach((el, i) => {
+//     el.open = (i === 2);
+//   });
+// });

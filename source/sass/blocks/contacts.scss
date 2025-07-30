@@ -1,0 +1,30 @@
+.contacts {
+  background-color: $primary;
+}
+
+.contacts-wrapper {
+  padding: 120px 100px;
+
+  & h3 {
+    color: $white;
+  }
+}
+
+.contacts__item-header {
+  color: $beige;
+  text-transform: uppercase;
+}
+
+.contacts__item-text {
+  color: $white;
+  font-size: 16px;
+  line-height: 26px;
+
+  @media screen and (width < 1439px) {
+    line-height: 20px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 14px;
+  }
+}

@@ -7,6 +7,7 @@
 @import "blocks/about";
 @import "blocks/grant";
 @import "blocks/faq";
+@import "blocks/contacts";
 
 body {
   font-family: "Manrope", "Arial", sans-serif;
@@ -194,5 +195,20 @@ ul {
 
   @media screen and (width < 767px) {
     max-width: 290px;
+  }
+}
+
+.phone-number,
+.e-mail {
+  color: $white;
+  font-size: 16px;
+  line-height: 17px;
+
+  @media screen and (width < 1439px) {
+    line-height: 20px;
+  }
+
+  @media screen and (width < 767px) {
+    font-size: 14px;
   }
 }

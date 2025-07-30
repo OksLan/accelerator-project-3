@@ -1,4 +1,4 @@
-.about-wrapper {
+.about__wrapper {
   padding: 60px 0;
 
   @media screen and (width < 1439px) {
@@ -177,8 +177,8 @@
   }
 }
 
-.about__grid-item--one,
-.about__grid-item--two {
+.about__grid-item--programs,
+.about__grid-item--participants {
   & h6 {
     padding: 51px 0 51px 41px;
 
@@ -192,8 +192,8 @@
   }
 }
 
-.about__grid-item--three,
-.about__grid-item--four {
+.about__grid-item--countries,
+.about__grid-item--grants {
   & h6 {
     padding: 41px 0 41px 41px;
 

@@ -2,11 +2,30 @@
   background-color: $primary;
 }
 
-.contacts-wrapper {
-  padding: 120px 100px;
+.contacts__wrapper {
+  padding: 100px 0;
 
   & h3 {
     color: $white;
+  }
+}
+
+.contacts__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__info {
+  display: flex;
+  gap: 52.5px;
+  margin-left: auto;
+}
+
+.contacts__item {
+
+  & p {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -27,4 +46,12 @@
   @media screen and (width < 767px) {
     font-size: 14px;
   }
+}
+
+.contacts__item-header {
+  margin-bottom: 24px;
+}
+
+.contacts__item-text {
+  max-width: 263px;
 }

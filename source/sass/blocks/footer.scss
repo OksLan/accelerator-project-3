@@ -1,0 +1,39 @@
+.footer__wrapper {
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    
+  & a {
+    color: $dark;
+  }
+  
+  & .social-list {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    margin-left: auto;
+
+    & .social-list__link {
+      content: "";
+      background-color: $primary;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.footer__links-list {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.footer__links-item {
+  font-size: 16px;
+  line-height: 26px;
+}

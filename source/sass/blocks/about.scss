@@ -76,14 +76,6 @@
     }
   }
 
-  .about__button {
-    grid-column: 2 / 3;
-    grid-row: 3;
-    align-self: start;
-    max-width: 279px;
-    padding: 21px 31px;
-  }
-
   @media screen and (width < 1439px) {
     grid-template-columns: 1fr;
 
@@ -200,5 +192,19 @@
     @media screen and (width < 1439px) {
       padding: 16px 23px 15px 21px;
     }
+  }
+}
+
+.about__button {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  align-self: start;
+  max-width: 279px;
+  padding: 5px 5px 5px 31px;
+  align-items: center;
+
+  & span {
+    font-size: 14px;
+    line-height: 14px;
   }
 }

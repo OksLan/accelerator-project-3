@@ -159,7 +159,10 @@ ul {
   font-size: 14px;
   line-height: 14px;
   border: 1px solid $primary;
-  border-radius: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.28px;
 
   &:hover {
     background-color: $primary;

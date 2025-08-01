@@ -116,6 +116,10 @@
     height: 40px;
     right: 0;
     top: -3px;
+
+    @media screen and (width < 767px) {
+      align-self: anchor-center;
+    }
   }
 
   &:hover::before,

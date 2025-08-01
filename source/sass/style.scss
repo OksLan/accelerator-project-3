@@ -148,47 +148,6 @@ ul {
   overflow: hidden;
 }
 
-.button {
-  font-family: "Manrope", "Arial", sans-serif;
-  font-weight: 500;
-  background-color: transparent;
-  text-transform: uppercase;
-  color: $primary;
-  cursor: pointer;
-  text-align: center;
-  font-size: 14px;
-  line-height: 14px;
-  border: 1px solid $primary;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  letter-spacing: 0.28px;
-
-  &:hover {
-    background-color: $primary;
-    color: $white;
-    border: 1px solid $primary;
-  }
-
-  &:active {
-    background-color: $primary;
-    color: $overlay-blue;
-    border: 1px solid $primary;
-  }
-
-  &:disabled {
-    background-color: transparent;
-    color: $grey;
-    border: 1px solid $grey;
-  }
-
-  &:focus {
-    background-color: transparent;
-    color: $primary;
-    border: 1px solid $primary;
-  }
-}
-
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -217,3 +176,83 @@ ul {
     font-size: 14px;
   }
 }
+
+.button {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.28px;
+
+  &--light {
+  color: $primary;
+  border: 1px solid $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+
+    &:active {
+      background-color: $primary;
+
+      & span {
+        color: $white;
+        opacity: 0.6;
+      }
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $grey;
+      border: 1px solid $grey;
+    }
+  }
+
+  &--dark {
+  color: $white;
+  border: 1px solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $primary;
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: $white;
+      border: 1px solid $white;
+    }
+
+    &:active {
+      background-color: $white;
+
+      & span {
+        color: $primary;
+        opacity: 0.6;
+      }
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $grey;
+      border: 1px solid $grey;
+    }
+  }
+}
+
+
+

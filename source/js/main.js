@@ -18,14 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const XLINK_NS = 'http://www.w3.org/1999/xlink';
 
   if (!button || !svgUse) {
-    console.log('Кнопка или <use> не найдены');
     return;
   }
 
   const setIcon = (href) => {
     svgUse.setAttributeNS(XLINK_NS, 'xlink:href', href);
     svgUse.setAttribute('href', href);
-    console.log('установлена иконка', href);
   };
 
   button.addEventListener('mouseenter', () => {
@@ -34,17 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   button.addEventListener('mouseleave', () => {
-    console.log('leave');
     setIcon('/__spritemap#sprite-arrow-df-light');
   });
 
   button.addEventListener('mousedown', () => {
-    console.log('mousedown');
+    console.log('active');
     setIcon('/__spritemap#sprite-arrow-act-light');
   });
 
   button.addEventListener('mouseup', () => {
-    console.log('mouseup');
     setIcon('/__spritemap#sprite-arrow-hv-light');
   });
 
@@ -54,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   button.addEventListener('blur', () => {
-    console.log('blur');
     setIcon('/__spritemap#sprite-arrow-df-light');
   });
 });

@@ -93,7 +93,7 @@
   & label {
     font-size: 14px;
     line-height: 18px;
-    color: #f0efe9cc;
+    color: $beige08;
     margin-bottom: 12px;
   }
 
@@ -133,7 +133,7 @@
 .form__city {
   & select {
     background-color: transparent;
-    border: 1px solid #ffffff4d;
+    border: 1px solid $white03;
     border-radius: 8px;
     height: 52px;
     margin-bottom: 20px;

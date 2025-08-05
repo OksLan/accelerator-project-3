@@ -192,6 +192,11 @@ ul {
   justify-content: space-between;
   letter-spacing: 0.28px;
 
+  @media screen and (width < 767px) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
   &--light {
   color: $primary;
   border: 1px solid $primary;

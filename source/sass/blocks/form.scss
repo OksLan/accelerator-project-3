@@ -60,18 +60,34 @@
   flex-direction: column;
   top: 60px;
   height: 800px;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-radius: 16px;
 
   @media (width < 1439px) {
+    max-width: 442px;
+    height: 780px;
+    top: 50px;
+    padding: 41px 40px 36px;
   }
 
   @media (width < 767px) {
+    max-width: 300px;
+    height: 670px;
+    padding: 15px 15px 27px;
+    top: 83px;
+    left: 10px;
   }
 
   & h4 {
     color: $white;
     margin-bottom: 34px;
+
+    @media (width < 1439px) {
+      margin-bottom: 31px;
+    }
+
+    @media (width < 767px) {
+      margin-bottom: 10px;
+    }
   }
 
   & p {
@@ -79,6 +95,15 @@
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 40px;
+
+    @media (width < 1439px) {
+      line-height: 20px;
+    }
+
+    @media (width < 767px) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -95,6 +120,15 @@
     line-height: 18px;
     color: $beige08;
     margin-bottom: 12px;
+
+    @media (width < 1439px) {
+      line-height: 20px;
+    }
+
+    @media (width < 767px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   & input {
@@ -117,10 +151,19 @@
   display: flex;
   align-items: center;
 
+  @media (width < 767px) {
+    margin-bottom: 20px;
+  }
+
   & label {
     font-size: 12px;
     line-height: 12px;
     color: $white;
+
+    @media (width < 767px) {
+      line-height: 14px;
+      max-width: 144px;
+    }
   }
 
   & input {
@@ -152,5 +195,12 @@
   & span {
     margin: auto;
     letter-spacing: 0.28px;
+  }
+
+  & svg {
+    @media screen and (width < 767px) {
+      width: 34px;
+      height: 34px;
+    }
   }
 }

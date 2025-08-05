@@ -128,7 +128,56 @@
       </div>
     </div>
 
-    <!-- <div data-test="programs">programs</div> -->
+    <div class="programs" data-test="programs">      
+      <div class="container">
+      <div class="programs__wrapper">
+        <div class="programs__heading">
+          <h3>Программы</h3>
+          <div class="programs__link">
+            <button class="programs__button button button--light" type="button">
+              <span class="programs__button-text">Все прпограммы</span>
+              <svg class="programs__button-icon" width="46" height="46">
+                <use href="/__spritemap#sprite-arrow-df-light"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper programs__swiper">
+          <div class="swiper-wrapper programs__list">
+          </div>
+        </div>
+
+        <div class="programs__footer">
+          <div class="swiper__pagination">
+            <span class="swiper__pagination-bullet swiper__pagination-bullet--selected">*</span>
+            <span class="swiper__pagination-bullet swiper__pagination-bullet">*</span>
+            <span class="swiper__pagination-bullet swiper__pagination-bullet">*</span>
+          </div>
+          <div class="programs__prevnext swiper-prevnext">
+            <button class="swiper-prevnext__arrow programs__prevnext--prev" aria-label="Посмотреть предыдущую программу" disabled>
+              <svg width="22"
+                height="22"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <use href="/__spritemap#sprite-prev"></use>
+              </svg>
+            </button>
+            <button class="swiper-prevnext__arrow programs__prevnext--next" aria-label="Посмотреть следующую программу">
+              <svg width="22"
+                height="22"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <use href="/__spritemap#sprite-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div></div>
 
     <div class="grant" data-test="grant">
       <div class="container">

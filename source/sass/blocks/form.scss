@@ -188,19 +188,7 @@
 }
 
 .form__button {
-  max-width: 350px;
-  align-items: center;
-  padding: 4px 4px 4px 30px;
-
   & span {
-    margin: auto;
-    letter-spacing: 0.28px;
-  }
-
-  & svg {
-    @media screen and (width < 767px) {
-      width: 34px;
-      height: 34px;
-    }
+    margin: 0 auto;
   }
 }

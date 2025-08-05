@@ -1,0 +1,35 @@
+.programs {
+  position: relative;
+}
+
+.programs__wrapper {
+  padding: 60px 0;
+}
+
+.programs__heading {
+  display: flex;
+  justify-content: space-between;
+  color: $primary;
+  margin-bottom: 40px;
+}
+
+.programs__button {
+   & span {
+    margin-right: 30px;
+   }
+}
+
+.swiper.programs__swiper {
+  position: relative;
+  display: flex;
+  height: 420px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background-color: wheat;
+}
+
+.programs__footer {
+  display: flex;
+  justify-content: space-between;
+}

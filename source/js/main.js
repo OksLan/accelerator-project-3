@@ -28,29 +28,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('mouseenter', () => {
     console.log('hover');
-    setIcon('/__spritemap#sprite-arrow-hv-light');
+    setIcon('/__spritemap#sprite-hv-light');
   });
 
   button.addEventListener('mouseleave', () => {
-    setIcon('/__spritemap#sprite-arrow-df-light');
+    setIcon('/__spritemap#sprite-df-light');
   });
 
   button.addEventListener('mousedown', () => {
     console.log('active');
-    setIcon('/__spritemap#sprite-arrow-act-light');
+    setIcon('/__spritemap#sprite-act-light');
   });
 
   button.addEventListener('mouseup', () => {
-    setIcon('/__spritemap#sprite-arrow-hv-light');
+    setIcon('/__spritemap#sprite-hv-light');
   });
 
   button.addEventListener('focus', () => {
     console.log('focus');
-    setIcon('/__spritemap#sprite-arrow-fc-light');
+    setIcon('/__spritemap#sprite-fc-light');
   });
 
   button.addEventListener('blur', () => {
-    setIcon('/__spritemap#sprite-arrow-df-light');
+    setIcon('/__spritemap#sprite-df-light');
   });
 });
 
@@ -67,37 +67,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const setIcon = (href) => {
     svgUse.setAttributeNS(XLINK_NS, 'xlink:href', href);
-    svgUse.setAttribute('href', href); // на всякий случай, как fallback
+    svgUse.setAttribute('href', href);
   };
 
   formButton.addEventListener('mouseenter', () => {
     console.log('hover');
-    setIcon('/__spritemap#sprite-arrow-hv-blue');
+    setIcon('/__spritemap#sprite-hv-blue');
   });
 
   formButton.addEventListener('mouseleave', () => {
-    setIcon('/__spritemap#sprite-arrow-df-blue');
+    setIcon('/__spritemap#sprite-df-blue');
   });
 
   formButton.addEventListener('mousedown', () => {
     console.log('active');
-    setIcon('/__spritemap#sprite-arrow-act-blue');
+    setIcon('/__spritemap#sprite-act-blue');
   });
 
   formButton.addEventListener('mouseup', () => {
-    setIcon('/__spritemap#sprite-arrow-hv-blue');
+    setIcon('/__spritemap#sprite-hv-blue');
   });
 
   formButton.addEventListener('focus', () => {
     console.log('focus');
-    setIcon('/__spritemap#sprite-arrow-fc-blue');
+    setIcon('/__spritemap#sprite-fc-blue');
   });
 
   formButton.addEventListener('blur', () => {
-    setIcon('/__spritemap#sprite-arrow-df-blue');
+    setIcon('/__spritemap#sprite-df-blue');
   });
 
   if (formButton.disabled) {
-    setIcon('/__spritemap#sprite-arrow-dis');
+    setIcon('/__spritemap#sprite-dis');
   }
 });

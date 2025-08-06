@@ -4,9 +4,13 @@
 
 .programs__wrapper {
   padding: 60px 0;
+
+  @media screen and (width < 1439px) {
+    padding: 50px 0;
+  }
 }
 
-.programs__heading {
+.programs__header {
   display: flex;
   justify-content: space-between;
   color: $primary;
@@ -14,9 +18,9 @@
 }
 
 .programs__button {
-   & span {
+  span {
     margin-right: 30px;
-   }
+  }
 }
 
 .swiper.programs__swiper {

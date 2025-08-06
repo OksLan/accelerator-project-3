@@ -200,11 +200,12 @@
   grid-row: 3;
   width: fit-content;
 
-  @media screen and (width < 767px) {
-    max-width: 223px;
-  }
-
-  & span {
+  span {
     margin-right: 30px;
+    margin-bottom: 0;
+
+    @media screen and (width < 767px) {
+      margin-right: 20px;
+    }
   }
 }

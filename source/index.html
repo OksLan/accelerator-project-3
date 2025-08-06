@@ -31,6 +31,14 @@
           <div class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">О проекте</li>
+              <li class="header__nav-item">Программы
+                <ul>
+                  <li>Стажировки</li>
+                  <li>Волонтерство</li>
+                  <li>Учёба</li>
+                  <li>Религия</li>
+                </ul>
+              </li>
               <li class="header__nav-item">Как проехать</li>
               <li class="header__nav-item">Отзывы</li>
               <li class="header__nav-item">Новости</li>
@@ -155,22 +163,22 @@
             <span class="swiper__pagination-bullet swiper__pagination-bullet">*</span>
           </div>
           <div class="programs__prevnext swiper-prevnext">
-            <button class="swiper-prevnext__arrow programs__prevnext--prev" aria-label="Посмотреть предыдущую программу" disabled>
+            <button class="swiper-prevnext__button" aria-label="Посмотреть предыдущую программу" disabled>
               <svg width="22"
                 height="22"
                 fill="currentColor"
                 aria-hidden="true"
                 focusable="false">
-                <use href="/__spritemap#sprite-prev"></use>
+                <use href="/__spritemap#sprite-df-prev"></use>
               </svg>
             </button>
-            <button class="swiper-prevnext__arrow programs__prevnext--next" aria-label="Посмотреть следующую программу">
+            <button class="swiper-prevnext__button" aria-label="Посмотреть следующую программу">
               <svg width="22"
                 height="22"
                 fill="currentColor"
                 aria-hidden="true"
                 focusable="false">
-                <use href="/__spritemap#sprite-next"></use>
+                <use href="/__spritemap#sprite-df-next"></use>
               </svg>
             </button>
           </div>
@@ -281,7 +289,46 @@
       </div>
     </div>
 
-    <!-- <div data-test="reviews">reviews</div> -->
+    <div class="reviews" data-test="reviews">
+      <div class="container">
+        <div class="reviews__wrapper">
+          <h3>Отзывы</h3>
+ 
+          <div class="swiper reviews__swiper">
+            <div class="swiper-wrapper reviews__list">
+            </div>
+          </div>
+  
+          <div class="reviews__footer">
+            <div class="swiper__pagination">
+              <span class="swiper__pagination-bullet swiper__pagination-bullet--selected">*</span>
+              <span class="swiper__pagination-bullet swiper__pagination-bullet">*</span>
+              <span class="swiper__pagination-bullet swiper__pagination-bullet">*</span>
+            </div>
+            <div class="reviews__prevnext swiper-prevnext">
+              <button class="swiper-prevnext__button" aria-label="Посмотреть предыдущий отзыв" disabled>
+                <svg width="22"
+                  height="22"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false">
+                  <use href="/__spritemap#sprite-df-prev"></use>
+                </svg>
+              </button>
+              <button class="swiper-prevnext__button" aria-label="Посмотреть следующий отзыв">
+                <svg width="22"
+                  height="22"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false">
+                  <use href="/__spritemap#sprite-df-next"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="contacts" data-test="contacts">
       <div class="container">

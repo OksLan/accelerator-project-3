@@ -1,0 +1,27 @@
+.reviews__wrapper {
+  padding: 60px 0;
+
+  @media screen and (width < 1439px) {
+    padding: 50px 0;
+  }
+
+  h3 {
+    color: $primary;
+    margin-bottom: 40px;
+  }
+}
+
+.swiper.reviews__swiper {
+  position: relative;
+  display: flex;
+  height: 483px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background-color: wheat;
+}
+
+.reviews__footer {
+  display: flex;
+  justify-content: space-between;
+}

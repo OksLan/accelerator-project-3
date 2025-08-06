@@ -321,3 +321,20 @@ ul {
     }
   }  
 }
+
+.swiper__pagination.swiper__pagination-progressbar {
+  width: calc(100% - 104px);
+  background-color: $primary02;
+  height: 1px;
+  margin-top: 12px;
+}
+  
+.swiper__pagination.swiper__pagination-progressbar
+.swiper__pagination-progressbar-fill {
+  position: absolute;
+  height: 2px;
+  background-color: $primary;
+  border-radius: 2px;
+  width: 420px;
+  left: 24px;
+}

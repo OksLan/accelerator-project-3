@@ -1,9 +1,0 @@
-<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="46" height="46" rx="23" fill="#316DC2"/>
-  <g shape-rendering="crispEdges">
-    <path d="M19 27L27 19" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M27 19H19" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M27 19V27" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-  </g>
-</svg>
-

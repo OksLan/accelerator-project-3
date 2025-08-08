@@ -28,40 +28,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('mouseenter', () => {
     console.log('hover');
-    setIcon('/__spritemap#sprite-hv-light');
+    setIcon('/__spritemap#sprite-hover-light');
   });
 
   button.addEventListener('mouseleave', () => {
-    setIcon('/__spritemap#sprite-df-light');
+    setIcon('/__spritemap#sprite-default-light');
   });
 
   button.addEventListener('mousedown', () => {
     console.log('active');
-    setIcon('/__spritemap#sprite-act-light');
+    setIcon('/__spritemap#sprite-active-light');
   });
 
   button.addEventListener('mouseup', () => {
-    setIcon('/__spritemap#sprite-hv-light');
+    setIcon('/__spritemap#sprite-hover-light');
   });
 
   button.addEventListener('focus', () => {
     console.log('focus');
-    setIcon('/__spritemap#sprite-fc-light');
+    setIcon('/__spritemap#sprite-focus-light');
   });
 
   button.addEventListener('blur', () => {
-    setIcon('/__spritemap#sprite-df-light');
+    setIcon('/__spritemap#sprite-default-light');
   });
+
+    if (button.disabled) {
+    setIcon('/__spritemap#sprite-disabled');
+  }
 });
 
 
 /* FORM - Смена иконки на кнопке */
 document.addEventListener('DOMContentLoaded', () => {
-  const formButton = document.querySelector('.form__button');
-  const svgUse = formButton?.querySelector('use');
+  const button = document.querySelector('.form__button');
+  const svgUse = button?.querySelector('use');
   const XLINK_NS = 'http://www.w3.org/1999/xlink';
 
-  if (!formButton || !svgUse) {
+  if (!button || !svgUse) {
     return;
   }
 
@@ -70,34 +74,81 @@ document.addEventListener('DOMContentLoaded', () => {
     svgUse.setAttribute('href', href);
   };
 
-  formButton.addEventListener('mouseenter', () => {
+  button.addEventListener('mouseenter', () => {
     console.log('hover');
-    setIcon('/__spritemap#sprite-hv-blue');
+    setIcon('/__spritemap#sprite-hover-blue');
   });
 
-  formButton.addEventListener('mouseleave', () => {
-    setIcon('/__spritemap#sprite-df-blue');
+  button.addEventListener('mouseleave', () => {
+    setIcon('/__spritemap#sprite-default-blue');
   });
 
-  formButton.addEventListener('mousedown', () => {
+  button.addEventListener('mousedown', () => {
     console.log('active');
-    setIcon('/__spritemap#sprite-act-blue');
+    setIcon('/__spritemap#sprite-active-blue');
   });
 
-  formButton.addEventListener('mouseup', () => {
-    setIcon('/__spritemap#sprite-hv-blue');
+  button.addEventListener('mouseup', () => {
+    setIcon('/__spritemap#sprite-hover-blue');
   });
 
-  formButton.addEventListener('focus', () => {
+  button.addEventListener('focus', () => {
     console.log('focus');
-    setIcon('/__spritemap#sprite-fc-blue');
+    setIcon('/__spritemap#sprite-focus-blue');
   });
 
-  formButton.addEventListener('blur', () => {
-    setIcon('/__spritemap#sprite-df-blue');
+  button.addEventListener('blur', () => {
+    setIcon('/__spritemap#sprite-default-blue');
   });
 
-  if (formButton.disabled) {
-    setIcon('/__spritemap#sprite-dis');
+    if (button.disabled) {
+    setIcon('/__spritemap#sprite-disabled');
+  }
+});
+
+/* PROGRAMS - Смена икноки на кнопке */
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('.programs__button');
+  const svgUse = button?.querySelector('use');
+  const XLINK_NS = 'http://www.w3.org/1999/xlink';
+
+  if (!button || !svgUse) {
+    return;
+  }
+
+  const setIcon = (href) => {
+    svgUse.setAttributeNS(XLINK_NS, 'xlink:href', href);
+    svgUse.setAttribute('href', href);
+  };
+
+  button.addEventListener('mouseenter', () => {
+    console.log('hover');
+    setIcon('/__spritemap#sprite-hover-light');
+  });
+
+  button.addEventListener('mouseleave', () => {
+    setIcon('/__spritemap#sprite-default-light');
+  });
+
+  button.addEventListener('mousedown', () => {
+    console.log('active');
+    setIcon('/__spritemap#sprite-active-light');
+  });
+
+  button.addEventListener('mouseup', () => {
+    setIcon('/__spritemap#sprite-hover-light');
+  });
+
+  button.addEventListener('focus', () => {
+    console.log('focus');
+    setIcon('/__spritemap#sprite-focus-light');
+  });
+
+  button.addEventListener('blur', () => {
+    setIcon('/__spritemap#sprite-default-light');
+  });
+
+    if (button.disabled) {
+    setIcon('/__spritemap#sprite-disabled');
   }
 });

@@ -199,9 +199,9 @@
   grid-column: 2 / 3;
   grid-row: 3;
   width: fit-content;
+  position: relative;
 
   span {
-    margin-right: 30px;
     margin-bottom: 0;
 
     @media screen and (width < 767px) {

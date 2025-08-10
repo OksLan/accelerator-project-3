@@ -190,7 +190,7 @@ ul {
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
-  padding: 4px 4px 4px 30px;
+  padding: 22px 80px 22px 30px;
 
   @media screen and (width < 767px) {
     font-size: 12px;
@@ -202,9 +202,51 @@ ul {
   color: $primary;
   border: 1px solid $primary;
 
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $primary;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    right: 4px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../../img/button/white.svg');
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    right: 22px;
+    transform: rotate(-45deg);
+  }
+
     &:hover {
       background-color: $primary;
       color: $white;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $white;
+          border-radius: 50%;
+          width: 46px;
+          height: 46px;
+          right: 4px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url('../../img/button/primary.svg');
+          background-repeat: no-repeat;
+          width: 10px;
+          height: 10px;
+          right: 22px;
+          transform: none;
+        }
     }
 
     &:focus {
@@ -270,13 +312,6 @@ ul {
       line-height: 12px;
     }
   }
-
-  & svg {
-    @media screen and (width < 767px) {
-      width: 34px;
-      height: 34px;
-    }
-  }
 }
 
 .swiper-prevnext {
@@ -303,14 +338,14 @@ ul {
   }
   &:focus {
     background-color: $white;
-    
+
     svg {
       fill: $primary;
     }
   }
   &:active {
     background-color: $white;
-    
+
     svg {
       fill: $primary07;
     }
@@ -319,7 +354,7 @@ ul {
     svg {
       fill: $primary07;
     }
-  }  
+  }
 }
 
 .swiper__pagination.swiper__pagination-progressbar {
@@ -328,7 +363,7 @@ ul {
   height: 1px;
   margin-top: 12px;
 }
-  
+
 .swiper__pagination.swiper__pagination-progressbar
 .swiper__pagination-progressbar-fill {
   position: absolute;

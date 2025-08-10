@@ -258,6 +258,27 @@ ul {
     &:active {
       background-color: $primary;
 
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $white;
+          border-radius: 50%;
+          width: 46px;
+          height: 46px;
+          right: 4px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url('../../img/button/primary07.svg');
+          background-repeat: no-repeat;
+          width: 10px;
+          height: 10px;
+          right: 22px;
+          transform: none;
+        }
+
       & span {
         color: $white;
         opacity: 0.6;

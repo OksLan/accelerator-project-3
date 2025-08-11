@@ -191,6 +191,7 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 22px 80px 22px 30px;
+  position: relative;
 
   @media screen and (width < 767px) {
     font-size: 12px;
@@ -253,10 +254,33 @@ ul {
       background-color: transparent;
       color: $primary;
       border: 1px solid $primary;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $primary;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        right: 4px;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../img/button/white.svg');
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 22px;
+        transform: none;
+      }
     }
 
     &:active {
       background-color: $primary;
+      color: $white;
+      opacity: 0.6;
 
         &::before {
           content: "";
@@ -278,17 +302,33 @@ ul {
           right: 22px;
           transform: none;
         }
-
-      & span {
-        color: $white;
-        opacity: 0.6;
-      }
     }
 
     &:disabled {
       background-color: transparent;
       color: $grey;
       border: 1px solid $grey;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $grey;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        right: 4px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../img/button/white06.svg');
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 22px;
+        transform: rotate(-45deg);
+      }
     }
   }
 
@@ -296,15 +336,78 @@ ul {
   color: $white;
   border: 1px solid $white;
 
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $white;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    right: 4px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../../img/button/primary.svg');
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    right: 22px;
+    transform: rotate(-45deg);
+  }
+
     &:hover {
       background-color: $white;
       color: $primary;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $primary;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        right: 4px;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../img/button/white.svg');
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 22px;
+        transform: none;
+      }
     }
 
     &:focus {
       background-color: transparent;
       color: $white;
       border: 1px solid $white;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $white;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        right: 4px;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../img/button/primary.svg');
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 22px;
+        transform: none;
+      }      
     }
 
     &:active {
@@ -314,12 +417,54 @@ ul {
         color: $primary;
         opacity: 0.6;
       }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $primary;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        right: 4px;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../img/button/primary07.svg');
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 22px;
+        transform: none;
+      }
     }
 
     &:disabled {
       background-color: transparent;
       color: $grey;
       border: 1px solid $grey;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $grey;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        right: 4px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../img/button/white06.svg');
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 22px;
+        transform: rotate(-45deg);
+      }
     }
   }
 

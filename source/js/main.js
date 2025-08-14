@@ -28,3 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
+
+  // Подменю
+  document.querySelectorAll(".main__nav-item").forEach(item => {
+    const subList = item.querySelector(".program__list");
+    if (subList) {
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
+        subList.classList.toggle("open");
+      });
+    }
+  });

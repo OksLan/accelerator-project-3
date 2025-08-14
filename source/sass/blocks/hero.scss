@@ -3,16 +3,18 @@
   width: 100%;
   justify-content: space-between;
   margin-top: 30px;
+  position: relative;
 }
 
 .hero__header-toggle {
-  border: none;
   display: flex;
   align-items: center;
   border: 1px solid $primary;
   border-radius: 50px;
   background-color: $white;
   padding: 4px 4px 4px 20px;
+  transition: width 0.3s ease;
+  width: 134px;
 
   & span {
     text-transform: uppercase;
@@ -22,16 +24,33 @@
     letter-spacing: 0.2px;
     margin-right: 20px;
   }
+
+  &--open {
+    width: 286px;
+  }
 }
 
 .hero .main__nav {
-  position: relative;
-  display: none;
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
+  width: 286px;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+  z-index: 10;
+  background-color: $primary;
+  border-radius: 16px;
+  right: 0;
+  top: 58px;
 }
 
-// .hero .main__nav--opened {
-//   display: block;
-// }
+.hero .main__nav--opened {
+  max-height: 1000px;
+  opacity: 1;
+}
 
 .hero__header-toggle--close {
   background-color: $primary;
@@ -44,12 +63,8 @@
 }
 
 .hero .main__nav-list {
-  position: absolute;
-  background-color: $primary;
-  width: 286px;
   margin: 0;
   padding: 0;
-  border-radius: 16px;
   padding: 35px 25px;
   display: flex;
   flex-direction: column;
@@ -62,7 +77,7 @@
   letter-spacing: 0.2px;
   text-transform: uppercase;
   color: $white;
-  opacity: 0.7;  
+  opacity: 0.7;
 }
 
 .hero .program__list {
@@ -70,6 +85,13 @@
   flex-direction: column;
   gap: 16px;
   padding-left: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.hero .program__list--opened {
+  max-height: 500px;
 }
 
 .hero .program__list-item {

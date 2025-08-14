@@ -20,15 +20,22 @@
 
     <div class="hero" data-test="hero">
       <h2 class="visually-hidden">hero</h2>
-      <!-- <div class="hero header">
-        <div class="container">
-          <a class="header__logo" href="#"></a>
+      <div class="container">
+        <div class="hero__header">
+          <a class="hero__header-logo" href="#" area-label="Логотип проекта Стажировка">
+            <svg class="logo" width="52" height="52">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg> 
+          </a>
 
-          <button class="header__toggle" type="button">
+          <button class="hero__header-toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
+            <svg class="header__toggle-icon" width="134" height="54">
+              <use href="/__spritemap#sprite-menu"></use>
+            </svg>
           </button>
 
-          <div class="header__nav">
+          <!-- <div class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">О проекте</li>
               <li class="header__nav-item">Программы
@@ -44,11 +51,10 @@
               <li class="header__nav-item">Новости</li>
               <li class="header__nav-item">Контакты</li>
             </ul>
-          </div>
+          </div> -->
         </div>
-      </div> -->
 
-      <!-- <div class="hero slider">
+        <!-- <div class="hero slider">
         <div class="slides-wrapper">
           <div class="slide slide--one">
             <div class="slide__content-container">
@@ -79,7 +85,7 @@
           </div>
         </div>
       </div> -->
-
+      </div>
     </div>
 
     <div class="about" data-test="about">

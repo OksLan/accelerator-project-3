@@ -168,4 +168,18 @@
 }
 
 .slide__content-container {
+  position: relative;
+  z-index: 3;
+  max-width: 968px;
+  padding: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $white;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    width: calc(100% - 100px);
+    height: 100%;
+    inset: 0;
+  }
 }

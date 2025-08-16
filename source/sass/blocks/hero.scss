@@ -142,20 +142,39 @@
   width: 100%;
   height: 100%;
   flex-shrink: 0;
-   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
 }
 
-.hero .slide--one {
-  background-image:
-  image-set(
-    url("../../img/hero/slide1-desktop@1x.png") type("image/png") 1x,
-    url("../../img/hero/slide1-desktop@2x.png") type("image/png") 2x,
-    url("../../img/hero/slide1-desktop@1x.webp") type("image/webp") 1x,
-    url("../../img/hero/slide1-desktop@2x.webp") type("image/webp") 2x,
-  );
+.slide__image-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  picture, img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+    &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 109, 194, 0.2);
+  }
+}
+
+.slide__content-container {
+  position: relative;
+  background-image: url("../../img/cnt-container/desktop.png");
+  width: 968px;
+  height: 323px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom left;
+  z-index: 2;
+  top: 417px;
+  left: 100px;
 }

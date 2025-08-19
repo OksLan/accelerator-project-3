@@ -11,32 +11,36 @@ import 'swiper/css/navigation'
 //   });
 // });
 
-/* развернуть/свернуть main__nav */
+/* развернуть/свернуть hero__nav */
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector(".hero__header-toggle");
-  const navList = document.querySelector(".main__nav");
-  const icon = toggleButton.querySelector("use");
+  const nav = document.querySelector(".hero__nav");
+  const icon = toggleButton?.querySelector("use");
 
+  // бургер
   toggleButton.addEventListener("click", () => {
     toggleButton.classList.toggle("hero__header-toggle--open");
     toggleButton.classList.toggle("hero__header-toggle--close");
-    navList.classList.toggle("main__nav--opened");
+    nav.classList.toggle("nav--opened");
 
-    const isOpen = navList.classList.contains("main__nav--opened");
-    icon.setAttribute(
-      "href",
-      isOpen ? "/__spritemap#sprite-cross" : "/__spritemap#sprite-burger"
-    );
+    const isOpen = nav.classList.contains("nav--opened");
+    if (icon) {
+      icon.setAttribute(
+        "href",
+        isOpen ? "/__spritemap#sprite-cross" : "/__spritemap#sprite-burger"
+      );
+    }
   });
-});
 
-  // Подменю
-  document.querySelectorAll(".main__nav-item").forEach(item => {
-    const subList = item.querySelector(".program__list");
+  // подменю
+  document.querySelectorAll(".nav__item--submenu").forEach(item => {
+    const subList = item.querySelector(".submenu");
     if (subList) {
       item.addEventListener("click", (e) => {
         e.stopPropagation();
-        subList.classList.toggle("open");
+        subList.classList.toggle("submenu--open");
       });
     }
   });
+});
+

@@ -29,29 +29,32 @@
 
           <button class="hero__header-toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <span class="about__button-text">Меню</span>
+            <span class="toggle-text">Меню</span>
             <svg class="toggle-icon" width="46" height="46">
               <use href="/__spritemap#sprite-burger"></use>
             </svg>
           </button>
 
-          <div class="hero__header-nav main__nav">
-            <ul class="main__nav-list">
-              <li class="main__nav-item">О проекте</li>
-              <li class="main__nav-item main__nav-item--select">Программы
-                <ul class="program__list">
-                  <li class="program__list-item">Стажировки</li>
-                  <li class="program__list-item">Волонтерство</li>
-                  <li class="program__list-item">Учёба</li>
-                  <li class="program__list-item">Религия</li>
-                </ul>
-              </li>
-              <li class="main__nav-item">Как проехать</li>
-              <li class="main__nav-item">Отзывы</li>
-              <li class="main__nav-item main__nav-item--select">Новости</li>
-              <li class="main__nav-item">Контакты</li>
-            </ul>
+          <div class="hero__nav">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">О проекте</li>
+                <li class="nav__item nav__item--submenu">Программы
+                  <ul class="submenu">
+                    <li class="submenu__item">Стажировки</li>
+                    <li class="submenu__item">Волонтерство</li>
+                    <li class="submenu__item">Учёба</li>
+                    <li class="submenu__item">Религия</li>
+                  </ul>
+                </li>
+                <li class="nav__item">Как проехать</li>
+                <li class="nav__item">Отзывы</li>
+                <li class="nav__item nav__item--submenu">Новости</li>
+                <li class="nav__item">Контакты</li>
+              </ul>
+            </nav>
           </div>
+
         </div>
 
         <div class="hero__slider slider">

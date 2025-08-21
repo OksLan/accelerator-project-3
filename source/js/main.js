@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".hero__nav");
   const icon = toggleButton?.querySelector("use");
 
-  // бургер
+  // toggle
   toggleButton.addEventListener("click", () => {
     toggleButton.classList.toggle("hero__header-toggle--open");
     toggleButton.classList.toggle("hero__header-toggle--close");
@@ -34,13 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // подменю
   document.querySelectorAll(".nav__item--submenu").forEach(item => {
-    const subList = item.querySelector(".submenu");
-    if (subList) {
-      item.addEventListener("click", (e) => {
-        e.stopPropagation();
-        subList.classList.toggle("submenu--open");
-      });
+    const subList = item.querySelector(".submenu__list");
+    const arrowBtn = item.querySelector(".submenu-toggle");
+
+    if (subList && arrowBtn) {
+    subList.classList.remove("submenu__list--open");
+
+    arrowBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      const isOpen = subList.classList.toggle("submenu__list--open");
+      arrowBtn.classList.toggle("submenu-toggle--open", isOpen);
+    });
     }
   });
 });
-

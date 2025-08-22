@@ -99,33 +99,23 @@
 
 .hero .nav__item--submenu {
   position: relative;
-
-  // p {
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     background: url('../../img/sprite/submenu.svg');
-  //     width: 12px;
-  //     height: 7px;
-  //     top: 5px;
-  //     margin-left: 10px;
-  //   }
-  // }
 }
 
 .hero .submenu-toggle {
-  position: absolute;
-  width: 12px;
-  height: 7px;
-  margin-left: 10px;
-  background: url('../../img/sprite/submenu.svg') no-repeat center/contain;
+  background: none;
   border: none;
   cursor: pointer;
-  top: 5px;
-  transition: transform 0.3s ease;
 
-  &.submenu-toggle--open {
+  .submenu-toggle-icon {
+    color: $white07;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-left: 8px;
+    margin-bottom: 2px;
+  }
+
+  &.submenu-toggle--open .submenu-toggle-icon {
     transform: rotate(180deg);
+    color: $white;
   }
 }
 
@@ -134,10 +124,14 @@
   margin-top: 20px;
   margin-left: 16px;
   display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .hero .submenu__list--open {
   display: block;
+  max-height: 500px;
 }
 
 .hero .submenu__item {

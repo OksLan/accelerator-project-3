@@ -121,17 +121,19 @@
 
 .hero .submenu__list {
   gap: 16px;
-  margin-top: 20px;
   margin-left: 16px;
-  display: none;
   max-height: 0;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
   transition: max-height 0.3s ease-in-out;
 }
 
 .hero .submenu__list--open {
   display: block;
   max-height: 500px;
+  opacity: 0.6;
+  visibility: visible;
 }
 
 .hero .submenu__item {
@@ -139,6 +141,16 @@
   text-transform: none;
   margin-bottom: 16px;
   opacity: 0.7;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.hero .submenu__item:first-child {
+  margin-top: 20px;
 }
 
 .hero .submenu__item:last-child {

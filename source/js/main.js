@@ -46,6 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = subList.classList.toggle("submenu__list--open");
       arrowBtn.classList.toggle("submenu-toggle--open", isOpen);
     });
-    }
+   }
   });
 });

@@ -13,116 +13,48 @@ import 'swiper/css/navigation'
 
 
 /* hero__nav */
-// document.addEventListener("DOMContentLoaded", () => {
-//   const toggleButton = document.querySelector(".hero__header-toggle");
-//   const nav = document.querySelector(".hero__nav");
-//   const icon = toggleButton?.querySelector("use");
-
-//   // toggle
-//   toggleButton.addEventListener("click", () => {
-//     toggleButton.classList.toggle("hero__header-toggle--open");
-//     toggleButton.classList.toggle("hero__header-toggle--close");
-//     nav.classList.toggle("nav--opened");
-
-//     const isOpen = nav.classList.contains("nav--opened");
-//     if (icon) {
-//       icon.setAttribute(
-//         "href",
-//         isOpen ? "/__spritemap#sprite-cross" : "/__spritemap#sprite-burger"
-//       );
-//     }
-
-//       // клик вне меню закрывает его
-//   document.addEventListener("click", () => {
-//     if (nav.classList.contains("nav--opened")) {
-//       closeMenu();
-//     }
-//   });
-
-//   // Esc закрывает
-//   document.addEventListener("keydown", (e) => {
-//     if (e.key === "Escape" && nav.classList.contains("nav--opened")) {
-//       closeMenu();
-//     }
-//   });
-//   });
-
-//   // подменю
-//   document.querySelectorAll(".nav__item--submenu").forEach(item => {
-//     const subList = item.querySelector(".submenu__list");
-//     const arrowBtn = item.querySelector(".submenu-toggle");
-
-//     if (subList && arrowBtn) {
-//     subList.classList.remove("submenu__list--open");
-
-//     arrowBtn.addEventListener("click", (e) => {
-//       e.stopPropagation();
-
-//       const isOpen = subList.classList.toggle("submenu__list--open");
-//       arrowBtn.classList.toggle("submenu-toggle--open", isOpen);
-//     });
-//    }
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector(".hero__header-toggle");
   const nav = document.querySelector(".hero__nav");
   const icon = toggleButton?.querySelector("use");
 
-  const setIcon = (id) => {
-    if (!icon) return;
-    icon.setAttribute("href", id);
-    icon.setAttribute("xlink:href", id);
-  };
+  const setIcon = (id) => icon?.setAttribute("href", id);
 
   const closeAllSubmenus = () => {
-    document.querySelectorAll(".submenu__list").forEach((subList) => {
-      subList.classList.remove("submenu__list--open");
-    });
-    document.querySelectorAll(".submenu-toggle").forEach((btn) => {
+    document.querySelectorAll(".submenu__list").forEach(el => el.classList.remove("submenu__list--open"));
+    document.querySelectorAll(".submenu-toggle").forEach(btn => {
       btn.classList.remove("submenu-toggle--open");
       btn.setAttribute("aria-expanded", "false");
     });
   };
 
-  const openMenu = () => {
-    nav.classList.add("nav--opened");
-    toggleButton.setAttribute("aria-expanded", "true");
-    setIcon("/__spritemap#sprite-cross");
+  const setMenuState = (open) => {
+    nav.classList.toggle("nav--opened", open);
+    toggleButton.setAttribute("aria-expanded", open);
+    setIcon(open ? "/__spritemap#sprite-cross" : "/__spritemap#sprite-burger");
+    if (!open) {
+      closeAllSubmenus();
+      toggleButton.blur();
+    }
   };
 
-  const closeMenu = () => {
-    nav.classList.remove("nav--opened");
-    toggleButton.setAttribute("aria-expanded", "false");
-    setIcon("/__spritemap#sprite-burger");
-    closeAllSubmenus();
-    toggleButton.blur();
-  };
-
-  // закрыть меню по кнопке
   toggleButton.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (nav.classList.contains("nav--opened")) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    setMenuState(!nav.classList.contains("nav--opened"));
   });
 
-  // закрыть меню по клику в любом месте
+  // закрыть меню по клику вне
   document.addEventListener("click", (e) => {
-    if (nav.classList.contains("nav--opened")) {
-      if (!nav.contains(e.target) && !toggleButton.contains(e.target)) {
-        closeMenu();
-      }
+    if (nav.classList.contains("nav--opened") &&
+        !nav.contains(e.target) && !toggleButton.contains(e.target)) {
+      setMenuState(false);
     }
   });
 
   // закрыть меню по Esc
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && nav.classList.contains("nav--opened")) {
-      closeMenu();
+      setMenuState(false);
     }
   });
 
@@ -131,15 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const subList = item.querySelector(".submenu__list");
     const arrowBtn = item.querySelector(".submenu-toggle");
 
-    if (subList && arrowBtn) {
-      subList.classList.remove("submenu__list--open");
+    if (!subList || !arrowBtn) return;
 
-      arrowBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const isOpen = subList.classList.toggle("submenu__list--open");
-        arrowBtn.classList.toggle("submenu-toggle--open", isOpen);
-        arrowBtn.setAttribute("aria-expanded", String(isOpen));
-      });
-    }
+    arrowBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = subList.classList.toggle("submenu__list--open");
+      arrowBtn.classList.toggle("submenu-toggle--open", isOpen);
+      arrowBtn.setAttribute("aria-expanded", isOpen);
+    });
   });
 });

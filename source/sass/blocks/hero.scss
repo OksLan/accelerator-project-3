@@ -42,12 +42,13 @@
 .hero__header-toggle {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   background: $white;
   border: 1px solid $primary;
   border-radius: 50px;
   padding:  4px 4px 4px 20px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 
   span {
     text-transform: uppercase;
@@ -67,16 +68,14 @@
 .hero .nav--opened {
   max-height: 1000px;
   opacity: 1;
+}
+
+.hero__header:has(.nav--opened) .hero__header-toggle {
+  width: 286px;
+  background-color: $primary;
 
   span {
     color: $white;
-    letter-spacing: 0.2px;
-    margin-right: 172px;
-  }
-
-  & .hero__header-toggle {
-    background-color: $primary;
-    width: 286px;
   }
 }
 

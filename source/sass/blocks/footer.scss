@@ -1,39 +1,186 @@
-.footer__wrapper {
-  padding: 60px 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-    
-  & a {
-    color: $dark;
-  }
-  
-  & .social-list {
-    display: flex;
-    gap: 20px;
-    position: relative;
-    margin-left: auto;
+// .footer__wrapper {
+//   padding: 60px 0 40px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 
-    & .social-list__link {
-      content: "";
-      background-color: $primary;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      justify-content: center;
+//   & a {
+//     color: $dark;
+//   }
+
+//   & .social-list {
+//     display: flex;
+//     gap: 20px;
+//     position: relative;
+//     margin-left: auto;
+
+//     & .social-list__link {
+//       content: "";
+//       background-color: $primary;
+//       border-radius: 50%;
+//       width: 36px;
+//       height: 36px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
+// }
+
+// .footer__links-list {
+//   display: flex;
+//   gap: 30px;
+//   margin-left: auto;
+// }
+
+// .footer__links-item {
+//   font-size: 16px;
+//   line-height: 26px;
+// }
+
+.footer {
+  background-color: aliceblue;
+}
+
+.footer__wrapper {
+  display: grid;
+  align-items: center;
+  padding: 60px 0 40px;
+
+  grid-template-rows: auto auto;
+  row-gap: 25px;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-areas:
+    "logo links social"
+    "privacy privacy privacy";
+
+    .footer__logo       { grid-area: logo; }
+    .footer__links-list { grid-area: links; justify-self: start; display: flex; gap: 30px; margin-left: 52px;}
+    .social-list        { grid-area: social; justify-self: end; display: flex; gap: 12px; }
+    .footer__privacy    {
+      grid-area: privacy;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      column-gap: 20px;
       align-items: center;
+
+      .footer__privacy-rights  { grid-column: 1; white-space: nowrap; }
+      .footer__privacy-confid  { grid-column: 2; justify-self: end; }
     }
+
+  @media screen and (width < 1439px)  {
+    grid-template-rows: auto auto;
+    grid-template-columns: 52px max-content;
+    grid-template-areas:
+      "logo links"
+      "privacy social";
+
+    .footer__logo       { grid-area: logo; justify-self: start; }
+    .footer__links-list { grid-area: links; justify-self: end; display: flex; gap: 15px; margin-left: 0;}
+
+    .footer__privacy {
+      grid-area: privacy;
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+      align-items: start;
+
+      .footer__privacy-rights { grid-row: 2; }
+      .footer__privacy-confid { grid-row: 1; }
+    }
+
+    .social-list {
+      grid-area: social;
+      justify-self: end;
+      display: flex;
+      gap: 12px;
+    }
+}
+
+  // @media screen and (width < 767px) {
+  //   grid-template-columns: 1fr;
+  //   grid-template-areas:
+  //     "logo"
+  //     "links"
+  //     "privacy"
+  //     "social";
+
+  //   .footer__logo       { grid-area: logo; justify-self: center; }
+  //   .footer__links-list { grid-area: links; justify-self: center; display: flex; flex-wrap: wrap; gap: 16px; }
+  //   .footer__privacy    { grid-area: privacy; justify-self: center; text-align: center; gap: 10px;}
+  //   .social-list        { grid-area: social; justify-self: center; display: flex; gap: 12px; }
+  // }
+
+  a {
+    color: $dark;
   }
 }
 
 .footer__links-list {
   display: flex;
   gap: 30px;
-  margin-left: auto;
 }
 
 .footer__links-item {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 17px;
+
+  @media screen and (width < 1439px) {
+    line-height: 20px;
+  }
+}
+
+.footer .social-list {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-left: auto;
+
+  @media screen and (width < 1439px) {
+    gap: 10px;
+  }
+
+  & .social-list__link {
+    content: "";
+    background-color: $primary;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__privacy-rights {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media screen and (width < 1439px) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.footer__privacy-confid {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: $dark;
+  }
+
+  @media screen and (width < 1439px) {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }

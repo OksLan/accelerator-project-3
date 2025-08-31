@@ -37,7 +37,7 @@
       "privacy social";
 
     .footer__logo       { grid-area: logo; justify-self: start; }
-    .footer__links-list { grid-area: links; justify-self: felx-end; display: flex; gap: 15px;}
+    .footer__links-list { grid-area: links; justify-self: end; display: flex; gap: 15px;margin-left: 98px;}
 
     .footer__privacy {
       grid-area: privacy;
@@ -90,7 +90,7 @@
     line-height: 20px;
   }
 
-  @media screen and (width < 1439px) {
+  @media screen and (width < 767px) {
     font-size: 14px;
   }
 }

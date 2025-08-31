@@ -1,12 +1,18 @@
+.hero {
+  position: relative;
+}
+
 // header
 .hero__header {
+  position: relative;
+}
+
+.hero__header-wrapper {
   display: flex;
   justify-content: space-between;
-  position: absolute;
   z-index: 2;
-  top: 30px;
+  padding-top: 30px;
   width: 100%;
-  padding: 0 100px;
 }
 
 .hero__nav {
@@ -23,7 +29,16 @@
   background-color: $primary;
   border-radius: 16px;
   right: 100px;
-  top: 58px;
+  top: 90px;
+
+  @media (width < 1439px) {
+    right: 45px;
+  }
+
+  @media (width < 767px) {
+    right: 15px;
+    width: 290px;
+  }
 }
 
 .hero__header-toggle {

@@ -21,55 +21,58 @@
     <div class="hero" data-test="hero">
       <h2 class="visually-hidden">hero</h2>
         <div class="hero__header">
-          <a class="hero__header-logo" href="#">
-            <svg class="logo" width="52" height="52">
-              <use href="/__spritemap#sprite-logo"></use>
-            </svg>
-          </a>
+          <div class="container">
+            <div class="hero__header-wrapper">
+              <a class="hero__header-logo" href="#">
+                <svg class="logo" width="52" height="52">
+                  <use href="/__spritemap#sprite-logo"></use>
+                </svg>
+              </a>
 
-          <button class="hero__header-toggle toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="toggle-text">Меню</span>
-            <svg class="toggle-icon" width="46" height="46">
-              <use href="/__spritemap#sprite-burger"></use>
-            </svg>
-          </button>
+              <button class="hero__header-toggle toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+                <span class="toggle-text">Меню</span>
+                <svg class="toggle-icon" width="46" height="46">
+                  <use href="/__spritemap#sprite-burger"></use>
+                </svg>
+              </button>
 
-          <div class="hero__nav">
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">О проекте</li>
-                <li class="nav__item nav__item--submenu">
-                  <p>Программы
-                  <button class="submenu-toggle" aria-label="Открыть подменю">
-                    <svg class="submenu-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
-                      <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
-                    </svg>
-                  </button>
-                  </p>
-                  <ul class="submenu__list">
-                    <li class="submenu__item">Стажировки</li>
-                    <li class="submenu__item">Волонтерство</li>
-                    <li class="submenu__item">Учёба</li>
-                    <li class="submenu__item">Религия</li>
+              <div class="hero__nav">
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li class="nav__item">О проекте</li>
+                    <li class="nav__item nav__item--submenu">
+                      <p>Программы
+                      <button class="submenu-toggle" aria-label="Открыть подменю">
+                        <svg class="submenu-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
+                          <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                      </button>
+                      </p>
+                      <ul class="submenu__list">
+                        <li class="submenu__item">Стажировки</li>
+                        <li class="submenu__item">Волонтерство</li>
+                        <li class="submenu__item">Учёба</li>
+                        <li class="submenu__item">Религия</li>
+                      </ul>
+                    </li>
+                    <li class="nav__item">Как проехать</li>
+                    <li class="nav__item">Отзывы</li>
+                    <li class="nav__item nav__item--submenu">
+                      <p>Новости
+                        <button class="submenu-toggle" aria-label="Открыть подменю">
+                          <svg class="submenu-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
+                            <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
+                          </svg>
+                        </button>
+                      </p>
+                    </li>
+                    <li class="nav__item">Контакты</li>
                   </ul>
-                </li>
-                <li class="nav__item">Как проехать</li>
-                <li class="nav__item">Отзывы</li>
-                <li class="nav__item nav__item--submenu">
-                  <p>Новости
-                    <button class="submenu-toggle" aria-label="Открыть подменю">
-                      <svg class="submenu-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
-                        <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
-                      </svg>
-                    </button>
-                  </p>
-                </li>
-                <li class="nav__item">Контакты</li>
-              </ul>
-            </nav>
+                </nav>
+              </div>
           </div>
-
+          </div>
         </div>
 
         <div class="hero__slider slider">
@@ -181,11 +184,11 @@
           </div>
 
           <div class="programs__footer">
-            <div class="swiper__pagination swiper__pagination-progressbar">
+            <!-- <div class="swiper__pagination swiper__pagination-progressbar">
               <span class="swiper__pagination-progressbar-fill"
                 style="transform: translate3d(0px, 0px, 0px) scaleX(0.636364) scaleY(1); transition-duration: 300ms;">
               </span>
-            </div>
+            </div> -->
             <div class="programs__prevnext swiper-prevnext">
               <button class="swiper-prevnext__button" aria-label="Посмотреть предыдущую программу" disabled>
                 <svg width="22"
@@ -324,11 +327,11 @@
           </div>
 
           <div class="reviews__footer">
-            <div class="swiper__pagination swiper__pagination-progressbar">
+            <!-- <div class="swiper__pagination swiper__pagination-progressbar">
               <span class="swiper__pagination-progressbar-fill"
                 style="transform: translate3d(0px, 0px, 0px) scaleX(0.636364) scaleY(1); transition-duration: 300ms;">
               </span>
-            </div>
+            </div> -->
             <div class="programs__prevnext swiper-prevnext">
               <button class="swiper-prevnext__button" aria-label="Посмотреть предыдущий отзыв" disabled>
                 <svg width="22"

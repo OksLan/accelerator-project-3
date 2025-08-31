@@ -67,7 +67,7 @@
     left: 10px;
   }
 
-  & h4 {
+  h4 {
     color: $white;
     margin-bottom: 34px;
 
@@ -80,7 +80,7 @@
     }
   }
 
-  & p {
+  p {
     color: $beige;
     font-size: 16px;
     line-height: 26px;
@@ -149,6 +149,7 @@
     font-size: 12px;
     line-height: 12px;
     color: $white;
+    opacity: 0.8;
 
     @media (width < 767px) {
       line-height: 14px;

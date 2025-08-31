@@ -1,43 +1,3 @@
-// .footer__wrapper {
-//   padding: 60px 0 40px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-
-//   & a {
-//     color: $dark;
-//   }
-
-//   & .social-list {
-//     display: flex;
-//     gap: 20px;
-//     position: relative;
-//     margin-left: auto;
-
-//     & .social-list__link {
-//       content: "";
-//       background-color: $primary;
-//       border-radius: 50%;
-//       width: 36px;
-//       height: 36px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//     }
-//   }
-// }
-
-// .footer__links-list {
-//   display: flex;
-//   gap: 30px;
-//   margin-left: auto;
-// }
-
-// .footer__links-item {
-//   font-size: 16px;
-//   line-height: 26px;
-// }
-
 .footer {
   background-color: aliceblue;
 }
@@ -60,14 +20,13 @@
     .footer__privacy    {
       grid-area: privacy;
       display: grid;
-      grid-template-columns: max-content 1fr;
-      column-gap: 20px;
       align-items: center;
 
       .footer__privacy-rights  { grid-column: 1; white-space: nowrap; }
       .footer__privacy-confid  { grid-column: 2; justify-self: end; }
     }
 
+  // tablet
   @media screen and (width < 1439px)  {
     grid-template-rows: auto auto;
     grid-template-columns: 52px max-content;
@@ -76,18 +35,18 @@
       "privacy social";
 
     .footer__logo       { grid-area: logo; justify-self: start; }
-    .footer__links-list { grid-area: links; justify-self: end; display: flex; gap: 15px; margin-left: 0;}
+    .footer__links-list { grid-area: links; justify-self: felx-end; display: flex; gap: 15px;}
 
     .footer__privacy {
       grid-area: privacy;
       display: grid;
-      grid-template-rows: auto auto;
       grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
       row-gap: 10px;
       align-items: start;
 
-      .footer__privacy-rights { grid-row: 2; }
-      .footer__privacy-confid { grid-row: 1; }
+      .footer__privacy-rights { grid-row: 2; opacity: 0.6; }
+      .footer__privacy-confid { grid-column: 1; justify-self: start; grid-row: 1; }
     }
 
     .social-list {
@@ -98,28 +57,27 @@
     }
 }
 
-  // @media screen and (width < 767px) {
-  //   grid-template-columns: 1fr;
-  //   grid-template-areas:
-  //     "logo"
-  //     "links"
-  //     "privacy"
-  //     "social";
+  //mobile
+  @media screen and (width < 767px) {
+    padding: 40px 0;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "links"
+      "privacy"
+      "social";
 
-  //   .footer__logo       { grid-area: logo; justify-self: center; }
-  //   .footer__links-list { grid-area: links; justify-self: center; display: flex; flex-wrap: wrap; gap: 16px; }
-  //   .footer__privacy    { grid-area: privacy; justify-self: center; text-align: center; gap: 10px;}
-  //   .social-list        { grid-area: social; justify-self: center; display: flex; gap: 12px; }
-  // }
+    .footer__logo       { grid-area: logo; justify-self: center; }
+    .footer__links-list { grid-area: links; justify-content: center; display: flex; flex-wrap: wrap; gap: 30px; row-gap: 20px; margin-left: 0;}
+    .footer__privacy    { grid-area: privacy; justify-self: center; text-align: center; gap: 10px;}
+    .social-list        { grid-area: social; justify-self: center; display: flex; gap: 12px; }
 
-  a {
-    color: $dark;
+    .footer__privacy    {
+      .footer__privacy-rights { grid-row: 2; opacity: 0.6; }
+      .footer__privacy-confid { grid-column: 1; justify-self: center; grid-row: 1; }
+    }
   }
-}
-
-.footer__links-list {
-  display: flex;
-  gap: 30px;
 }
 
 .footer__links-item {
@@ -128,6 +86,10 @@
 
   @media screen and (width < 1439px) {
     line-height: 20px;
+  }
+
+  @media screen and (width < 1439px) {
+    font-size: 14px;
   }
 }
 
@@ -141,6 +103,10 @@
     gap: 10px;
   }
 
+  @media screen and (width < 767px) {
+    margin-left: 0;
+  }
+
   & .social-list__link {
     content: "";
     background-color: $primary;
@@ -150,6 +116,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (width < 767px) {
+      width: 26px;
+      height: 26px;
+    }
   }
 }
 
@@ -160,6 +131,11 @@
   @media screen and (width < 1439px) {
     font-size: 12px;
     line-height: 12px;
+  }
+
+  @media screen and (width < 767px) {
+    line-height: 14px;
+    justify-self: center;
   }
 }
 
@@ -182,5 +158,10 @@
   @media screen and (width < 1439px) {
     font-size: 12px;
     line-height: 12px;
+  }
+
+  @media screen and (width < 767px) {
+    line-height: 14px;
+    justify-self: center;
   }
 }

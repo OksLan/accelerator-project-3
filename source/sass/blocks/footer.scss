@@ -1,8 +1,10 @@
-.footer {
-  background-color: aliceblue;
-}
-
 .footer__wrapper {
+
+  a {
+    color: $dark;
+  }
+
+ // desktop
   display: grid;
   align-items: center;
   padding: 60px 0 40px;
@@ -125,6 +127,7 @@
 }
 
 .footer__privacy-rights {
+  color: $dark;
   font-size: 14px;
   line-height: 18px;
 
@@ -144,6 +147,7 @@
   display: inline-block;
   font-size: 14px;
   line-height: 18px;
+  color: $dark;
 
   &::after {
     content: "";

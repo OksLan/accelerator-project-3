@@ -113,29 +113,29 @@
 }
 
 // submenu
-.hero .nav__item--submenu {
+.hero__nav-sublist {
   position: relative;
 }
 
-.hero__nav-item--submenu__toggle {
+.hero__nav-toggle {
   background: none;
   border: none;
   cursor: pointer;
-
-  .hero__nav-item--submenu__toggle-icon {
-    color: $white07;
-    transition: transform 0.3s ease, color 0.3s ease;
-    margin-left: 8px;
-    margin-bottom: 2px;
-  }
-
-  &.hero__nav-item--submenu__toggle--open .hero__nav-item--submenu__toggle-icon {
-    transform: rotate(180deg);
-    color: $white;
-  }
 }
 
-.hero__nav-item--submenu__list {
+.hero__nav-toggle-icon {
+  color: $white07;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-left: 8px;
+  margin-bottom: 2px;
+}
+
+.hero__nav-toggle--open .hero__nav-toggle-icon {
+  transform: rotate(180deg);
+  color: $white;
+}
+
+.hero__nav-sublist {
   gap: 16px;
   margin-left: 16px;
   max-height: 0;
@@ -144,13 +144,13 @@
   transition: max-height 0.3s ease-in-out;
 }
 
-.hero__nav-item--submenu__list--open {
+.hero__nav-sublist--open {
   display: block;
   max-height: 500px;
   visibility: visible;
 }
 
-.hero__nav-item--submenu__item {
+.hero__nav-subitem {
   letter-spacing: 0;
   text-transform: none;
   margin-bottom: 16px;
@@ -169,11 +169,11 @@
   }
 }
 
-.hero__nav-item--submenu__item:first-child {
+.hero__nav-subitem:first-child {
   margin-top: 20px;
 }
 
-.hero__nav-item--submenu__item:last-child {
+.hero__nav-subitem:last-child {
   margin-bottom: 0;
 }
 

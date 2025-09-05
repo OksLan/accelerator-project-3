@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const setIcon = (id) => icon?.setAttribute("href", id);
 
   const closeAllSubmenus = () => {
-    document.querySelectorAll(".submenu__list").forEach(el => el.classList.remove("submenu__list--open"));
-    document.querySelectorAll(".submenu-toggle").forEach(btn => {
-      btn.classList.remove("submenu-toggle--open");
+    document.querySelectorAll(".hero__nav-item--submenu__list").forEach(el => el.classList.remove("hero__nav-item--submenu__list--open"));
+    document.querySelectorAll(".hero__nav-item--submenu__toggle").forEach(btn => {
+      btn.classList.remove("hero__nav-item--submenu__toggle--open");
       btn.setAttribute("aria-expanded", "false");
     });
   };

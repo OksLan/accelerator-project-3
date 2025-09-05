@@ -38,35 +38,37 @@
               </button>
 
               <nav class="hero__nav">
-                  <ul class="nav__list">
-                    <li class="nav__item">О проекте</li>
-                    <li class="nav__item nav__item--submenu">
-                      <p>Программы
-                      <button class="submenu-toggle" aria-label="Открыть подменю">
-                        <svg class="submenu-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
-                          <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
+                <ul class="hero__nav-list">
+                  <li class="hero__nav-item">О проекте</li>
+                  <li class="hero__nav-item hero__nav-item--submenu">
+                    <p>Программы
+                      <button class="hero__nav-item--submenu__toggle" aria-label="Открыть подменю">
+                        <svg class="hero__nav-item--submenu__toggle-icon" width="12" height="7" viewBox="0 0 12 7">
+                            <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
                         </svg>
                       </button>
-                      </p>
-                      <ul class="submenu__list">
-                        <li class="submenu__item">Стажировки</li>
-                        <li class="submenu__item">Волонтерство</li>
-                        <li class="submenu__item">Учёба</li>
-                        <li class="submenu__item">Религия</li>
-                      </ul>
+                    </p>
+                    
+                    <ul class="hero__nav-item--submenu__list">
+                      <li class="hero__nav-item--submenu__item">Стажировки</li>
+                      <li class="hero__nav-item--submenu__item">Волонтерство</li>
+                      <li class="hero__nav-item--submenu__item">Учёба</li>
+                      <li class="hero__nav-item--submenu__item">Религия</li>
+                    </ul>
                     </li>
-                    <li class="nav__item">Как проехать</li>
-                    <li class="nav__item">Отзывы</li>
-                    <li class="nav__item nav__item--submenu">
+                    
+                    <li class="hero__nav-item">Как проехать</li>
+                    <li class="hero__nav-item">Отзывы</li>
+                    <li class="hero__nav-item hero__nav-item--submenu">
                       <p>Новости
-                        <button class="submenu-toggle" aria-label="Открыть подменю">
-                          <svg class="submenu-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
+                        <button class="hero__nav-item--submenu__toggle" aria-label="Открыть подменю">
+                          <svg class="hero__nav-item--submenu__toggle-icon" width="12" height="7" viewBox="0 0 12 7">
                             <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
                           </svg>
                         </button>
                       </p>
                     </li>
-                    <li class="nav__item">Контакты</li>
+                    <li class="hero__nav-item">Контакты</li>
                   </ul>
               </nav>
           </div>
@@ -77,20 +79,6 @@
           <div class="slides-wrapper">
 
             <div class="slide slide--one">
-              <!-- <div class="slide__image-container">
-                <picture class="slide-1">
-                  <source media="(min-width: 1439px)" type="image/webp" width="1440" height="800"
-                  srcset="img/hero/slide1-desktop@1x.webp 1x, img/hero/slide1-desktop@2x.webp 2x">
-                  <source media="(min-width: 767px)" type="image/webp" width="768" height="1024"
-                  srcset="img/hero/slide1-tablet@1x.webp 1x, img/hero/slide1-tablet@2x.webp 2x">
-                  <source media="(min-width: 1439px)" type="image/png" width="1440" height="800"
-                  srcset="img/hero/slide1-desktop@1x.png 1x, img/hero/slide1-desktop@2x.png 2x">
-                  <source media="(min-width: 767px)" type="image/png" width="768" height="1024"
-                  srcset="img/hero/slide1-tablet@1x.png 1x, img/hero/slide1-tablet@2x.png 2x">
-                  <img class="slide1" width="320" height="568" src="img/hero/slide1-mobile@1x.png" alt="slide1">
-                </picture>
-              </div> -->
-
               <!-- <div class="slide__content-container">
                   <h2>Глобальный профессиональный
                     опыт обучения за&nbsp;рубежом</h2>
@@ -330,7 +318,7 @@
                 style="transform: translate3d(0px, 0px, 0px) scaleX(0.636364) scaleY(1); transition-duration: 300ms;">
               </span>
             </div> -->
-            <div class="programs__prevnext swiper-prevnext">
+            <div class="reviews__prevnext swiper-prevnext">
               <button class="swiper-prevnext__button" aria-label="Посмотреть предыдущий отзыв" disabled>
                 <svg width="22"
                   height="22"
@@ -416,10 +404,10 @@
           </div>
 
           <div class="form__city">
-            <label class="city" for="city">Выберите город</label>
-            <select class="city__list" name="city" id="city">
-              <option class="city__item" value=""> </option>
-              <option class="city__item" value="Москва">Москва</option>
+            <label class="form__city-label" for="city">Выберите город</label>
+            <select class="form__city-list" name="city" id="city">
+              <option class="form__city-item" value=""> </option>
+              <option class="form__city-item" value="Москва">Москва</option>
             </select>
           </div>
 

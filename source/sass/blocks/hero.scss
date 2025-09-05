@@ -88,7 +88,7 @@
   }
 }
 
-.hero .nav__list {
+.hero__nav-list {
   margin: 0;
   padding: 0;
   padding: 35px 25px;
@@ -97,7 +97,7 @@
   gap: 28px;
 }
 
-.hero .nav__item {
+.hero__nav-item {
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.2px;
@@ -117,25 +117,25 @@
   position: relative;
 }
 
-.hero .submenu-toggle {
+.hero__nav-item--submenu__toggle {
   background: none;
   border: none;
   cursor: pointer;
 
-  .submenu-toggle-icon {
+  .hero__nav-item--submenu__toggle-icon {
     color: $white07;
     transition: transform 0.3s ease, color 0.3s ease;
     margin-left: 8px;
     margin-bottom: 2px;
   }
 
-  &.submenu-toggle--open .submenu-toggle-icon {
+  &.hero__nav-item--submenu__toggle--open .hero__nav-item--submenu__toggle-icon {
     transform: rotate(180deg);
     color: $white;
   }
 }
 
-.hero .submenu__list {
+.hero__nav-item--submenu__list {
   gap: 16px;
   margin-left: 16px;
   max-height: 0;
@@ -144,13 +144,13 @@
   transition: max-height 0.3s ease-in-out;
 }
 
-.hero .submenu__list--open {
+.hero__nav-item--submenu__list--open {
   display: block;
   max-height: 500px;
   visibility: visible;
 }
 
-.hero .submenu__item {
+.hero__nav-item--submenu__item {
   letter-spacing: 0;
   text-transform: none;
   margin-bottom: 16px;
@@ -169,11 +169,11 @@
   }
 }
 
-.hero .submenu__item:first-child {
+.hero__nav-item--submenu__item:first-child {
   margin-top: 20px;
 }
 
-.hero .submenu__item:last-child {
+.hero__nav-item--submenu__item:last-child {
   margin-bottom: 0;
 }
 

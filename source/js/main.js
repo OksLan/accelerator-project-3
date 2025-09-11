@@ -3,6 +3,11 @@ import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation'
 
+/* HERO slider */
+
+import { initSlider} from "./slider.js";
+
+  initSlider();
 
 /* FAQ */
 // document.addEventListener('DOMContentLoaded', () => {

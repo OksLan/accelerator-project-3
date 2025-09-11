@@ -135,7 +135,7 @@
   }
 }
 
-.slide__container {
+.slide__content {
   margin-left: 100px; 
   display: flex;
     
@@ -162,16 +162,19 @@
   gap: 12px;
   justify-content: center;
   align-items: center;
+  left: 100px;
   
   @media screen and (width < 1439px) {
     width: 100px;
     bottom: 332px;
+    left: 45px;
   }
   
   @media screen and (width < 767px) {
     width: 80px;
     height: 28px;
     border-radius: 12px 12px 0 0;
+    left: 15px;
   }
   
   &::before {

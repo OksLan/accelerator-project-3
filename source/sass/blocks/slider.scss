@@ -3,13 +3,14 @@
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
+  height: 100%;
 }
-  
+
 .slides-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-  
+
 .slide {
   position: relative;
   display: flex;
@@ -18,15 +19,15 @@
   width: 100%;
   min-height: 800px;
   flex-shrink: 0;
-  
+
   @media screen and (width < 1439px) {
     min-height: 1024px;
   }
-  
+
   @media screen and (width < 767px) {
     min-height: 568px;
   }
-  
+
   &::before {
     content: "";
     display: block;
@@ -47,7 +48,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom left;
-  
+
   @media screen and (width < 1439px) {
     background-image:
     image-set(
@@ -57,7 +58,7 @@
     url("../../img/hero/slide_1-tablet@2x.webp") type("image/webp") 2x
     );
   }
-  
+
   @media screen and (width < 767px) {
     background-image:
     image-set(
@@ -80,7 +81,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom left;
-   
+
   @media screen and (width < 1439px) {
     background-image:
     image-set(
@@ -90,7 +91,7 @@
     url("../../img/hero/slide_2-tablet@2x.webp") type("image/webp") 2x
     );
   }
-    
+
   @media screen and (width < 767px) {
     background-image:
     image-set(
@@ -113,7 +114,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom left;
-     
+
   @media screen and (width < 1439px) {
     background-image:
     image-set(
@@ -123,7 +124,7 @@
     url("../../img/hero/slide_3-tablet@2x.webp") type("image/webp") 2x
     );
   }
-      
+
   @media screen and (width < 767px) {
     background-image:
     image-set(
@@ -136,19 +137,19 @@
 }
 
 .slide__content {
-  margin-left: 100px; 
+  margin-left: 100px;
   display: flex;
-    
+
   @media screen and (width < 1439px) {
     margin-left: 45px;
   }
-  
+
   @media screen and (width < 767px) {
     margin-left: 15px;
     flex-direction: column;
   }
 }
-  
+
 .slider__pagination {
   position: absolute;
   z-index: 3;
@@ -156,27 +157,28 @@
   width: 120px;
   height: 40px;
   bottom: 366px;
+  left: 160px;
   border-radius: 20px 20px 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   align-items: center;
-  left: 100px;
-  
+  transform: translateX(-50%);
+
   @media screen and (width < 1439px) {
     width: 100px;
     bottom: 332px;
-    left: 45px;
+    left: 95px;
   }
-  
+
   @media screen and (width < 767px) {
     width: 80px;
     height: 28px;
     border-radius: 12px 12px 0 0;
-    left: 15px;
+    left: 55px;
   }
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -185,21 +187,21 @@
       background-image: url("../../img/sprite/angle-1.svg");
     top: 20px;
     left: 120px;
-  
+
       @media screen and (width < 1439px) {
     left: 99px;
-   }    
-  
+   }
+
    @media screen and (width < 767px) {
     background-image: url("../../img/sprite/angle-3.svg");
     width: 10px;
     height: 10px;
     top: 18px;
     left: 79px;
-    }  
+    }
   }
 }
-  
+
 .slider__pagination-bullet {
   display: inline-block;
   width: 12px;
@@ -208,17 +210,17 @@
   border: 2px solid $primary;
   cursor: pointer;
   position: relative;
-  
+
   @media screen and (width < 767px) {
     width: 8px;
     height: 8px;
-  }  
+  }
 }
-  
+
 .slider__pagination-bullet--selected {
   background-color: $primary;
 }
-  
+
 .slide__content-heading {
   display: flex;
   justify-content: space-between;
@@ -228,25 +230,25 @@
   background-color: $white;
   padding: 40px 50px 30px;
   border-radius: 0 30px 30px 0;
-  
+
   @media screen and (width < 1439px) {
     padding: 30px 69px 24px 40px;
     max-width: 659px;
     bottom: 192px;
   }
-  
+
   @media screen and (width < 767px) {
     padding: 20px 15px 16px 14px;
     max-width: 290px;
     bottom: 193px;
     border-radius: 0 16px 16px 0;
   }
-  
+
   h2 {
     color: $primary;
   }
 }
-  
+
 .slide__content-text {
   display: flex;
   justify-content: space-between;
@@ -256,12 +258,12 @@
   background-color: $white;
   padding: 0 41px 35px;
   border-radius: 0 0 0 30px;
-  
+
   @media screen and (width < 1439px) {
     max-width: 593px;
     padding: 0 28px 35px 40px;
   }
-  
+
   @media screen and (width < 767px) {
     flex-direction: column;
     padding: 0 14px 15px;
@@ -269,23 +271,23 @@
     border-radius: 0 0 16px 0;
     bottom: 79px;
   }
-    
+
   p {
     font-size: 16px;
     line-height: 26px;
     color: $dark;
     max-width: 446px;
-  
+
     @media screen and (width < 1439px) {
       line-height: 20px;
       max-width: 285px;
     }
-  
+
     @media screen and (width < 767px) {
       max-width: 267px;
     }
   }
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -294,12 +296,12 @@
     background-image: url("../../img/sprite/angle-2.svg");
     top: 0;
     left: 776px;
-  
+
     @media screen and (width < 1439px) {
       left: 591px;
       top: 4px;
     }
-  
+
     @media screen and (width < 767px) {
       left: 591px;
       top: 0;
@@ -310,7 +312,7 @@
     }
   }
 }
-  
+
 .slide__content-button {
   background-color: $white;
   display: flex;
@@ -323,13 +325,13 @@
   padding-right: 56px;
   border-radius: 0 0 30px 0;
   z-index: 3;
-  
+
   @media screen and (width < 1439px) {
     left: 398px;
     padding-right: 40px;
     height: 131px;
   }
-  
+
   @media screen and (width < 767px) {
     padding: 10px 15px;
     height: 64px;
@@ -337,7 +339,7 @@
     bottom: 16px;
     border-radius: 0 0 16px 16px;
     left: 15px;
-  
+
     &::before {
       content: "";
       position: absolute;
@@ -349,14 +351,14 @@
     }
   }
 }
-  
+
 .slide__button {
   height: 58px;
- 
+
   @media screen and (width < 1439px) {
     height: 56px;
   }
- 
+
   @media screen and (width < 767px) {
     height: 44px;
   }

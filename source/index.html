@@ -560,6 +560,56 @@
         </div>
     </div>
 
+    <!-- темплейт карточки каталога Программы -->
+    <template id="program-card">
+      <article class="programs__list-item program-card swiper-slide">
+        <div class="program-card__image-wrapper">
+          <picture>
+            <source
+                media="(min-width: 1439px)"
+                class="tour-card__image-webp"
+                type="image/webp"
+                width="380"
+                height="416"
+              data-srcset="img/programs/[[id]]-desktop@1x.webp 1x, img/cards/[[id]]-desktop@2x.webp 2x">
+            <source
+                media="(min-width: 1439px)"
+                class="tour-card__image-png"
+                type="image/png"
+                width="380"
+                height="416"
+              data-srcset="img/programs/[[id]]-desktop@1x.png 1x, img/cards/[[id]]-desktop@2x.png 2x">
+            <source
+                media="(min-width: 767px)"
+                class="tour-card__image-webp"
+                type="image/webp"
+                width="330"
+                height="416"
+              data-srcset="img/programs/[[id]]-tablet@1x.webp 1x, img/cards/[[id]]-tablet@2x.webp 2x">
+            <source
+                media="(min-width: 767px)"
+                class="tour-card__image-png"
+                type="image/png"
+                width="330"
+                height="416"
+              data-srcset="img/programs/[[id]]-tablet@1x.png 1x, img/cards/[[id]]-tablet@2x.png 2x">
+            <img
+                class="tour-card__image"
+                data-src="img/cards/[[id]]-mobile@1x.png"
+                data-srcset="img/cards/[[id]]-mobile@1x.png 1x, img/cards/[[id]]-mobile@2x.png 2x"
+                width="290"
+                height="416"
+              alt="">
+          </picture>
+        </div>
+        <div class="program-card__title">Стажировки</div>
+        <div class="program-card__text">
+          <p></p>
+        </div>
+        <a class="program-card__button button" href="#"></a>
+      </article>
+    </template>    
+
     <script type="module" src="js/main.js"></script>
   </body>
 

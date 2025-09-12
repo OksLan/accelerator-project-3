@@ -1,0 +1,28 @@
+.program-card {
+  position: relative;
+  background-color: $white;
+  width: 392px;
+  height: 420px;
+}
+
+.program-card picture::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(49, 109, 194, 0.2);
+}
+
+.program-card__title {
+  color: $primary;
+  display: flex;
+  font-size: 24px;
+  line-height: 17px;
+}
+
+.program-card__text {
+  color: $dark;
+  display: flex;
+  font-size: 24px;
+  line-height: 17px;
+}

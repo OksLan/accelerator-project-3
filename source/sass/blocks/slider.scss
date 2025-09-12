@@ -9,6 +9,7 @@
 .slides-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  // position: relative;
 }
 
 .slide {
@@ -157,26 +158,26 @@
   width: 120px;
   height: 40px;
   bottom: 366px;
-  left: 160px;
+  left: 100px;
   border-radius: 20px 20px 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   align-items: center;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
 
   @media screen and (width < 1439px) {
     width: 100px;
     bottom: 332px;
-    left: 95px;
+    left: 45px;
   }
 
   @media screen and (width < 767px) {
     width: 80px;
     height: 28px;
     border-radius: 12px 12px 0 0;
-    left: 55px;
+    left: 15px;
   }
 
   &::before {
@@ -298,7 +299,7 @@
     left: 776px;
 
     @media screen and (width < 1439px) {
-      left: 591px;
+      left: 589px;
       top: 4px;
     }
 
@@ -327,7 +328,7 @@
   z-index: 3;
 
   @media screen and (width < 1439px) {
-    left: 398px;
+    left: 397px;
     padding-right: 40px;
     height: 131px;
   }

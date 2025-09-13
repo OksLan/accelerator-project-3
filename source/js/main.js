@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { programCards, showPrograms } from './programs.js';
+  showPrograms(programCards);
 
 /* HERO slider */
 import { initSlider} from "./slider.js";

@@ -1,9 +1,9 @@
 import Swiper from "swiper";
 import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
-import 'swiper/css/navigation'
+import 'swiper/css/navigation';
 
-import { programs, showPrograms } from './programs.js';
+import { programCards, showPrograms } from './programs.js';
 
 /* HERO slider */
 import { initSlider} from "./slider.js";

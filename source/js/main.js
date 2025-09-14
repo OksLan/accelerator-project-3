@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { programCards, showPrograms } from './programs.js';
-  showPrograms(programCards);
+  // showPrograms(programCards);
 
 /* HERO slider */
 import { initSlider} from "./slider.js";
@@ -65,4 +65,40 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.setAttribute("aria-expanded", isOpen);
     });
   });
+});
+
+/* PROGRAMS */
+const programsList = document.querySelector(".programs__list");
+const programTemplate = document.querySelector("#program-card");
+
+showPrograms(programCards);
+
+/* PROGRAMS свайпер */
+const swiperPrograms = new Swiper('.programs__swiper', {
+  modules: [Navigation],
+  direction: 'horizontal',
+  speed: 500,
+
+  breakpoints: {
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
+
+    // Navigation arrows
+  navigation: {
+  nextEl: '.tours__button--next',
+  prevEl: '.tours__button--prev',
+  enabled: true,
+  clickable: true,
+},
 });

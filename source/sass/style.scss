@@ -500,7 +500,7 @@ ul {
   }
 }
 
-.swiper-prevnext {
+.swiper-buttons {
   display: flex;
   cursor: pointer;
   gap: 10px;
@@ -516,7 +516,7 @@ ul {
   }
 }
 
-.swiper-prevnext__button {
+.swiper-buttons__button {
   width: 22px;
   height: 22px;
   background-color: transparent;

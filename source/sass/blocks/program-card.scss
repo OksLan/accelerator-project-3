@@ -38,9 +38,19 @@
   line-height: 17px;
   padding: 18px 0 6px 18px;
   border-radius: 12px 12px 0 0;
-  top: 280px;
+  top: 281px;
   background-color: $white;
-  width: 212px;
+  width: 194px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../img/sprite/angle-6.svg);
+    top: 23px;
+    left: 193px;
+  }
 }
 
 .program-card__text {
@@ -62,7 +72,7 @@
   position: absolute;
   background-color: $white;
   top: 321px;
-  left: 259px;
+  left: 258px;
   height: 82px;
   width: 64px;
   border-radius: 0 12px 12px 0;

@@ -9,7 +9,6 @@
 .slides-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  // position: relative;
 }
 
 .slide {
@@ -138,34 +137,82 @@
 }
 
 .slide__content {
-  margin-left: 100px;
   display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 58px;
+  left: 100px;
+  max-width: 968px;
 
   @media screen and (width < 1439px) {
-    margin-left: 45px;
+    left: 45px;
   }
 
   @media screen and (width < 767px) {
-    margin-left: 15px;
+    left: 15px;
     flex-direction: column;
+  }
+
+  &::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/sprite/angle-2.svg");
+
+    @media screen and (width < 1439px) {
+      left: 589px;
+      top: 4px;
+    }
+
+    @media screen and (width < 767px) {
+      left: 591px;
+      top: 0;
+      background-image: url("../../img/sprite/angle-4.svg");
+      width: 8px;
+      height: 10px;
+      left: 267px;
+    }
   }
 }
 
 .slider__pagination {
   position: absolute;
   z-index: 3;
-  background-color: $white;
   width: 120px;
   height: 40px;
   bottom: 366px;
   left: 100px;
-  border-radius: 20px 20px 0 0;
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   align-items: center;
-  // transform: translateX(-50%);
+
+  @media screen and (width < 1439px) {
+    width: 100px;
+    bottom: 332px;
+    left: 45px;
+  }
+
+  @media screen and (width < 767px) {
+    width: 80px;
+    height: 28px; 
+    border-radius: 12px 12px 0 0;
+    left: 15px;
+  }
+}
+
+.slider__pagination-bg {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  bottom: 366px;
+  left: 100px;
+  background-color: $white;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (width < 1439px) {
     width: 100px;
@@ -183,27 +230,41 @@
   &::before {
     content: "";
     position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url("../../img/sprite/angle-1.svg");
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/sprite/angle-1.svg");
     top: 20px;
     left: 120px;
 
-      @media screen and (width < 1439px) {
-    left: 99px;
-   }
+    @media screen and (width < 1439px) {
+      left: 99px;
+    }
 
-   @media screen and (width < 767px) {
-    background-image: url("../../img/sprite/angle-3.svg");
-    width: 10px;
-    height: 10px;
-    top: 18px;
-    left: 79px;
+    @media screen and (width < 767px) {
+      background-image: url("../../img/sprite/angle-3.svg");
+      width: 10px;
+      height: 10px;
+      top: 18px;
+      left: 79px;
     }
   }
 }
 
 .slider__pagination-bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+
+  @media screen and (width < 767px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.slider__pagination-bullet-inslide {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -223,11 +284,7 @@
 }
 
 .slide__content-heading {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  max-width: 968px;
-  bottom: 173px;
+  flex-grow: 1;
   background-color: $white;
   padding: 40px 50px 30px;
   border-radius: 0 30px 30px 0;
@@ -251,11 +308,6 @@
 }
 
 .slide__content-text {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  max-width: 775px;
-  bottom: 61px;
   background-color: $white;
   padding: 0 41px 35px;
   border-radius: 0 0 0 30px;
@@ -288,44 +340,14 @@
       max-width: 267px;
     }
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-image: url("../../img/sprite/angle-2.svg");
-    top: 0;
-    left: 776px;
-
-    @media screen and (width < 1439px) {
-      left: 589px;
-      top: 4px;
-    }
-
-    @media screen and (width < 767px) {
-      left: 591px;
-      top: 0;
-      background-image: url("../../img/sprite/angle-4.svg");
-      width: 8px;
-      height: 10px;
-      left: 267px;
-    }
-  }
 }
 
 .slide__content-button {
   background-color: $white;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  max-width: 249px;
-  bottom: 61px;
-  left: 627px;
-  height: 113px;
+  max-width: fit-content;
   padding-right: 56px;
+  padding-bottom: 56px;
   border-radius: 0 0 30px 0;
-  z-index: 3;
 
   @media screen and (width < 1439px) {
     left: 397px;

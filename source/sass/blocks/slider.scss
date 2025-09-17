@@ -150,7 +150,7 @@
 
   @media screen and (width < 767px) {
     left: 15px;
-    flex-direction: column;
+    bottom: 20px;
   }
 
   &::after {
@@ -159,18 +159,11 @@
     height: 26px;
     background-image: url("../../img/sprite/angle-2.svg");
 
-    @media screen and (width < 1439px) {
-      left: 589px;
-      top: 4px;
-    }
-
     @media screen and (width < 767px) {
-      left: 591px;
-      top: 0;
-      background-image: url("../../img/sprite/angle-4.svg");
-      width: 8px;
+      width: 10px;
       height: 10px;
-      left: 267px;
+      background-image: url("../../img/sprite/angle-5.svg");
+      order: 2;
     }
   }
 }
@@ -180,7 +173,7 @@
   z-index: 3;
   width: 120px;
   height: 40px;
-  bottom: 366px;
+  bottom: 365px;
   left: 100px;
   display: flex;
   gap: 12px;
@@ -198,6 +191,7 @@
     height: 28px; 
     border-radius: 12px 12px 0 0;
     left: 15px;
+    bottom: 339px;
   }
 }
 
@@ -205,7 +199,7 @@
   position: absolute;
   width: 120px;
   height: 40px;
-  bottom: 366px;
+  bottom: 365px;
   left: 100px;
   background-color: $white;
   border-radius: 20px 20px 0 0;
@@ -225,6 +219,7 @@
     height: 28px;
     border-radius: 12px 12px 0 0;
     left: 15px;
+    bottom: 339px;
   }
 
   &::before {
@@ -292,14 +287,22 @@
   @media screen and (width < 1439px) {
     padding: 30px 69px 24px 40px;
     max-width: 659px;
-    bottom: 192px;
   }
 
   @media screen and (width < 767px) {
     padding: 20px 15px 16px 14px;
     max-width: 290px;
-    bottom: 193px;
     border-radius: 0 16px 16px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/sprite/angle-4.svg");
+      width: 8px;
+      height: 10px;
+      left: 266px;
+      top: 140px;
+    }
   }
 
   h2 {
@@ -318,11 +321,9 @@
   }
 
   @media screen and (width < 767px) {
-    flex-direction: column;
     padding: 0 14px 15px;
     max-width: 267px;
     border-radius: 0 0 16px 0;
-    bottom: 79px;
   }
 
   p {
@@ -350,28 +351,12 @@
   border-radius: 0 0 30px 0;
 
   @media screen and (width < 1439px) {
-    left: 397px;
     padding-right: 40px;
-    height: 131px;
   }
 
   @media screen and (width < 767px) {
     padding: 10px 15px;
-    height: 64px;
-    max-width: 194px;
-    bottom: 16px;
     border-radius: 0 0 16px 16px;
-    left: 15px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-image: url("../../img/sprite/angle-5.svg");
-      top: 0;
-      left: 191px;
-    }
   }
 }
 

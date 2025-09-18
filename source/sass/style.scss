@@ -499,6 +499,32 @@ ul {
       letter-spacing: 0.24px;
     }
   }
+
+  &--notext {
+    background-color: $white;
+    border-radius: 0 12px 12px 0;
+    padding: 22px 52px 22px 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #316dc2;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../../img/button/white.svg);
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      transform: rotate(-45deg);
+      left: 50%;
+    }
+  }
 }
 
 .swiper-buttons {

@@ -1,5 +1,6 @@
 .programs {
   position: relative;
+  display: flex;
 }
 
 .programs__wrapper {
@@ -38,6 +39,8 @@
 .programs__footer {
   display: flex;
   justify-content: space-between;
+
+  align-items: center;
 }
 
 .programs__list-item {

@@ -11,14 +11,17 @@
 .grant__wrapper {
   display: flex;
   gap: 138px;
-  padding: 120px 206px 100px;
+  padding: 120px 206px 120px 100px;
 
+  padding-top: 120px;
+  padding-bottom: 100px;
 
   @media screen and (width < 1439px) {
     flex-direction: column;
     gap: 40px;
-    padding: 100px 45px;
+    padding-top: 100px;
   }
+
 
   @media screen and (width < 767px) {
     gap: 30px;

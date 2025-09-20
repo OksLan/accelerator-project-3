@@ -102,3 +102,20 @@ const swiperPrograms = new Swiper('.programs__swiper', {
   clickable: true,
 },
 });
+
+/* перемещение элементов в PROGRAMS */
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".programs__header");
+  const footer = document.querySelector(".programs__footer");
+  const link   = document.querySelector(".programs__link");
+  const buttons = document.querySelector(".programs__buttons");
+
+  const move = () => {
+    const mobile = window.innerWidth < 768;
+    header.append(mobile ? buttons : link);
+    footer.prepend(mobile ? link : buttons);
+  };
+
+  move();
+  window.addEventListener("resize", move);
+});

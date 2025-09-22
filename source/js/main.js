@@ -77,6 +77,7 @@ showPrograms(programCards);
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation],
   direction: 'horizontal',
+  loop: false,
   speed: 500,
 
   breakpoints: {
@@ -94,13 +95,13 @@ const swiperPrograms = new Swiper('.programs__swiper', {
     },
   },
 
-    // Navigation arrows
-  navigation: {
-  nextEl: '.tours__button--next',
-  prevEl: '.tours__button--prev',
-  enabled: true,
-  clickable: true,
-},
+  // Navigation arrows
+    navigation: {
+    nextEl: '.programs__button--next',
+    prevEl: '.programs__button--prev',
+    enabled: true,
+    clickable: true,
+  },
 });
 
 /* перемещение элементов в PROGRAMS */

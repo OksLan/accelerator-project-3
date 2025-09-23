@@ -1,10 +1,10 @@
 import Swiper from "swiper";
 import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 import { programCards, showPrograms } from './programs.js';
-  // showPrograms(programCards);
 
 /* HERO slider */
 import { initSlider} from "./slider.js";
@@ -75,7 +75,7 @@ showPrograms(programCards);
 
 /* PROGRAMS свайпер */
 const swiperPrograms = new Swiper('.programs__swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Pagination],
   direction: 'horizontal',
   loop: false,
   speed: 500,
@@ -95,28 +95,46 @@ const swiperPrograms = new Swiper('.programs__swiper', {
     },
   },
 
-  // Navigation arrows
+  // пагинация-скроллбар
+  pagination: {
+    el: '.swiper__pagination',
+    type: 'progressbar',
+  },
+
+  // стрелки
     navigation: {
     nextEl: '.programs__button--next',
     prevEl: '.programs__button--prev',
     enabled: true,
     clickable: true,
   },
+
+
 });
 
 /* перемещение элементов в PROGRAMS */
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".programs__header");
-  const footer = document.querySelector(".programs__footer");
-  const link   = document.querySelector(".programs__link");
-  const buttons = document.querySelector(".programs__buttons");
+  const header     = document.querySelector(".programs__header");
+  const footer     = document.querySelector(".programs__footer");
+  const link       = document.querySelector(".programs__link");
+  const buttons    = document.querySelector(".programs__buttons");
+  const pagination = footer.querySelector(".swiper__pagination");
 
   const move = () => {
     const mobile = window.innerWidth < 768;
-    header.append(mobile ? buttons : link);
-    footer.prepend(mobile ? link : buttons);
+
+    if (mobile) {
+      if (pagination) pagination.style.display = "none";
+      if (!header.contains(buttons)) header.append(buttons);
+      if (!footer.contains(link)) footer.append(link);
+    } else {
+      if (pagination) pagination.style.display = "";
+      if (!header.contains(link)) header.append(link);
+      if (!footer.contains(buttons)) footer.append(buttons);
+    }
   };
 
   move();
   window.addEventListener("resize", move);
 });
+

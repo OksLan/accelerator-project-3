@@ -589,7 +589,7 @@ ul {
   width: calc(100% - 104px);
   background-color: $primary02;
   height: 1px;
-  position: relative;
+  position: unset;
 }
 
 .swiper__pagination.swiper__pagination-progressbar
@@ -600,4 +600,6 @@ ul {
   border-radius: 2px;
   width: 420px;
   left: 24px;
+  top: 0;
+  bottom: 0;
 }

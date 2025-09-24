@@ -97,7 +97,7 @@ const swiperPrograms = new Swiper('.programs__swiper', {
 
   // пагинация-скроллбар
   pagination: {
-    el: '.swiper__pagination',
+    el: '.programs__footer .swiper__pagination',
     type: 'progressbar',
   },
 
@@ -108,8 +108,6 @@ const swiperPrograms = new Swiper('.programs__swiper', {
     enabled: true,
     clickable: true,
   },
-
-
 });
 
 /* перемещение элементов в PROGRAMS */

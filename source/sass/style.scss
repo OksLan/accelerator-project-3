@@ -578,9 +578,10 @@ ul {
       fill: $primary07;
     }
   }
+
   &:disabled {
     svg {
-      fill: $primary07;
+      fill: $grey;
     }
   }
 }

@@ -564,6 +564,7 @@ ul {
       fill: $primary02;
     }
   }
+
   &:focus {
     background-color: $white;
 
@@ -571,6 +572,7 @@ ul {
       fill: $primary;
     }
   }
+  
   &:active {
     background-color: $white;
 

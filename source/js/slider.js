@@ -94,5 +94,9 @@ export function initSlider() {
     slider.addEventListener("touchend", handleDragEnd);
 
     goToSlide(slideIndex, false);
+
+    window.addEventListener("resize", () => {
+      goToSlide(slideIndex, false);
+    });
   });
 }

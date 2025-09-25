@@ -561,7 +561,7 @@ ul {
 
   &:hover {
     svg {
-      fill: $primary02;
+      stroke: $primary02;
     }
   }
 
@@ -577,7 +577,7 @@ ul {
     background-color: $white;
 
     svg {
-      fill: $primary07;
+      stroke: $primary07;
     }
   }
 
@@ -588,14 +588,13 @@ ul {
   }
 }
 
-.swiper__pagination.swiper__pagination-progressbar {
-  width: calc(100% - 104px);
-  background-color: $primary02;
-  height: 1px;
-  position: unset;
+.swiper-pagination-progressbar.programs__pagination-progressbar {
+  width: calc(100% - 104px) !important;
+  background-color: $primary02 !important;
+  height: 1px !important;
+  position: unset !important;
 }
 
-.swiper__pagination.swiper__pagination-progressbar
 .swiper__pagination-progressbar-fill {
   position: absolute;
   height: 2px;

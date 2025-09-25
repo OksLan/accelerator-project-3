@@ -196,7 +196,7 @@
 }
 
 .slider__pagination-bg {
-  position: absolute;
+  // position: absolute;
   width: 120px;
   height: 40px;
   bottom: 365px;
@@ -286,12 +286,10 @@
 
   @media screen and (width < 1439px) {
     padding: 30px 69px 24px 40px;
-    max-width: 659px;
   }
 
   @media screen and (width < 767px) {
     padding: 20px 15px 16px 14px;
-    max-width: 290px;
     border-radius: 0 16px 16px 0;
 
     &::after {

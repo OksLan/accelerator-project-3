@@ -77,7 +77,7 @@ showPrograms(programCards);
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   speed: 500,
 
   breakpoints: {

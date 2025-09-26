@@ -556,7 +556,7 @@ ul {
   border-radius: 50px;
 
   svg {
-    fill: $primary;
+    stroke: $primary;
   }
 
   &:hover {
@@ -569,7 +569,7 @@ ul {
     background-color: $white;
 
     svg {
-      fill: $primary;
+      stroke: $primary;
     }
   }
   
@@ -583,16 +583,16 @@ ul {
 
   &:disabled {
     svg {
-      fill: $grey;
+      stroke: $grey;
     }
   }
 }
 
 .swiper-pagination-progressbar.programs__pagination-progressbar {
-  width: calc(100% - 104px) !important;
-  background-color: $primary02 !important;
-  height: 1px !important;
-  position: unset !important;
+  width: calc(100% - 104px);
+  background-color: $primary02;
+  height: 1px;
+  position: unset;
 }
 
 .swiper__pagination-progressbar-fill {

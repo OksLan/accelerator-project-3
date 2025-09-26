@@ -47,7 +47,7 @@
     );
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: top left;
 
   @media screen and (width < 1439px) {
     background-image:
@@ -80,7 +80,7 @@
     );
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: top left;
 
   @media screen and (width < 1439px) {
     background-image:
@@ -113,7 +113,7 @@
     );
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: top left;
 
   @media screen and (width < 1439px) {
     background-image:
@@ -146,11 +146,13 @@
 
   @media screen and (width < 1439px) {
     left: 45px;
+    max-width: 659px;
   }
 
   @media screen and (width < 767px) {
     left: 15px;
     bottom: 20px;
+    max-width: 290px;
   }
 
   &::after {
@@ -298,8 +300,8 @@
       background-image: url("../../img/sprite/angle-4.svg");
       width: 8px;
       height: 10px;
-      left: 266px;
-      top: 140px;
+      left: 267px;
+      top: 167px;
     }
   }
 

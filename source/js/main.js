@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
-// import 'swiper/css/navigation';
+import 'swiper/css/navigation';
 
 import { programCards, showPrograms } from './programs.js';
 
@@ -76,7 +76,6 @@ showPrograms(programCards);
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
-  loop: false,
   speed: 500,
 
   breakpoints: {

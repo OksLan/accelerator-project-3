@@ -1,6 +1,11 @@
-<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<!-- <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
   <path d="M16 11H6" stroke="#A9AFB7" stroke-width="2" stroke-linecap="round"/>
   <path d="M6 11L11 6" stroke="#A9AFB7" stroke-width="2" stroke-linecap="round"/>
   <path d="M6 11L11 16" stroke="#A9AFB7" stroke-width="2" stroke-linecap="round"/>
-</svg>
+</svg> -->
 
+<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <g transform="scale(-1,1) translate(-10,0)">
+    <path d="M8.8322 4.49484L9.3372 4.99986L4.8185 9.51857L3.80845 8.5085L6.60281 5.71415H0.246094V4.28557H6.60281L3.80845 1.49121L4.8185 0.480469L8.8322 4.49484Z" />
+  </g>
+</svg>

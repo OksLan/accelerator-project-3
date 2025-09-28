@@ -556,12 +556,12 @@ ul {
   border-radius: 50px;
 
   svg {
-    stroke: $primary;
+    fill: $primary;
   }
 
   &:hover {
     svg {
-      stroke: $primary02;
+      fill: $primary02;
     }
   }
 
@@ -569,21 +569,21 @@ ul {
     background-color: $white;
 
     svg {
-      stroke: $primary;
+      fill: $primary;
     }
   }
-  
+
   &:active {
     background-color: $white;
 
     svg {
-      stroke: $primary07;
+      fill: $primary07;
     }
   }
 
   &:disabled {
     svg {
-      stroke: $grey;
+      fill: $grey;
     }
   }
 }

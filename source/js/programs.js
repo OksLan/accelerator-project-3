@@ -14,6 +14,11 @@ const programCards = [
     title: "Учёба",
     text: "Получите образование и&nbsp;измените своё будущее.",
   },
+  {
+    foto: "study",
+    title: "Учёба",
+    text: "Получите образование и&nbsp;измените своё будущее.",
+  },
 ];
 
 export { programCards };

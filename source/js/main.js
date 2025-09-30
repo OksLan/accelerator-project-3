@@ -93,12 +93,6 @@ const swiperPrograms = new Swiper('.programs__swiper', {
     },
   },
 
-  // пагинация-скроллбар
-  pagination: {
-    el: '.programs__footer .swiper__pagination',
-    type: 'progressbar',
-  },
-
   // стрелки
     navigation: {
     nextEl: '.programs__button--next',
@@ -133,4 +127,3 @@ document.addEventListener("DOMContentLoaded", () => {
   move();
   window.addEventListener("resize", move);
 });
-

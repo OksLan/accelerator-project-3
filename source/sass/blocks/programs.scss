@@ -53,29 +53,14 @@
 
 .programs__pagination-progressbar {
   position: relative;
-  height: 2px;
   width: calc(100% - 104px);
-  background: $primary02;
-  border-radius: 1px;
-  overflow: visible;
-}
-
-.programs__pagination-progressbar-fill {
-  --fill-width: 394px;
-  position: absolute;
-  left: 0;
-  top: 50%;
   height: 2px;
-  width: var(--fill-width);
-  transform: translateY(-50%) translateX(calc(var(--p, 0) * (100% - var(--fill-width))));
-  transform-origin: left center !important;
-  transition: transform 300ms ease;
-  background: $primary;
-  will-change: transform;
+  background: $primary02;
 }
 
-@media screen and (width < 1439px) {
-  .programs__pagination-progressbar-fill {
-    --fill-width: 326px;
-  }
+.programs__pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: $primary;
+  height: 100%;
+  transform-origin: left top;
+  display: block;
 }

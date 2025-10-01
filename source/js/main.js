@@ -100,6 +100,12 @@ const swiperPrograms = new Swiper('.programs__swiper', {
     enabled: true,
     clickable: true,
   },
+
+  // прогрессбар
+  pagination: {
+    el: '.programs__pagination-progressbar',
+    type: 'progressbar',
+  },
 });
 
 /* перемещение элементов в PROGRAMS */

@@ -1,7 +1,6 @@
 .program-card {
   position: relative;
   background-color: $white;
-  width: 392px;
   border-radius: 12px;
 }
 
@@ -26,17 +25,24 @@
   position: absolute;
   bottom: 17px;
   left: 20px;
-  max-width: 321px;
+  width: 90%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    align-self: flex-end;
+    background-image: url(../../img/sprite/angle-6.svg);
+  }
 
   @media screen and (width < 1439px) {
     bottom: 10px;
-    max-width: 284px;
   }
 
   @media screen and (width < 767px) {
     bottom: 18px;
     left: 10px;
-    max-width: 270px;
   }
 }
 
@@ -47,37 +53,19 @@
   padding: 18px 0 6px 18px;
   border-radius: 12px 12px 0 0;
   background-color: $white;
-  width: 194px;
+  // width: 194px;
+  width: 60%;
+  order:-1;
 
   @media screen and (width < 1439px) {
     font-size: 20px;
     line-height: 14px;
-    width: 173px;
+    // width: 173px;
   }
 
   @media screen and (width < 767px) {
     font-size: 16px;
     line-height: 18px;
-    width: 146px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-image: url(../../img/sprite/angle-6.svg);
-    top: 23px;
-    left: 193px;
-
-    @media screen and (width < 1439px) {
-      left: 173px;
-    }
-
-    @media screen and (width < 767px) {
-      left: 146px;
-      top: 24px;
-    }
   }
 }
 
@@ -98,13 +86,11 @@
 
 .program-card__text {
   color: $dark;
-  display: flex;
   font-size: 14px;
   line-height: 18px;
   padding: 12.5px 0 15.5px 18px;
   background-color: $white;
   border-radius: 0 0 0 12px;
-  align-items: center;
 
   @media screen and (width < 1439px) {
     font-size: 12px;

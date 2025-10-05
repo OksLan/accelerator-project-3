@@ -2,6 +2,7 @@ import Swiper from "swiper";
 import {Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import { programCards, showPrograms } from './programs.js';
 
@@ -76,6 +77,7 @@ showPrograms(programCards);
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
+  loop: true,
   speed: 500,
 
   breakpoints: {
@@ -93,18 +95,18 @@ const swiperPrograms = new Swiper('.programs__swiper', {
     },
   },
 
+  // прогрессбар
+  pagination: {
+    el: '.programs__pagination-progressbar',
+    type: 'progressbar',
+  },
+
   // стрелки
     navigation: {
     nextEl: '.programs__button--next',
     prevEl: '.programs__button--prev',
     enabled: true,
     clickable: true,
-  },
-
-  // прогрессбар
-  pagination: {
-    el: '.programs__pagination-progressbar',
-    type: 'progressbar',
   },
 });
 

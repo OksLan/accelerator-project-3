@@ -27,7 +27,6 @@
 }
 
 .swiper.programs__swiper {
-  position: relative;
   display: flex;
   height: 420px;
   align-items: center;
@@ -52,10 +51,8 @@
 }
 
 .programs__pagination-progressbar {
-  position: relative;
-  width: calc(100% - 104px);
-  height: 2px;
-  background: $primary02;
+  position: relative !important;
+  width: calc(100% - 104px) !important;
 }
 
 .programs__pagination-progressbar .swiper-pagination-progressbar-fill {

@@ -1,0 +1,40 @@
+.review-card {
+  position: relative;
+  background-color: $beige;
+  border: 2px solid $primary;
+  border-radius: 16px;
+  max-width: 604px;
+}
+
+.review-card__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 52px 48px 78px;
+}
+
+.review-card__header {
+  display: grid;
+  grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+      "avatar"
+      "name"
+      "program"
+      "date";
+  background-color: aqua;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+.review-card__title {
+  font-size: 24px;
+  line-height: 26px;
+  color: $primary;
+  margin-bottom: 25px;
+}
+
+.review-card__text {
+  font-size: 16px;
+  line-height: 26px;
+  color: $dark;
+}

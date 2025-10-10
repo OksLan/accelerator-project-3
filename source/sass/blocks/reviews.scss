@@ -1,3 +1,8 @@
+.reviews {
+  position: relative;
+  padding: 1px 0;
+}
+
 .reviews__wrapper {
   padding: 60px 0;
 
@@ -26,4 +31,16 @@
   justify-content: space-between;
   align-items: center;
   justify-content: end;
+}
+
+.reviews__pagination-progressbar {
+  position: relative !important;
+  width: calc(100% - 104px) !important;
+}
+
+.reviews__pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: $primary;
+  height: 100%;
+  transform-origin: left top;
+  display: block;
 }

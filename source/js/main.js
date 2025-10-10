@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { programCards, showPrograms } from './programs.js';
+// import { reviewsCards, showReviews } from './reviews.js';
 
 /* HERO slider */
 import { initSlider} from "./slider.js";
@@ -135,3 +136,40 @@ document.addEventListener("DOMContentLoaded", () => {
   move();
   window.addEventListener("resize", move);
 });
+
+/* REVIEWS свайпер */
+// const swiperReviews = new Swiper('.reviews__swiper', {
+//   modules: [Navigation, Pagination],
+//   direction: 'horizontal',
+//   loop: true,
+//   speed: 500,
+
+//   breakpoints: {
+//     1440: {
+//       slidesPerView: 2,
+//       spaceBetween: 32,
+//     },
+//     768: {
+//       slidesPerView: 1.3,
+//       spaceBetween: 30,
+//     },
+//     320: {
+//       slidesPerView: 1,
+//       spaceBetween: 15,
+//     },
+//   },
+
+//   // прогрессбар
+//   pagination: {
+//     el: '.reviews__pagination-progressbar',
+//     type: 'progressbar',
+//   },
+
+//   // стрелки
+//     navigation: {
+//     nextEl: '.reviews__button--next',
+//     prevEl: '.reviews__button--prev',
+//     enabled: true,
+//     clickable: true,
+//   },
+// });

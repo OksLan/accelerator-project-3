@@ -380,18 +380,42 @@
 
           <div class="swiper reviews__swiper">
             <div class="swiper-wrapper reviews__list">
-            </div>
+
+        <article class="reviews__list-item review-card swiper-slide">
+          <div class="review-card__content-wrapper">
+            <div class="review-card__header">
+              <div class="review-card__avatar">
+                <picture>
+                </picture>
+              </div>
+              <div class="review-card__name"></div>
+              <div class="review-card__program"></div>
+              <div class="review-card__date"></div>
+          </div>
+          <div class="review-card__title">Я&nbsp;могу с&nbsp;уверенностью сказать, что это был
+            один из&nbsp;самых незабываемых опытов
+            в&nbsp;жизни!
+          </div>
+          <div class="review-card__text">
+            <p>Я&nbsp;рекомендую программу &laquo;Стажировка&raquo; всем студентам,
+              желающим получить незабываемые впечатления. Сочетание
+              путешествий, общения и&nbsp;значимой работы действительно
+              отличает её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную
+              благодарность за&nbsp;предоставленную мне возможность.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
           </div>
 
           <div class="reviews__footer">
             <div class="swiper__pagination swiper__pagination-progressbar reviews__pagination-progressbar">
-              <span class="reviews__pagination-progressbar-fill"
-                style="transform: translate3d(0px, 0px, 0px) scaleX(0.636364) scaleY(1); transition-duration: 300ms;">
-              </span>
             </div>
 
             <div class="reviews__buttons swiper-buttons">
-              <button class="swiper-buttons__button programs__button reviews__button--prev" aria-label="Посмотреть предыдущюю программу" disabled>
+              <button class="swiper-buttons__button reviews__button reviews__button--prev" aria-label="Посмотреть предыдущий отзыв" disabled>
                 <svg width="10"
                   height="10"
                   aria-hidden="true"
@@ -399,7 +423,7 @@
                   <use href="/__spritemap#sprite-prev"></use>
                 </svg>
               </button>
-              <button class="swiper-buttons__button programs__button reviews__button--next" aria-label="Посмотреть следующую программу">
+              <button class="swiper-buttons__button reviews__button reviews__button--next" aria-label="Посмотреть следующий отзыв">
                 <svg width="10"
                   height="10"
                   aria-hidden="true"
@@ -613,6 +637,28 @@
         </div>
       </article>
     </template>
+
+    <!-- темплейт карточки Отзывы -->
+    <!-- <template id="reviews-card">
+      <article class="reviews__list-item reviews-card swiper-slide">
+
+        <div class="review-card__content-wrapper">
+          <div class="review-card_header">
+            <div class="review-card__avatar">
+              <picture>
+              </picture>
+            </div>
+            <div class="review-card__name"></div>
+            <div class="review-card__program"></div>
+            <div class="review-card__date"></div>
+          </div>
+          <div class="review-card__title"></div>
+          <div class="review-card__text">
+            <p></p>
+          </div>
+        </div>
+      </article>
+    </template> -->
 
     <script type="module" src="js/main.js"></script>
   </body>

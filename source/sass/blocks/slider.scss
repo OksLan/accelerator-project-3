@@ -321,8 +321,7 @@
 
     @media screen and (width < 1439px) {
     width: 100px;
-    bottom: 332px;
-    // left: 45px;
+    // bottom: 332px;
   }
 
   @media screen and (width < 767px) {
@@ -330,7 +329,7 @@
     height: 28px;
     border-radius: 12px 12px 0 0;
     // left: 15px;
-    bottom: 339px;
+    // bottom: 339px;
   }
 
     &::before {
@@ -544,14 +543,38 @@
 
   @media screen and (width < 1439px) {
     padding-right: 40px;
+    padding-bottom: 79px;
   }
 
   @media screen and (width < 767px) {
     padding: 10px 15px;
     border-radius: 0 0 16px 16px;
   }
-}
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    bottom: 88px;
+    left: 787px;
+    background-image: url("../../img/sprite/angle-2.svg");
+
+    @media screen and (width < 1439px) {
+      bottom: 109px;
+      left: 568px;
+      }
+    
+    @media screen and (width < 767px) {
+      width: 10px;
+      height: 10px;
+      background-image: url("../../img/sprite/angle-5.svg");
+      bottom: 54px;
+      left: 181px;
+      // order: 2;
+      }
+    }
+}
 
 .slide__button {
   height: 58px;

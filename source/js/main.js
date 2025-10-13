@@ -74,7 +74,7 @@ const programTemplate = document.querySelector("#program-card");
 
 showPrograms(programCards);
 
-/* PROGRAMS свайпер */
+/* свайпер */
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
@@ -137,39 +137,45 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", move);
 });
 
-/* REVIEWS свайпер */
-// const swiperReviews = new Swiper('.reviews__swiper', {
-//   modules: [Navigation, Pagination],
-//   direction: 'horizontal',
-//   loop: true,
-//   speed: 500,
+/* REVIEWS */
+const reviewsList = document.querySelector(".reviews__list");
+const reviewTemplate = document.querySelector("#review-card");
 
-//   breakpoints: {
-//     1440: {
-//       slidesPerView: 2,
-//       spaceBetween: 32,
-//     },
-//     768: {
-//       slidesPerView: 1.3,
-//       spaceBetween: 30,
-//     },
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 15,
-//     },
-//   },
+showPrograms(reviewCards);
 
-//   // прогрессбар
-//   pagination: {
-//     el: '.reviews__pagination-progressbar',
-//     type: 'progressbar',
-//   },
+/* свайпер */
+const swiperReviews = new Swiper('.reviews__swiper', {
+  modules: [Navigation, Pagination],
+  direction: 'horizontal',
+  loop: true,
+  speed: 500,
 
-//   // стрелки
-//     navigation: {
-//     nextEl: '.reviews__button--next',
-//     prevEl: '.reviews__button--prev',
-//     enabled: true,
-//     clickable: true,
-//   },
-// });
+  breakpoints: {
+    1440: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+    },
+    768: {
+      slidesPerView: 1.3,
+      spaceBetween: 30,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+  },
+
+  // прогрессбар
+  pagination: {
+    el: '.reviews__pagination-progressbar',
+    type: 'progressbar',
+  },
+
+  // стрелки
+    navigation: {
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev',
+    enabled: true,
+    clickable: true,
+  },
+});

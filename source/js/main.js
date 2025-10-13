@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { programCards, showPrograms } from './programs.js';
-// import { reviewsCards, showReviews } from './reviews.js';
+import { reviewsCards, showReviews } from './reviews.js';
 
 /* HERO slider */
 import { initSlider} from "./slider.js";
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const reviewsList = document.querySelector(".reviews__list");
 const reviewTemplate = document.querySelector("#review-card");
 
-showPrograms(reviewCards);
+showReviews(reviewsCards);
 
 /* свайпер */
 const swiperReviews = new Swiper('.reviews__swiper', {

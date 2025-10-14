@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { programCards, showPrograms } from './programs.js';
-import { reviewsCards, showReviews } from './reviews.js';
+import { reviewCards, showReviews } from './reviews.js';
 
 /* HERO slider */
 import { initSlider} from "./slider.js";
@@ -78,7 +78,6 @@ showPrograms(programCards);
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
-  loop: true,
   speed: 500,
 
   breakpoints: {
@@ -141,13 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const reviewsList = document.querySelector(".reviews__list");
 const reviewTemplate = document.querySelector("#review-card");
 
-showReviews(reviewsCards);
+showReviews(reviewCards);
 
 /* свайпер */
 const swiperReviews = new Swiper('.reviews__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
-  loop: true,
   speed: 500,
 
   breakpoints: {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -231,7 +230,7 @@
           <div class="programs__header">
             <h3>Программы</h3>
             <div class="programs__link">
-              <a class="programs__button button button--light" type="button">
+              <a class="programs__button button button--light" type="button" href="https://www.internship/programs.com">
                 <span class="programs__button-text">Все программы</span>
               </a>
             </div>
@@ -738,8 +737,8 @@
               data-srcset="img/programs/[[id]]-desktop@1x.webp 1x, img/programs/[[id]]-desktop@2x.webp 2x">
             <source
                 media="(min-width: 1439px)"
-                class="program-card__image-webp"
-                type="image/webp"
+                class="program-card__image-png"
+                type="image/png"
                 width="392"
                 height="420"
               data-srcset="img/programs/[[id]]-desktop@1x.png 1x, img/programs/[[id]]-desktop@2x.png 2x">
@@ -752,8 +751,8 @@
               data-srcset="img/programs/[[id]]-tablet@1x.webp 1x, img/programs/[[id]]-tablet@2x.webp 2x">
             <source
                 media="(min-width: 767px)"
-                class="program-card__image-webp"
-                type="image/webp"
+                class="program-card__image-png"
+                type="image/png"
                 width="324"
                 height="420"
               data-srcset="img/programs/[[id]]-tablet@1x.png 1x, img/programs/[[id]]-tablet@2x.png 2x">
@@ -772,21 +771,42 @@
             <div class="program-card__text">
               <p></p>
             </div>
-            <a class="program-card__button button button--notext" type="button" href="#"></a>
+            <a class="program-card__button button button--notext" type="button" href="https://www.internship/programs.com"></a>
           </div>
         </div>
       </article>
     </template>
 
     <!-- темплейт карточки Отзывы -->
-    <template id="reviews-card">
-      <article class="reviews__list-item reviews-card swiper-slide">
+    <template id="review-card">
+      <article class="reviews__list-item review-card swiper-slide">
 
         <div class="review-card__content-wrapper">
           <div class="review-card_header">
             <div class="review-card__avatar">
               <picture>
-              </picture>
+                <source
+                    media="(min-width: 1439px)"
+                    class="review-card__avatar-webp"
+                    type="image/webp"
+                    width="90"
+                    height="90"
+                  data-srcset="img/reviews/[[id]]-desktop@1x.webp 1x, img/reviews/[[id]]-desktop@2x.webp 2x">
+                <source
+                    media="(min-width: 1439px)"
+                    class="review-card__avatar-png"
+                    type="image/png"
+                    width="90"
+                    height="90"
+                  data-srcset="img/reviews/[[id]]-desktop@1x.png 1x, img/reviews/[[id]]-desktop@2x.png 2x">
+                <img
+                    class="review-card__avatar"
+                    data-src="img/reviews/[[id]]-mobile@1x.png"
+                    data-srcset="img/reviews/[[id]]-mobile@1x.png 1x, img/reviews/[[id]]-mobile@2x.png 2x"
+                    width="60"
+                    height="60"
+                  alt="">
+              </picture>            
             </div>
             <div class="review-card__name"></div>
             <div class="review-card__program"></div>
@@ -800,88 +820,7 @@
       </article>
     </template>
 
-            <!-- <article class="reviews__list-item review-card swiper-slide">
-              <div class="review-card__content-wrapper">
-                <div class="review-card__header">
-
-                  <div class="review-card__author">
-                    <div class="review-card__avatar">
-                      <picture>
-                        <source
-                          media="(min-width: 1439px)"
-                          class="review__avatar-webp"
-                          type="image/webp"
-                          width="90"
-                          height="90"
-                          srcset="img/reviews/alex-desktop@1x.webp 1x, img/reviews/alex-desktop@2x.webp 2x"
-                        >
-                        <source
-                          media="(min-width: 1439px)"
-                          class="review__avatar-png"
-                          type="image/png"
-                          width="90"
-                          height="90"
-                          srcset="img/reviews/alex-desktop@1x.png 1x, img/reviews/alex-desktop@2x.png 2x"
-                        >
-                        <source
-                          media="(min-width: 767px)"
-                          class="review__avatar-webp"
-                          type="image/webp"
-                          width="90"
-                          height="90"
-                          srcset="img/reviews/alex-desktop@1x.webp 1x, img/reviews/alex-desktop@2x.webp 2x"
-                        >
-                        <source
-                          media="(min-width: 767px)"
-                          class="review__avatar-png"
-                          type="image/png"
-                          width="90"
-                          height="90"
-                          srcset="img/reviews/alex-desktop@1x.png 1x, img/reviews/alex-desktop@2x.png 2x"
-                        >
-                        <img
-                          class="review__avatar"
-                          width="60"
-                          height="60"
-                          alt=""
-                          srcset="img/reviews/alex-mobile@1x.png 1x, img/reviews/alex-mobile@2x.png 2x"
-                        >
-                      </picture>
-                    </div>
-                    <div class="review-card__name">Лола<br>Алекс</div>
-                  </div>
-
-                  <div class="review-card__meta">
-                    <div class="review-card__program">
-                       <span class="review-card__meta-label">Программа</span>
-                      <span class="review-card__meta-value">Masa Art Challenge</span>
-                    </div>
-                    <div class="review-card__date">
-                      <span class="review-card__meta-label">Дата</span>
-                      <span class="review-card__meta-value">Осень 2022</span>
-                    </div>
-                  </div>
-
-                </div>
-
-              <div class="review-card__title">Я&nbsp;могу с&nbsp;
-                уверенностью сказать, что это был
-                один из&nbsp;самых незабываемых опытов
-                в&nbsp;жизни!
-              </div>
-
-              <div class="review-card__text">
-                <p>Я&nbsp;рекомендую программу &laquo;Стажировка&raquo; всем студентам,
-                  желающим получить незабываемые впечатления. Сочетание
-                  путешествий, общения и&nbsp;значимой работы действительно
-                  отличает её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную
-                  благодарность за&nbsp;предоставленную мне возможность.
-                </p>
-              </div>
-
-              </div>
-            </article> -->
-    <script type="module" src="js/main.js"></script>
+      <script type="module" src="js/main.js"></script>
   </body>
 
 </html>

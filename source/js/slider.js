@@ -55,7 +55,7 @@ export function initSlider() {
 
     // перетягивание для tablet и mobile
     const handleDragStart = (e) => {
-      if (window.innerWidth >= 1024) return; // отключен на desktop
+      if (window.innerWidth >= 1439) return; // отключен на desktop
       isDragging = true;
       startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
       slider.style.transition = "none";

@@ -55,7 +55,7 @@
 
     @media screen and (width < 767px) {
       width: 60px;
-      height: 60px; 
+      height: 60px;
     }
   }
 
@@ -63,6 +63,9 @@
     font-size: 18px;
     line-height: 24px;
     color: $primary;
+
+    display: flex;
+    flex-direction: column;
 
     @media screen and (width < 767px) {
       font-size: 14px;

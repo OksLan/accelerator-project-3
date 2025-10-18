@@ -49,12 +49,16 @@
   align-items: center;
 }
 
-.programs__pagination-progressbar {
+.programs__pagination {
   position: relative !important;
   width: calc(100% - 104px) !important;
+
+  @media screen and (width < 767px) {
+    display: none;
+  }
 }
 
-.programs__pagination-progressbar .swiper-pagination-progressbar-fill {
+.programs__pagination .swiper-pagination-progressbar-fill {
   background: $primary;
   height: 100%;
   transform-origin: left top;

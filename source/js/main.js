@@ -98,7 +98,7 @@ const swiperPrograms = new Swiper('.programs__swiper', {
 
   // прогрессбар
   pagination: {
-    el: '.programs__pagination-progressbar',
+    el: '.programs__pagination',
     type: 'progressbar',
   },
 
@@ -166,7 +166,7 @@ const swiperReviews = new Swiper('.reviews__swiper', {
 
   // прогрессбар
   pagination: {
-    el: '.reviews__pagination-progressbar',
+    el: '.reviews__pagination',
     type: 'progressbar',
   },
 

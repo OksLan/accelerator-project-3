@@ -222,6 +222,41 @@
           </div>
         </div>
       </div>
+
+      <div class="popup">
+        <div class="popup__container">
+          <h4>Напишите нам</h4>
+          <p>Оставьте ваши контакты, если у&nbsp;вас остались
+            вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!
+          </p>
+          <div class="popup__name">
+            <label class="name" for="name">Имя</label>
+            <input class="popup__input" type="text" name="user-name" id="name">
+          </div>
+
+          <div class="popup__phone">
+            <label class="phone" for="phone">Телефон</label>
+            <input class="popup__input" type="text" name="user-phone" id="phone">
+          </div>
+
+          <div class="popup__city">
+            <label class="popup__city-label" for="city">Выберите город</label>
+            <select class="popup__city-list" name="city" id="city">
+              <option class="popup__city-item" value=""> </option>
+              <option class="popup__city-item" value="Москва">Москва</option>
+            </select>
+          </div>
+
+          <div class="popup__checkbox">
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
+          </div>
+
+          <button class="popup__button button button--light" type="button">
+            <span class="popup__button-text">Отправить</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="programs" data-test="programs">
@@ -243,7 +278,7 @@
 
           <div class="programs__footer">
 
-            <div class="swiper__pagination swiper__pagination-progressbar programs__pagination-progressbar">
+            <div class="swiper-pagination swiper-pagination-progressbar programs__pagination">
             </div>
 
             <div class="programs__buttons swiper-buttons">
@@ -382,7 +417,7 @@
           </div>
 
         <div class="reviews__footer">
-            <div class="swiper__pagination swiper__pagination-progressbar reviews__pagination-progressbar">
+            <div class="swiper-pagination swiper-pagination-progressbar reviews__pagination">
             </div>
 
             <div class="reviews__buttons swiper-buttons">

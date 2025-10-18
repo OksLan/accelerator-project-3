@@ -30,12 +30,12 @@
   align-items: center;
 }
 
-.reviews__pagination-progressbar {
+.reviews__pagination {
   position: relative !important;
   width: calc(100% - 104px) !important;
 }
 
-.reviews__pagination-progressbar .swiper-pagination-progressbar-fill {
+.reviews__pagination .swiper-pagination-progressbar-fill {
   background: $primary;
   height: 100%;
   transform-origin: left top;

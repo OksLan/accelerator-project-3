@@ -71,7 +71,7 @@
     }
 
     @media (width < 767px) {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 14px;
       margin-bottom: 8px;
     }
@@ -79,8 +79,7 @@
 
   & input {
     background-color: transparent;
-    border: 1px solid $dark;
-    opacity: 0.3;
+    border: 1px solid #4848484D;
     border-radius: 8px;
     margin-bottom: 20px;
     height: 50px;
@@ -95,12 +94,11 @@
 .popup__city {
   & select {
     background-color: transparent;
-    border: 1px solid $dark;
-    opacity: 0.3;
+    border: 1px solid #4848484D;;
     border-radius: 8px;
     height: 52px;
     margin-bottom: 20px;
-    background: url("../../img/sprite/select.svg") no-repeat right 21px center;
+    background: url("../../img/sprite/popup-select.svg") no-repeat right 21px center;
     appearance: none;
     cursor: pointer;
     background-size: 16px;
@@ -136,16 +134,15 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    background-color: $primary;
   }
 }
 
 .popup__button {
   margin: 0 auto;
-  height: 42px;
 
   @media (width < 767px) {
     margin: 0;
+    height: 42px;
   }
 
   span {

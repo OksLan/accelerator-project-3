@@ -178,3 +178,42 @@ const swiperReviews = new Swiper('.reviews__swiper', {
     clickable: true,
   },
 });
+
+/* POPUP */
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.querySelector(".popup");
+  const openBtn = document.querySelector(".about__button");
+  const closeBtn = document.querySelector(".popup-toggle");
+
+  if (!popup || !openBtn || !closeBtn) return;
+
+  const openPopup = () => {
+    popup.classList.add("popup--active");
+    document.body.classList.add("no-scroll");
+  };
+
+  const closePopup = () => {
+    popup.classList.remove("popup--active");
+    document.body.classList.remove("no-scroll");
+  };
+
+  openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openPopup();
+  });
+
+  closeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closePopup();
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (!e.target.closest(".popup__container")) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closePopup();
+  });
+});

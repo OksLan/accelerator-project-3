@@ -35,7 +35,7 @@
   }
 
   @media screen and (width < 767px) {
-    margin-top: 23px;
+    margin: 23px 15px;
     padding: 40px 15px;
   }
 
@@ -43,6 +43,11 @@
     margin-bottom: 20px;
     color: $primary;
     text-align: center;
+
+    @media screen and (width < 767px) {
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
   }
 
   p {
@@ -50,7 +55,13 @@
     line-height: 26px;
     text-align: center;
     margin-bottom: 30px;
-    color: #484848;
+    color: $dark;
+
+    @media screen and (width < 767px) {
+      line-height: 20px;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
   }
 
   label {
@@ -70,6 +81,11 @@
     transition: border-color 0.3s ease;
     margin-top: 12px;
     margin-bottom: 20px;
+
+    @media screen and (width < 767px) {
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -86,7 +102,7 @@
   border-radius: 8px;
   outline: none;
   background-color: #fff;
-  color: #484848;
+  color: $dark;
   appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -129,12 +145,18 @@
     flex-shrink: 0;
     width: 20px;
     height: 20px;
-    border: 1px solid #d0d0d0;
+    border: none;
     border-radius: 2px;
     cursor: pointer;
     appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
     vertical-align: middle;
+    display: inline-block;
     padding: 0;
+    position: relative;
+    background-color: $primary;
+    margin: 0;
   }
 }
 
@@ -147,7 +169,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 32px; /* ширина кнопки задаётся контентом */
+  padding: 14px 32px;
   border: none;
   border-radius: 8px;
   background-color: #007bff;
@@ -178,12 +200,23 @@
 
 .popup-toggle {
   position: absolute;
+  display: flex;
   top: 30px;
   right: 30px;
+  width: 22px;
+  height: 22px;
+  padding: 2px;
   background: none;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
+
+  @media screen and (width < 767px) {
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+  }
 
   &:hover {
     transform: scale(1.1);
@@ -192,6 +225,13 @@
 
 .popup-toggle .toggle-icon {
   pointer-events: none;
+  width: 18px;
+  height: 18px;
+
+  @media screen and (width < 767px) {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .no-scroll {

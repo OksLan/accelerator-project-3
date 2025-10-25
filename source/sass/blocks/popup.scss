@@ -19,6 +19,46 @@
   pointer-events: all;
 }
 
+.popup-toggle {
+  position: absolute;
+  display: flex;
+  top: 30px;
+  right: 30px;
+  width: 22px;
+  height: 22px;
+  padding: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  @media screen and (width < 767px) {
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.popup-toggle .toggle-icon {
+  pointer-events: none;
+  width: 18px;
+  height: 18px;
+
+  @media screen and (width < 767px) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .popup__container {
   position: relative;
   background: #ffffff;
@@ -73,7 +113,7 @@
 
   input {
     width: 100%;
-    padding: 12px 25px;
+    padding: 16px 25px;
     font-size: 16px;
     border: 1px solid #d0d0d0;
     border-radius: 8px;
@@ -83,6 +123,7 @@
     margin-bottom: 20px;
 
     @media screen and (width < 767px) {
+      padding: 15px 25px;
       margin-top: 8px;
       margin-bottom: 15px;
     }
@@ -94,74 +135,8 @@
   opacity: 1;
 }
 
-.popup__city-list {
-  width: 100%;
-  padding: 12px 14px;
-  font-size: 16px;
-  border: 1px solid #d0d0d0;
-  border-radius: 8px;
-  outline: none;
-  background-color: #fff;
-  color: $dark;
-  appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  background-image: url("../../img/sprite/popup-select.svg");
-  background-repeat: no-repeat;
-  background-position: right 17px center;
-  background-size: 12px auto;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
-}
-
-.popup__city-label {
-  display: block;
-  font-size: 14px;
-  line-height: 18px;
-  color: $dark;
-  opacity: 0.8;
-  margin-bottom: 12px;
-}
-
 .popup__input:focus,
 .popup__city-list:focus {
-  border-color: #007bff;
-}
-
-.popup__checkbox {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 20px 0;
-
-  label {
-    font-size: 12px;
-    color: $dark;
-    line-height: 12px;
-    cursor: pointer;
-  }
-
-  input {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-    vertical-align: middle;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    background-color: $primary;
-    margin: 0;
-  }
-}
-
-.popup__checkbox input:checked {
-  background-color: #007bff;
   border-color: #007bff;
 }
 
@@ -198,42 +173,177 @@
 }
 
 
-.popup-toggle {
-  position: absolute;
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+/* инпут */
+.custom-select__button {
+  width: 100%;
+  padding: 16px 17px;
+  font-size: 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: $dark;
   display: flex;
-  top: 30px;
-  right: 30px;
-  width: 22px;
-  height: 22px;
-  padding: 2px;
-  background: none;
-  border: none;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: border-color 0.3s ease;
+  margin-top: 12px;
+  margin-bottom: 20px;
 
   @media screen and (width < 767px) {
-    top: 20px;
-    right: 20px;
-    width: 16px;
-    height: 16px;
-  }
-
-  &:hover {
-    transform: scale(1.1);
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
   }
 }
 
-.popup-toggle .toggle-icon {
+.custom-select__button:hover,
+.custom-select__button:focus,
+.custom-select__button:active,
+.custom-select--open .custom-select__button {
+  border: 1px solid $dark;
+}
+
+.custom-select__text {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 16px;
+  color: $dark;
+}
+
+.custom-select__arrow {
+  flex-shrink: 0;
   pointer-events: none;
-  width: 18px;
-  height: 18px;
+  color: $dark;
+}
 
-  @media screen and (width < 767px) {
-    width: 12px;
-    height: 12px;
+/* выпадающий список */
+.custom-select__list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: calc(4 * 40px);
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  z-index: 1000;
+}
+
+.custom-select__item {
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $dark;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-select__item:hover {
+  background-color: $primary;
+  color: $white;
+}
+
+/* opened */
+.custom-select--open .custom-select__list {
+  display: block;
+  border: 1px solid $dark;
+}
+
+// .popup__checkbox {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   margin: 20px 0;
+
+//   label {
+//     font-size: 12px;
+//     color: $dark;
+//     line-height: 12px;
+//     cursor: pointer;
+//   }
+
+//   input {
+//     flex-shrink: 0;
+//     width: 20px;
+//     height: 20px;
+//     border: none;
+//     border-radius: 2px;
+//     cursor: pointer;
+//     appearance: none;
+//       -webkit-appearance: none;
+//       -moz-appearance: none;
+//     vertical-align: middle;
+//     display: inline-block;
+//     padding: 0;
+//     position: relative;
+//     background-color: $primary;
+//     margin: 0;
+//   }
+// }
+
+// .popup__checkbox input:checked {
+//   background-color: #007bff;
+//   border-color: #007bff;
+// }
+
+.popup__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+
+  label {
+    font-size: 12px;
+    color: $dark;
+    opacity: 0.9;
+    line-height: 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  input {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: $primary;
+    position: relative;
+    transition: all 0.2s ease;
+    padding: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 7px;
+      width: 5px;
+      height: 10px;
+      border-right: 1px solid $white;
+      border-bottom: 1px solid $white;
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.2s ease;
+      transform-origin: center;
+    }
   }
 }
 
-.no-scroll {
-  overflow: hidden;
+.popup__checkbox input:checked::after {
+  transform: rotate(45deg) scale(1);
 }

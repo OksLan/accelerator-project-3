@@ -247,15 +247,27 @@
             <input class="popup__input" type="text" name="user-phone" id="phone">
           </div>
 
-          <div class="popup__city">
-            <label class="popup__city-label" for="city">Выберите город</label>
-            <select class="popup__city-list" name="city" id="city">
-              <option class="popup__city-item" value=""> </option>
-              <option class="popup__city-item" value="Москва">Москва</option>
-              <option class="popup__city-item" value="Москва">Санкт-Петербург</option>
+        <div class="popup__city">
+          <label class="popup__city-label" for="city">Выберите город</label>
 
-            </select>
+          <div class="custom-select" id="city">
+            <button class="custom-select__button" type="button" >
+              <span class="custom-select__text"> </span>
+              <svg class="custom-select__arrow" width="16" height="16" aria-hidden="true">
+                <use href="/__spritemap#sprite-popup-select"></use>
+              </svg>
+            </button>
+
+            <ul class="custom-select__list">
+              <li class="custom-select__item">Москва</li>
+              <li class="custom-select__item">Санкт-Петербург</li>
+              <li class="custom-select__item">Екатеринбург</li>
+              <li class="custom-select__item">Саратов</li>
+            </ul>
           </div>
+        </div>
+
+
 
           <div class="popup__checkbox">
             <input type="checkbox" id="checkbox" name="checkbox">

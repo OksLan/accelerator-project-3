@@ -217,3 +217,32 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closePopup();
   });
 });
+
+
+document.querySelectorAll('.custom-select').forEach(select => {
+  const button = select.querySelector('.custom-select__button');
+  const text = select.querySelector('.custom-select__text');
+  const list = select.querySelector('.custom-select__list');
+  const items = select.querySelectorAll('.custom-select__item');
+
+  // открыть/закрыть список
+  button.addEventListener('click', () => {
+    select.classList.toggle('custom-select--open');
+  });
+
+  // выбрать пункт
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      text.textContent = item.textContent;
+      select.classList.remove('custom-select--open');
+    });
+  });
+
+  // закрыть при клике вне селекта
+  document.addEventListener('click', e => {
+    if (!select.contains(e.target)) {
+      select.classList.remove('custom-select--open');
+    }
+  });
+});
+

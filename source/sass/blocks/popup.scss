@@ -136,42 +136,12 @@
 }
 
 .popup__input:focus,
-.popup__city-list:focus {
-  border-color: #007bff;
+.popup__input:hover,
+.popup__input:active {
+  border-color: $dark;
 }
 
-.popup__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 32px;
-  border: none;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 0 auto;
-
-  @media screen and (width < 767px) {
-    width: 100%;
-    padding: 16px;
-    box-sizing: border-box;
-    margin: 0;
-  }
-}
-
-.popup__button-text {
-  text-align: center;
-
-  @media screen and (width < 767px) {
-      width: 100%;
-      text-align: center;
-    }
-}
-
+/* city */
 .custom-select {
   position: relative;
   width: 100%;
@@ -215,7 +185,6 @@
   color: $dark;
 }
 
-/* стрелка */
 .custom-select__arrow {
   flex-shrink: 0;
   pointer-events: none;
@@ -260,7 +229,6 @@
   color: $white;
 }
 
-/* opened */
 .custom-select--open .custom-select__list {
   display: block;
   border: 1px solid $dark;
@@ -320,4 +288,37 @@
 
 .popup__checkbox input:checked::after {
   transform: rotate(45deg) scale(1);
+}
+
+/* кнопка */
+.popup__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 auto;
+
+  @media screen and (width < 767px) {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+.popup__button-text {
+  text-align: center;
+
+  @media screen and (width < 767px) {
+      width: 100%;
+      text-align: center;
+    }
 }

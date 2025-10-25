@@ -225,7 +225,7 @@ document.querySelectorAll('.custom-select').forEach(select => {
   const list = select.querySelector('.custom-select__list');
   const items = select.querySelectorAll('.custom-select__item');
 
-  // открыть/закрыть список
+  // открыть/закрыть выпадающий список
   button.addEventListener('click', () => {
     select.classList.toggle('custom-select--open');
   });

@@ -127,18 +127,28 @@
       margin-top: 8px;
       margin-bottom: 15px;
     }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $dark;
+    }
+
+    &:invalid {
+      border: 1px solid #ff5e66;
+      background-color: #ff5e6633;
+    }
+
+    &:disabled {
+      border: 1px solid #a9afb780;
+      background-color: #a9afb733;
+    }
   }
 }
 
 .popup--active .popup__container {
   transform: translateY(0);
   opacity: 1;
-}
-
-.popup__input:focus,
-.popup__input:hover,
-.popup__input:active {
-  border-color: $dark;
 }
 
 /* city */
@@ -175,6 +185,11 @@
 .custom-select__button:active,
 .custom-select--open .custom-select__button {
   border: 1px solid $dark;
+}
+
+.custom-select.error .custom-select__button {
+  border: 1px solid #ff5e66;
+  background-color: #ff5e6633;
 }
 
 .custom-select__text {

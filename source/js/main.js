@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 
 import { programCards, showPrograms } from './programs.js';
 import { reviewCards, showReviews } from './reviews.js';
+import { initPopup } from './popup.js';
 
 
 /* HERO slider */
@@ -179,70 +180,4 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   },
 });
 
-/* POPUP */
-document.addEventListener("DOMContentLoaded", () => {
-  const popup = document.querySelector(".popup");
-  const openBtn = document.querySelector(".about__button");
-  const closeBtn = document.querySelector(".popup-toggle");
-
-  if (!popup || !openBtn || !closeBtn) return;
-
-  const openPopup = () => {
-    popup.classList.add("popup--active");
-    document.body.classList.add("no-scroll");
-  };
-
-  const closePopup = () => {
-    popup.classList.remove("popup--active");
-    document.body.classList.remove("no-scroll");
-  };
-
-  openBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    openPopup();
-  });
-
-  closeBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    closePopup();
-  });
-
-  popup.addEventListener("click", (e) => {
-    if (!e.target.closest(".popup__container")) {
-      closePopup();
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closePopup();
-  });
-});
-
-
-document.querySelectorAll('.custom-select').forEach(select => {
-  const button = select.querySelector('.custom-select__button');
-  const text = select.querySelector('.custom-select__text');
-  const list = select.querySelector('.custom-select__list');
-  const items = select.querySelectorAll('.custom-select__item');
-
-  // открыть/закрыть выпадающий список
-  button.addEventListener('click', () => {
-    select.classList.toggle('custom-select--open');
-  });
-
-  // выбрать пункт
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      text.textContent = item.textContent;
-      select.classList.remove('custom-select--open');
-    });
-  });
-
-  // закрыть при клике вне селекта
-  document.addEventListener('click', e => {
-    if (!select.contains(e.target)) {
-      select.classList.remove('custom-select--open');
-    }
-  });
-});
-
+initPopup();

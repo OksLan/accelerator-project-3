@@ -134,7 +134,7 @@
       border-color: $dark;
     }
 
-    &:invalid {
+    &--error {
       border: 1px solid #ff5e66;
       background-color: #ff5e6633;
     }
@@ -337,3 +337,25 @@
       text-align: center;
     }
 }
+
+// .popup__message {
+//   margin-top: 20px;
+//   font-size: 14px;
+//   line-height: 18px;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 10px 15px;
+//   display: block;
+
+//   &--success {
+//     color: #0a7a33;
+//     background-color: #e3f6eb;
+//     border: 1px solid #0a7a33;
+//   }
+
+//   &--error {
+//     color: #c00;
+//     background-color: #fdecec;
+//     border: 1px solid #c00;
+//   }
+// }

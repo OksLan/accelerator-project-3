@@ -50,6 +50,7 @@ function initCustomSelect() {
     // открыть/закрыть список
     button.addEventListener("click", () => {
       select.classList.toggle("custom-select--open");
+      select.classList.remove("error");
     });
 
     // выбрать пункт
@@ -57,6 +58,7 @@ function initCustomSelect() {
       item.addEventListener("click", () => {
         text.textContent = item.textContent;
         select.classList.remove("custom-select--open");
+        select.classList.remove("error");
       });
     });
 
@@ -96,10 +98,20 @@ function initPopupForm(popup, closePopup) {
   const validateForm = () => {
     let valid = true;
 
+    const namePattern = /^[A-Za-zА-Яа-яЁё\s'-]+$/;
+
     if (!nameInput.value.trim()) {
-      nameInput.setCustomValidity("Введите имя");
+      nameInput.classList.add("popup__input--error");
+      nameInput.setCustomValidity("Пожалуйста, укажите ваше имя");
       valid = false;
+
+    } else if (!namePattern.test(nameInput.value.trim())) {
+      nameInput.classList.add("popup__input--error");
+      nameInput.setCustomValidity("Имя должно содержать только буквы");
+      valid = false;
+
     } else {
+      nameInput.classList.remove("popup__input--error");
       nameInput.setCustomValidity("");
     }
 
@@ -143,21 +155,38 @@ function initPopupForm(popup, closePopup) {
     formData.append("city", citySelect.textContent.trim());
     formData.append("consent", checkbox.checked);
 
-    try {
-      await fetch("https://example.com/form-submit", {
-        method: "POST",
-        body: formData,
-      });
+    const messageEl = popup.querySelector(".popup__message");
 
+    try {
+      // имитация успешной отправки
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // очистка формы
       nameInput.value = "";
       phoneInput.value = "";
       citySelect.textContent = "";
       checkbox.checked = false;
 
-      closePopup();
-      alert("Форма отправлена!");
-    } catch (err) {
-      alert("Ошибка при отправке");
-    }
+      // сообщение
+      messageEl.textContent = "Спасибо! Форма успешно отправлена.";
+      messageEl.className = "popup__message popup__message--success";
+      messageEl.hidden = false;
+
+      // закрыть popup через 2 секунды
+      // setTimeout(() => {
+      //   messageEl.hidden = true;
+      //   closePopup();
+      // }, 2000);
+
+        setTimeout(() => {
+        messageEl.hidden = true;
+        closePopup();
+      },10000000);
+
+      } catch (err) {
+        messageEl.textContent = "Произошла ошибка при отправке. Попробуйте снова.";
+        messageEl.className = "popup__message popup__message--error";
+        messageEl.hidden = false;
+      }
   });
 }

@@ -9,17 +9,17 @@
   @media screen and (width < 1439px) {
     padding: 50px 0;
   }
-
-  // h3 {
-  //   color: $primary;
-  //   margin-bottom: 40px;
-  // }
 }
 
 .reviews__header {
+  margin-bottom: 40px;
+  
+  @media screen and (width < 767px) {
+    margin-bottom: 30px;
+  }
+
   h3 {
     color: $primary;
-    margin-bottom: 40px;
   }
 
   @media screen and (width < 767px) {
@@ -34,12 +34,20 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media screen and (width < 767px) {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (width < 767px) {
+    display: none;
+  }
 }
 
 .reviews__pagination {

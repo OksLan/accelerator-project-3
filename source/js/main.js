@@ -191,7 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobile = window.innerWidth < 768;
 
     if (mobile) {
-      if (pagination) pagination.style.display = "none";
       if (!header.contains(buttons)) header.append(buttons);
     } else {
       if (pagination) pagination.style.display = "";

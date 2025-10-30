@@ -239,18 +239,18 @@
           </p>
           <div class="popup__name">
             <label class="name" for="name">Имя</label>
-            <input class="popup__input" type="text" name="user-name" id="name" required pattern="^[^\d]+$">
+            <input class="popup__input" type="text" name="user-name" id="popup-name" required pattern="^[^\d]+$">
           </div>
 
           <div class="popup__phone">
             <label class="phone" for="phone">Телефон</label>
-            <input class="popup__input" type="text" name="user-phone" id="phone" required>
+            <input class="popup__input" type="text" name="user-phone" id="popup-phone" required>
           </div>
 
           <div class="popup__city">
             <label class="popup__city-label" for="city">Выберите город</label>
 
-            <div class="custom-select" id="city">
+            <div class="custom-select" id="popup-city">
               <button class="custom-select__button" type="button" >
                 <span class="custom-select__text"> </span>
                 <svg class="custom-select__arrow" width="16" height="16" aria-hidden="true">
@@ -268,14 +268,15 @@
           </div>
 
           <div class="popup__checkbox">
-            <input type="checkbox" id="checkbox" name="checkbox" required>
+            <input type="checkbox" id="popup-checkbox" name="checkbox" required>
             <label for="checkbox">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
           </div>
 
           <button class="popup__button button button--light" type="button">
-              <span class="popup__button-text">Отправить</span>
-              <p class="popup__message" hidden></p>
+            <span class="popup__button-text">Отправить</span>
+            <p class="popup__message" hidden></p>
           </button>
+
         </form>
       </div>
     </div>
@@ -509,34 +510,29 @@
           </p>
           <div class="form__name">
             <label class="name" for="name">Имя</label>
-            <input class="form__input" type="text" name="user-name" id="name">
-            <!-- <span class="form__error-message message-empty">Поле не может быть пустым</span>
-            <span class="form__error-message wrong-symbols">Только буквы</span> -->
+            <input class="form__input" type="text" name="user-name" id="form-name">
           </div>
 
           <div class="form__phone">
             <label class="phone" for="phone">Телефон</label>
-            <input class="form__input" type="text" name="user-phone" id="phone">
-            <!-- <span class="form__error-message message-empty">Поле не может быть пустым</span>
-            <span class="form__error-message wrong-symbols">Только цифры</span> -->
+            <input class="form__input" type="text" name="user-phone" id="form-phone">
           </div>
 
           <div class="form__message">
             <label class="message" for="message">Ваше сообщение</label>
-            <input class="form__input" type="text" name="user-message" id="message">
-            <!-- <span class="form__error-message message-empty">Поле не может быть пустым</span> -->
+            <input class="form__input" type="text" name="user-message" id="form-message">
           </div>
 
           <div class="form__city">
             <label class="form__city-label" for="city">Выберите город</label>
-            <select class="form__city-list" name="city" id="city">
+            <select class="form__city-list" name="city" id="form-city">
               <option class="form__city-item" value=""> </option>
               <option class="form__city-item" value="Москва">Москва</option>
             </select>
           </div>
 
           <div class="form__checkbox">
-            <input type="checkbox" id="checkbox" name="checkbox">
+            <input type="checkbox" id="form-checkbox" name="checkbox">
             <label for="checkbox">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
           </div>
 

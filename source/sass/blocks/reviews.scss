@@ -13,7 +13,7 @@
 
 .reviews__header {
   margin-bottom: 40px;
-  
+
   @media screen and (width < 767px) {
     margin-bottom: 30px;
   }
@@ -37,7 +37,16 @@
 
   @media screen and (width < 767px) {
     margin-bottom: 0;
+    height: auto !important;
   }
+}
+
+.reviews__swiper .swiper-wrapper {
+  align-items: stretch !important;
+}
+
+.reviews__swiper .swiper-slide {
+  height: auto !important;
 }
 
 .reviews__footer {

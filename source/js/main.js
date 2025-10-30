@@ -182,24 +182,14 @@ const swiperReviews = new Swiper('.reviews__swiper', {
 
 /* перемещение элементов в REVIEWS */
 document.addEventListener("DOMContentLoaded", () => {
-  const header     = document.querySelector(".reviews__header");
-  const footer     = document.querySelector(".reviews__footer");
-  const buttons    = document.querySelector(".reviews__buttons");
-  const pagination = footer.querySelector(".swiper__pagination");
+  const h = document.querySelector(".reviews__header");
+  const f = document.querySelector(".reviews__footer");
+  const b = document.querySelector(".reviews__buttons");
+  if (!h || !f || !b) return;
 
-  const move = () => {
-    const mobile = window.innerWidth < 768;
-
-    if (mobile) {
-      if (!header.contains(buttons)) header.append(buttons);
-    } else {
-      if (pagination) pagination.style.display = "";
-      if (!footer.contains(buttons)) footer.append(buttons);
-    }
-  };
-
+  const move = () => (window.innerWidth < 768 ? h : f).append(b);
   move();
-  window.addEventListener("resize", move);
+  addEventListener("resize", move);
 });
 
 

@@ -180,4 +180,28 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   },
 });
 
+/* перемещение элементов в REVIEWS */
+document.addEventListener("DOMContentLoaded", () => {
+  const header     = document.querySelector(".reviews__header");
+  const footer     = document.querySelector(".reviews__footer");
+  const buttons    = document.querySelector(".reviews__buttons");
+  const pagination = footer.querySelector(".swiper__pagination");
+
+  const move = () => {
+    const mobile = window.innerWidth < 768;
+
+    if (mobile) {
+      if (pagination) pagination.style.display = "none";
+      if (!header.contains(buttons)) header.append(buttons);
+    } else {
+      if (pagination) pagination.style.display = "";
+      if (!footer.contains(buttons)) footer.append(buttons);
+    }
+  };
+
+  move();
+  window.addEventListener("resize", move);
+});
+
+
 initPopup();

@@ -338,24 +338,48 @@
     }
 }
 
-// .popup__message {
-//   margin-top: 20px;
-//   font-size: 14px;
-//   line-height: 18px;
-//   text-align: center;
-//   border-radius: 6px;
-//   padding: 10px 15px;
-//   display: block;
+.system-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
 
-//   &--success {
-//     color: #0a7a33;
-//     background-color: #e3f6eb;
-//     border: 1px solid #0a7a33;
-//   }
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
 
-//   &--error {
-//     color: #c00;
-//     background-color: #fdecec;
-//     border: 1px solid #c00;
-//   }
-// }
+.system-message {
+  background-color: #ffffff;
+  color: $dark;
+  font-size: 18px;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  animation: fadeInUp 1s ease;
+
+  @media screen and (width < 767px) {
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

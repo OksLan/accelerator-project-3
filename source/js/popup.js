@@ -141,6 +141,67 @@ function initPopupForm(popup, closePopup) {
   };
 
   // отправка
+  // submitBtn.addEventListener("click", async (e) => {
+  //   e.preventDefault();
+
+  //   if (!validateForm()) {
+  //     formContainer.reportValidity();
+  //     return;
+  //   }
+
+  //   const formData = new FormData();
+  //   formData.append("name", nameInput.value.trim());
+  //   formData.append("phone", phoneInput.value.trim());
+  //   formData.append("city", citySelect.textContent.trim());
+  //   formData.append("consent", checkbox.checked);
+
+  //   const messageEl = popup.querySelector(".popup__message");
+
+  //   try {
+  //     // имитация успешной отправки
+  //     await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  //     // очистка формы
+  //     nameInput.value = "";
+  //     phoneInput.value = "";
+  //     citySelect.textContent = "";
+  //     checkbox.checked = false;
+
+  //     // сообщение
+  //     messageEl.textContent = "Спасибо! Форма успешно отправлена.";
+  //     messageEl.className = "popup__message popup__message--success";
+  //     messageEl.hidden = false;
+
+  //     // закрыть popup через 2 секунды
+  //     // setTimeout(() => {
+  //     //   messageEl.hidden = true;
+  //     //   closePopup();
+  //     // }, 2000);
+
+  //       setTimeout(() => {
+  //       messageEl.hidden = true;
+  //       closePopup();
+  //     },10000000);
+
+  //     } catch (err) {
+  //       messageEl.textContent = "Произошла ошибка при отправке. Попробуйте снова.";
+  //       messageEl.className = "popup__message popup__message--error";
+  //       messageEl.hidden = false;
+  //     }
+  // });
+
+    // отправка
+  // submitBtn.addEventListener("click", (e) => {
+  //   if (!validateForm()) {
+  //     formContainer.reportValidity();
+  //     return;
+  //   }
+
+  //   // если всё корректно — просто отправляем форму
+  //   formContainer.submit();
+  // });
+
+    // отправка
   submitBtn.addEventListener("click", async (e) => {
     e.preventDefault();
 
@@ -149,44 +210,36 @@ function initPopupForm(popup, closePopup) {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("name", nameInput.value.trim());
-    formData.append("phone", phoneInput.value.trim());
-    formData.append("city", citySelect.textContent.trim());
-    formData.append("consent", checkbox.checked);
+    // имитация успешной отправки
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    const messageEl = popup.querySelector(".popup__message");
+    // очистка формы
+    nameInput.value = "";
+    phoneInput.value = "";
+    citySelect.textContent = "";
+    checkbox.checked = false;
 
-    try {
-      // имитация успешной отправки
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+    closePopup();
 
-      // очистка формы
-      nameInput.value = "";
-      phoneInput.value = "";
-      citySelect.textContent = "";
-      checkbox.checked = false;
+    // создаем оверлей и сообщение
+    const overlay = document.createElement("div");
+    overlay.className = "system-overlay";
 
-      // сообщение
-      messageEl.textContent = "Спасибо! Форма успешно отправлена.";
-      messageEl.className = "popup__message popup__message--success";
-      messageEl.hidden = false;
+    const message = document.createElement("div");
+    message.className = "system-message";
+    message.textContent = "Форма успешно отправлена";
 
-      // закрыть popup через 2 секунды
-      // setTimeout(() => {
-      //   messageEl.hidden = true;
-      //   closePopup();
-      // }, 2000);
+    overlay.appendChild(message);
+    document.body.appendChild(overlay);
 
-        setTimeout(() => {
-        messageEl.hidden = true;
-        closePopup();
-      },10000000);
+    // показываем анимационно
+    requestAnimationFrame(() => overlay.classList.add("visible"));
 
-      } catch (err) {
-        messageEl.textContent = "Произошла ошибка при отправке. Попробуйте снова.";
-        messageEl.className = "popup__message popup__message--error";
-        messageEl.hidden = false;
-      }
+    // удаляем через 2.5 секунды
+    setTimeout(() => {
+      overlay.classList.remove("visible");
+      setTimeout(() => overlay.remove(), 300);
+    }, 2500);
   });
+
 }

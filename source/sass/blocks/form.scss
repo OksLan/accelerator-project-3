@@ -104,7 +104,6 @@
 
 .form__name,
 .form__phone,
-.form__message,
 .form__city {
   display: flex;
   flex-direction: column;
@@ -132,6 +131,11 @@
     border-radius: 8px;
     margin-bottom: 20px;
     height: 50px;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $white;
+    }
   }
 }
 
@@ -186,5 +190,43 @@
 .form__button {
   & span {
     margin: 0 auto;
+  }
+}
+
+.form__message {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 14px;
+    line-height: 18px;
+    color: $beige;
+    opacity: 0.8;
+    margin-bottom: 12px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 14px 16px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    background-color: transparent;
+    color: $white;
+    font-size: 14px;
+    line-height: 1.4;
+    resize: vertical; /* позволяет тянуть по вертикали */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 20px;
+
+    &:focus,
+    &:hover {
+      border-color: $white;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba($white, 0.6);
+    }
   }
 }

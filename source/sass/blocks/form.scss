@@ -109,7 +109,7 @@
   flex-direction: column;
   color: $beige;
 
-  & label {
+  label {
     font-size: 14px;
     line-height: 18px;
     color: $beige08;
@@ -125,71 +125,21 @@
     }
   }
 
-  & input {
+  input {
     background-color: transparent;
     border: 1px solid #ffffff4d;
     border-radius: 8px;
     margin-bottom: 20px;
     height: 50px;
+    width: 100%;
+    padding: 14px 16px;
+    color: $white;
+    transition: border-color 0.3s ease;
 
     &:hover,
     &:focus {
-      border: 1px solid $white;
+      border-color: $white;
     }
-  }
-}
-
-.form__message {
-  & input {
-    height: 90px;
-  }
-}
-
-.form__checkbox {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-
-  @media (width < 767px) {
-    margin-bottom: 20px;
-  }
-
-  & label {
-    font-size: 12px;
-    line-height: 12px;
-    color: $white;
-    opacity: 0.8;
-
-    @media (width < 767px) {
-      line-height: 14px;
-      max-width: 144px;
-    }
-  }
-
-  & input {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-}
-
-.form__city {
-  & select {
-    background-color: transparent;
-    border: 1px solid $white03;
-    border-radius: 8px;
-    height: 52px;
-    margin-bottom: 20px;
-    background: url("../../img/sprite/select.svg") no-repeat right 21px center;
-    appearance: none;
-    cursor: pointer;
-    background-size: 16px;
-  }
-}
-
-.form__button {
-  & span {
-    margin: 0 auto;
   }
 }
 
@@ -209,24 +159,142 @@
     width: 100%;
     min-height: 90px;
     padding: 14px 16px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #ffffff4d;
     border-radius: 8px;
     background-color: transparent;
     color: $white;
     font-size: 14px;
     line-height: 1.4;
-    resize: vertical; /* позволяет тянуть по вертикали */
+    resize: vertical;
     transition: border-color 0.3s ease, background-color 0.3s ease;
     margin-bottom: 20px;
 
     &:focus,
     &:hover {
       border-color: $white;
-      outline: none;
+    }
+  }
+}
+
+/* city */
+.form__city {
+  select {
+    background-color: transparent;
+    border: 1px solid $white03;
+    border-radius: 8px;
+    height: 52px;
+    margin-bottom: 20px;
+    background: url("../../img/sprite/select.svg") no-repeat right 21px center;
+    appearance: none;
+    cursor: pointer;
+    background-size: 16px;
+  }
+}
+
+/* инпут */
+.form__city .custom-select__button {
+  background-color: $primary;
+  width: 100%;
+  padding: 16px 17px;
+  border: 1px solid #ffffff4d;
+  border-radius: 8px;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and (width < 767px) {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+  }
+}
+
+.form__city .custom-select__button:hover,
+.form__city .custom-select__button:focus,
+.form__city .custom-select__button:active,
+.form__city .custom-select--open .custom-select__button {
+  border-color: $white;
+}
+
+/* выпадающий список */
+.form__city .custom-select--open .custom-select__list {
+  border-color: $white;
+}
+
+.form__city .custom-select__text {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 14px;
+  line-height: 14px;
+  color: $white;
+}
+
+/* чекбокс */
+.form__checkbox {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  @media (width < 767px) {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 12px;
+    line-height: 12px;
+    color: $white;
+    opacity: 0.8;
+
+    @media (width < 767px) {
+      line-height: 14px;
+      max-width: 144px;
+    }
+  }
+
+  input {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: $white;
+    position: relative;
+    transition: all 0.2s ease;
+    padding: 0;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 7px;
+      width: 5px;
+      height: 10px;
+      border-right: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.2s ease;
+      transform-origin: center;
     }
 
-    &::placeholder {
-      color: rgba($white, 0.6);
+    &:checked::after {
+      transform: rotate(45deg) scale(1);
     }
+  }
+}
+
+.form__button {
+  & span {
+    margin: 0 auto;
   }
 }

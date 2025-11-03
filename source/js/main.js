@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import { programCards, showPrograms } from './programs.js';
 import { reviewCards, showReviews } from './reviews.js';
 import { initPopup } from './popup.js';
+import { initForm } from './form.js';
 
 
 /* HERO slider */
@@ -194,3 +195,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 initPopup();
+initForm();

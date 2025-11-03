@@ -135,10 +135,15 @@
     padding: 14px 16px;
     color: $white;
     transition: border-color 0.3s ease;
+    font-size: 14px;
+    line-height: 14px;
+    opacity: 0.8;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       border-color: $white;
+      background-color: $primary;
     }
   }
 }
@@ -242,6 +247,7 @@
   margin-top: 20px;
 
   @media (width < 767px) {
+    margin-top: 0;
     margin-bottom: 20px;
   }
 

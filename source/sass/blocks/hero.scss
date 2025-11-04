@@ -158,6 +158,8 @@
 }
 
 .hero__nav-subitem {
+  margin-top: 20px;
+
   a {
     letter-spacing: 0;
     text-transform: none;
@@ -165,14 +167,6 @@
     color: $white06;
     cursor: pointer;
     transition: color 0.3s ease;
-
-  &:first-child {
-    margin-top: 20px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
     .submenu__list--open & {
       opacity: 1;
@@ -185,11 +179,3 @@
     }
   }
 }
-
-// .hero__nav-subitem:first-child {
-//   margin-top: 20px;
-// }
-
-// .hero__nav-subitem:last-child {
-//   margin-bottom: 0;
-// }

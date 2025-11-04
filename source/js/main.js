@@ -194,5 +194,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* FOOTER */
+document.querySelector('.footer__logo').addEventListener('click', (e) => {
+  e.preventDefault(); // отменяет переход по "#"
+});
+
 initPopup();
 initForm();

@@ -145,6 +145,16 @@
       border-color: $white;
       background-color: $primary;
     }
+
+    &--error {
+      border: 1px solid #ff5e66;
+      background-color: #ff5e6633;
+    }
+
+    &:disabled {
+      border: 1px solid #a9afb780;
+      background-color: #a9afb733;
+    }
   }
 }
 

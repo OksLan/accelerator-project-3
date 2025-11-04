@@ -36,7 +36,7 @@
                 </svg>
               </button>
 
-              <nav class="hero__nav">
+              <!-- <nav class="hero__nav">
                 <ul class="hero__nav-list">
                   <li class="hero__nav-item">О проекте</li>
                   <li class="hero__nav-item hero__nav-item--submenu">
@@ -54,11 +54,11 @@
                       <li class="hero__nav-subitem">Учёба</li>
                       <li class="hero__nav-subitem">Религия</li>
                     </ul>
-                    </li>
+                  </li>
 
-                    <li class="hero__nav-item">Как проехать</li>
-                    <li class="hero__nav-item">Отзывы</li>
-                    <li class="hero__nav-item hero__nav-item--submenu">
+                  <li class="hero__nav-item">Как проехать</li>
+                  <li class="hero__nav-item">Отзывы</li>
+                  <li class="hero__nav-item hero__nav-item--submenu">
                       <p>Новости
                         <button class="hero__nav-toggle" aria-label="Открыть подменю">
                           <svg class="hero__nav-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
@@ -66,11 +66,42 @@
                           </svg>
                         </button>
                       </p>
-                    </li>
-                    <li class="hero__nav-item">Контакты</li>
+                  </li>
+                  <li class="hero__nav-item">Контакты</li>
+                </ul>
+              </nav> -->
+
+            <nav class="hero__nav">
+              <ul class="hero__nav-list">
+                <li class="hero__nav-item">
+                  <a href="#about" class="hero__nav-link">О проекте</a>
+                </li>
+
+                <li class="hero__nav-item hero__nav-item--submenu">
+                  <p>Программы
+                    <button class="hero__nav-toggle" aria-label="Открыть подменю">
+                      <svg class="hero__nav-toggle-icon" width="12" height="7" viewBox="0 0 12 7">
+                        <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" fill="none" stroke="currentColor" stroke-width="1"/>
+                      </svg>
+                    </button>
+                  </p>
+
+                  <ul class="hero__nav-sublist">
+                    <li class="hero__nav-subitem"><a href="#internships" class="hero__nav-sublink">Стажировки</a></li>
+                    <li class="hero__nav-subitem"><a href="#volunteering" class="hero__nav-sublink">Волонтерство</a></li>
+                    <li class="hero__nav-subitem"><a href="#study" class="hero__nav-sublink">Учёба</a></li>
+                    <li class="hero__nav-subitem"><a href="#religion" class="hero__nav-sublink">Религия</a></li>
                   </ul>
-              </nav>
-          </div>
+                </li>
+
+                <li class="hero__nav-item"><a href="#grant" class="hero__nav-link">Как проехать</a></li>
+                <li class="hero__nav-item"><a href="#reviews" class="hero__nav-link">Отзывы</a></li>
+                <li class="hero__nav-item"><a href="#news" class="hero__nav-link">Новости</a></li>
+                <li class="hero__nav-item"><a href="#contacts" class="hero__nav-link">Контакты</a></li>
+              </ul>
+            </nav>
+
+            </div>
           </div>
         </header>
 
@@ -173,7 +204,7 @@
         </div>
     </div>
 
-    <div class="about" data-test="about">
+    <div id="about" class="about" data-test="about">
       <div class="container">
         <div class="about__wrapper">
           <div class="about__main-text">
@@ -281,7 +312,7 @@
       </div>
     </div>
 
-    <div class="programs" data-test="programs">
+    <div id="programs" class="programs" data-test="programs">
       <div class="container">
         <div class="programs__wrapper">
           <div class="programs__header">
@@ -327,44 +358,44 @@
       </div>
     </div>
 
-    <div class="grant" data-test="grant">
-      <!-- <div class="container"> -->
-        <div class="grant__wrapper">
-          <div class="grant__col-left">
-            <h3>Как поехать</h3>
-            <span>Свяжитесь с&nbsp;координатором, чтобы узнать полную информацию.
+    <div id="grant" class="grant" data-test="grant">
+      <div class="grant__wrapper">
+        <div class="grant__col-left">
+          <h3>Как поехать</h3>
+          <span>Свяжитесь с&nbsp;координатором, чтобы узнать полную информацию.
               Вы&nbsp;получите актуальные сведения о&nbsp;доступных программах
-              и&nbsp;городах, в&nbsp;которых можете пройти программу.</span>
-            <picture class="grant__image">
-              <source media="(min-width: 1440px)" width="498" height="363" type="image/webp" srcset="img/grant/grant-desktop@1x.webp 1x, img/grant/grant-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="678" height="375" type="image/webp" srcset="img/grant/grant-tablet@1x.webp 1x, img/grant/grant-tablet@2x.webp 2x">
-              <img src="img/grant/grant-mobile@1x.png" width="290" height="200" alt="Иллюстрация к условиям гранта">
-            </picture>
-          </div>
-          <div class="grant__col-right">
-            <h4>Чтобы получить грант на&nbsp;обучение, вам нужно:</h4>
-            <ol class="grant__list">
-              <li class="grant__item grant__item--one">
-                <span>Быть в&nbsp;возрасте от&nbsp;16&nbsp;до&nbsp;30&nbsp;лет</span>
-              </li>
-              <li class="grant__item grant__item--two">
-                <span>Иметь оконченное среднее образование</span>
-              </li>
-              <li class="grant__item grant__item--three">
-                <span>Иметь документально подтверждённое отсутствие
-                судимости и&nbsp;пройти консульскую проверку</span>
-              </li>
-              <li class="grant__item grant__item--four">
-                <span>За&nbsp;последние 2&nbsp;года быть не&nbsp;больше 3х&nbsp;месяцев
-                подряд непрерывно в&nbsp;одной стране</span>
-              </li>
-            </ol>
-         </div>
+            и&nbsp;городах, в&nbsp;которых можете пройти программу.</span>
+          <picture class="grant__image">
+            <source media="(min-width: 1440px)" width="498" height="363" type="image/webp" srcset="img/grant/grant-desktop@1x.webp 1x, img/grant/grant-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="678" height="375" type="image/webp" srcset="img/grant/grant-tablet@1x.webp 1x, img/grant/grant-tablet@2x.webp 2x">
+            <img src="img/grant/grant-mobile@1x.png" width="290" height="200" alt="Иллюстрация к условиям гранта">
+          </picture>
         </div>
-      <!-- </div> -->
+        <div class="grant__col-right">
+          <h4>Чтобы получить грант на&nbsp;обучение, вам нужно:</h4>
+          <ol class="grant__list">
+            <li class="grant__item grant__item--one">
+              <span>Быть в&nbsp;возрасте от&nbsp;16&nbsp;до&nbsp;30&nbsp;лет</span>
+            </li>
+            <li class="grant__item grant__item--two">
+              <span>Иметь оконченное среднее образование</span>
+            </li>
+            <li class="grant__item grant__item--three">
+              <span>Иметь документально подтверждённое отсутствие
+              судимости и&nbsp;пройти консульскую проверку</span>
+            </li>
+            <li class="grant__item grant__item--four">
+              <span>За&nbsp;последние 2&nbsp;года быть не&nbsp;больше 3х&nbsp;месяцев
+              подряд непрерывно в&nbsp;одной стране</span>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
 
-    <!-- <div data-test="news">news</div> -->
+    <div id="news" class="news" data-test="news">
+      Новости
+    </div>
 
     <div class="faq" data-test="FAQ">
       <div class="faq__wrapper">
@@ -429,7 +460,7 @@
       </div>
     </div>
 
-    <div class="reviews" data-test="reviews">
+    <div id="reviews" class="reviews" data-test="reviews">
       <div class="container">
         <div class="reviews__wrapper">
           <div class="reviews__header">
@@ -469,36 +500,36 @@
       </div>
     </div>
 
-    <div class="contacts" data-test="contacts">
+    <div id="contacts" class="contacts" data-test="contacts">
       <div class="container">
-      <div class="contacts__wrapper">
-        <div class="contacts__details">
-          <h3>Контакты</h3>
-          <div class="contacts__info">
-            <div class="contacts__item">
-              <p>
-                <span class="contacts__item-header">Центральный офис</span>
-                <span class="contacts__item-text">г. Новосибирск, ул. Щетинкина&nbsp;68,
-                  культурный центр</span>
-              </p>
-            </div>
-            <div class="contacts__item">
-              <p>
-                <span class="contacts__item-header">Телефон</span>
-                <a class="phone-number" href="tel:+796387687676">+7 963 876 876 76</a>
-              </p>
-            </div>
-            <div class="contacts__item">
-              <p>
-                <span class="contacts__item-header">Email</span>
-                <a class="e-mail" href="mailto:info@stazh.ru">info@stazh.ru</a>
-              </p>
+        <div class="contacts__wrapper">
+          <div class="contacts__details">
+            <h3>Контакты</h3>
+            <div class="contacts__info">
+              <div class="contacts__item">
+                <p>
+                  <span class="contacts__item-header">Центральный офис</span>
+                  <span class="contacts__item-text">г. Новосибирск, ул. Щетинкина&nbsp;68,
+                    культурный центр</span>
+                </p>
+              </div>
+              <div class="contacts__item">
+                <p>
+                  <span class="contacts__item-header">Телефон</span>
+                  <a class="phone-number" href="tel:+796387687676">+7 963 876 876 76</a>
+                </p>
+              </div>
+              <div class="contacts__item">
+                <p>
+                  <span class="contacts__item-header">Email</span>
+                  <a class="e-mail" href="mailto:info@stazh.ru">info@stazh.ru</a>
+                </p>
+              </div>
             </div>
           </div>
+          <div class="contacts__map"></div>
         </div>
-        <div class="contacts__map"></div>
       </div>
-    </div>
     </div>
 
     <div class="form" data-test="form">
@@ -522,14 +553,6 @@
             <label class="message" for="form-message">Ваше сообщение</label>
             <textarea class="form__input" name="user-message" id="form-message"></textarea>
           </div>
-
-          <!-- <div class="form__city">
-            <label class="form__city-label" for="city">Выберите город</label>
-            <select class="form__city-list" name="city" id="form-city">
-              <option class="form__city-item" value=""> </option>
-              <option class="form__city-item" value="Москва">Москва</option>
-            </select>
-          </div> -->
 
           <div class="form__city">
             <label class="form__city-label" for="city">Выберите город</label>
@@ -575,28 +598,28 @@
 
             <ul class="footer__links-list">
               <li class="footer__links-item">
-                 <a class="footer-link about-link" href="#">О проекте</a>
+                <a href="#about">О проекте</a>
               </li>
               <li class="footer__links-item">
-                <a class="footer-link programs-link" href="#">Программы</a>
+                <a href="#programs">Программы</a>
               </li>
               <li class="footer__links-item">
-                <a class="footer-link travel-link" href="#">Как поехать</a>
+                <a href="#grant">Как поехать</a>
               </li>
               <li class="footer__links-item">
-                <a class="footer-link reviews-link" href="#">Отзывы</a>
+                <a href="#reviews">Отзывы</a>
               </li>
               <li class="footer__links-item">
-                <a class="footer-link news-link" href="#">Новости</a>
+                <a href="#news">Новости</a>
               </li>
               <li class="footer__links-item">
-                <a class="footer-link contacts-link" href="#">Контакты</a>
+                <a href="#contacts">Контакты</a>
               </li>
             </ul>
 
             <ul class="social-list">
               <li class="social-list__item">
-                <a class="social-list__link" href="#">
+                <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
                   <span class="visually-hidden">Мы в ВKонтакте</span>
                   <svg class="vk-icon" width="16" height="16">
                     <use href="/__spritemap#sprite-vk"></use>
@@ -604,26 +627,30 @@
                 </a>
               </li>
               <li class="social-list__item">
-                  <a class="social-list__link" href="#">
-                    <span class="visually-hidden">Мы в Одноклассниках</span>
-                    <svg class="ok-icon" width="16" height="16">
-                      <use href="/__spritemap#sprite-ok"></use>
-                    </svg>
-                  </a>
+                <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                  <span class="visually-hidden">Мы в Одноклассниках</span>
+                  <svg class="ok-icon" width="16" height="16">
+                    <use href="/__spritemap#sprite-ok"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social-list__item">
-                  <a class="social-list__link" href="#">
-                    <span class="visually-hidden">Мы на Reddit</span>
-                    <svg class="rd-icon" width="16" height="16">
-                      <use href="/__spritemap#sprite-rd"></use>
-                    </svg>
-                  </a>
+                <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                  <span class="visually-hidden">Мы на Reddit</span>
+                  <svg class="rd-icon" width="16" height="16">
+                    <use href="/__spritemap#sprite-rd"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
 
             <div class="footer__privacy">
-              <span class="footer__privacy-rights">Стажировка &copy;&nbsp;2023 Все права защищены</span>
-              <span class="footer__privacy-confid">Политика конфиденциальности</span>
+              <span class="footer__privacy-rights">
+                Стажировка &copy;&nbsp;2023 Все права защищены
+              </span>
+              <a class="footer__privacy-confid" href="privacy.html" target="_blank" rel="noopener noreferrer">
+                Политика конфиденциальности
+              </a>
             </div>
 
           </div>

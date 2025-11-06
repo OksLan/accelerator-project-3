@@ -15,19 +15,13 @@ import { initSlider} from "./slider.js";
 
   initSlider();
 
-/* FAQ */
-// document.addEventListener('DOMContentLoaded', () => {
-//   document.querySelectorAll('.faq__details').forEach((el, i) => {
-//     el.open = (i === 2);
-//   });
-// });
-
-
 /* hero__nav */
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".hero__nav");
   const toggleBtn = document.querySelector(".hero__header-toggle");
   const icon = toggleBtn?.querySelector("use");
+  const overlay = document.querySelector(".overlay");
+  const body = document.body;
 
   const setIcon = (id) => icon?.setAttribute("href", id);
 
@@ -35,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("nav--opened", open);
     toggleBtn.setAttribute("aria-expanded", open);
     setIcon(open ? "/__spritemap#sprite-cross" : "/__spritemap#sprite-burger");
+    overlay.classList.toggle("overlay--active", open);
+    body.classList.toggle("menu-open", open);
+
     if (!open) {
       nav.querySelectorAll(".hero__nav-sublist").forEach(el => el.classList.remove("hero__nav-sublist--open"));
       nav.querySelectorAll(".hero__nav-toggle").forEach(btn => {
@@ -49,14 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
     setMenuState(!nav.classList.contains("nav--opened"));
   });
 
+  // закрытие при клике вне меню
   document.addEventListener("click", (e) => {
-    if (nav.classList.contains("nav--opened") && !nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+    if (
+      nav.classList.contains("nav--opened") &&
+      !nav.contains(e.target) &&
+      !toggleBtn.contains(e.target)
+    ) {
       setMenuState(false);
     }
   });
 
+  // закрытие по Esc
   document.addEventListener("keydown", (e) => e.key === "Escape" && setMenuState(false));
 
+  // закрытие по overlay
+  overlay.addEventListener("click", () => setMenuState(false));
+
+  // подменю
   nav.querySelectorAll(".hero__nav-item--submenu").forEach(item => {
     const sublist = item.querySelector(".hero__nav-sublist");
     const btn = item.querySelector(".hero__nav-toggle");
@@ -77,7 +84,7 @@ const programTemplate = document.querySelector("#program-card");
 
 showPrograms(programCards);
 
-/* свайпер */
+// свайпер
 const swiperPrograms = new Swiper('.programs__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
@@ -113,7 +120,7 @@ const swiperPrograms = new Swiper('.programs__swiper', {
   },
 });
 
-/* перемещение элементов в PROGRAMS */
+// перемещение элементов в PROGRAMS
 document.addEventListener("DOMContentLoaded", () => {
   const header     = document.querySelector(".programs__header");
   const footer     = document.querySelector(".programs__footer");
@@ -139,13 +146,20 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", move);
 });
 
+/* FAQ */
+// document.addEventListener('DOMContentLoaded', () => {
+//   document.querySelectorAll('.faq__details').forEach((el, i) => {
+//     el.open = (i === 2);
+//   });
+// });
+
 /* REVIEWS */
 const reviewsList = document.querySelector(".reviews__list");
 const reviewTemplate = document.querySelector("#review-card");
 
 showReviews(reviewCards);
 
-/* свайпер */
+// свайпер
 const swiperReviews = new Swiper('.reviews__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
@@ -181,7 +195,7 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   },
 });
 
-/* перемещение элементов в REVIEWS */
+// перемещение элементов в REVIEWS
 document.addEventListener("DOMContentLoaded", () => {
   const h = document.querySelector(".reviews__header");
   const f = document.querySelector(".reviews__footer");
@@ -193,11 +207,12 @@ document.addEventListener("DOMContentLoaded", () => {
   addEventListener("resize", move);
 });
 
-
 /* FOOTER */
 document.querySelector('.footer__logo').addEventListener('click', (e) => {
   e.preventDefault(); // отменяет переход по "#"
 });
+
+
 
 initPopup();
 initForm();

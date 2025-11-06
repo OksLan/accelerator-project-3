@@ -594,3 +594,21 @@ ul {
     }
   }
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #0d1d3366;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9;
+}
+
+.overlay--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-open {
+  overflow: hidden;
+}

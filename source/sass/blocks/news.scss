@@ -1,3 +1,67 @@
 .news {
   background-color: bisque;
+  position: relative;
+  display: flex;
 }
+
+.news__wrapper {
+  padding: 60px 0;
+
+  @media screen and (width < 1439px) {
+    padding: 50px 0;
+  }
+}
+
+.news__header {
+  margin-bottom: 40px;
+
+  @media screen and (width < 1439px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (width < 767px) {
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    color: $primary;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media screen and (width < 1439px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (width < 767px) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.news__tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  @media screen and (width < 1439px) {
+   gap: 10px;
+  }
+}
+
+.news__tab {
+  padding: 16px 26px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $primary;
+  opacity: 0.6;
+  letter-spacing: 0.28px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 20px;
+
+  @media screen and (width < 1439px) {
+    padding: 16px 22px;
+  }
+}
+

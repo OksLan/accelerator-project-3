@@ -300,7 +300,6 @@
           </div>
 
           <div class="programs__footer">
-
             <div class="swiper-pagination swiper-pagination-progressbar programs__pagination">
             </div>
 
@@ -322,7 +321,6 @@
                 </svg>
               </button>
             </div>
-
           </div>
         </div>
       </div>
@@ -366,6 +364,7 @@
     <div id="news" class="news" data-test="news">
       <div class="container">
         <div class="news__wrapper">
+
           <div class="news__header">
             <h3>Новости и материалы</h3>
             <div class="news__tabs">
@@ -376,8 +375,93 @@
               <button class="news__tab" data-target="news-trips" type="button">Путешествия</button>
             </div>
           </div>
-          <div class="swiper news__swiper"></div>
-          <div class="news__footer"></div>
+
+          <div class="swiper news__swiper">
+            <div class="swiper-wrapper news__list">
+              <article class="news__list-item news-card swiper-slide">
+                <div class="news-card__image-wrapper">
+                  <!-- <picture>
+                    <source
+                        media="(min-width: 1439px)"
+                        class="program-card__image-webp"
+                        type="image/webp"
+                        width="392"
+                        height="420"
+                      data-srcset="img/programs/[[id]]-desktop@1x.webp 1x, img/programs/[[id]]-desktop@2x.webp 2x">
+                    <source
+                        media="(min-width: 1439px)"
+                        class="program-card__image-png"
+                        type="image/png"
+                        width="392"
+                        height="420"
+                      data-srcset="img/programs/[[id]]-desktop@1x.png 1x, img/programs/[[id]]-desktop@2x.png 2x">
+                    <source
+                        media="(min-width: 767px)"
+                        class="program-card__image-webp"
+                        type="image/webp"
+                        width="324"
+                        height="420"
+                      data-srcset="img/programs/[[id]]-tablet@1x.webp 1x, img/programs/[[id]]-tablet@2x.webp 2x">
+                    <source
+                        media="(min-width: 767px)"
+                        class="program-card__image-png"
+                        type="image/png"
+                        width="324"
+                        height="420"
+                      data-srcset="img/programs/[[id]]-tablet@1x.png 1x, img/programs/[[id]]-tablet@2x.png 2x">
+                    <img
+                        class="program-card__image"
+                        data-src="img/programs/[[id]]-mobile@1x.png"
+                        data-srcset="img/programs/[[id]]-mobile@1x.png 1x, img/programs/[[id]]-mobile@2x.png 2x"
+                        width="290"
+                        height="400"
+                      alt="">
+                  </picture> -->
+                </div>
+                <div class="news-card__content-wrapper">
+                  <div class="news-card__date">Дата</div>
+                  <div class="news-card__title">Заголовок новости</div>
+                  <div class="news-card__text">
+                    <p></p>
+                  </div>
+                  <a class="news-card__button button button--notext" type="button" href="https://www.internship/programs.com"></a>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+          <div class="news__footer">
+
+            <button class="swiper-buttons__button programs__button programs__button--prev" aria-label="Посмотреть предыдущюю программу" disabled>
+                <svg width="10"
+                  height="10"
+                  aria-hidden="true"
+                  focusable="false">
+                  <use href="/__spritemap#sprite-prev"></use>
+                </svg>
+            </button>
+              
+            <div class="swiper-pagination swiper-pagination-bullets news__pagination">
+              <button class="swiper-pagination-bullet swiper-pagination-bullet--one" aria-label="">
+              </button>
+              <button class="swiper-pagination-bullet swiper-pagination-bullet--two" aria-label="">
+              </button>
+              <button class="swiper-pagination-bullet swiper-pagination-bullet--three" aria-label="">
+              </button>
+              <button class="swiper-pagination-bullet swiper-pagination-bullet--four" aria-label="">
+              </button>
+            </div>
+
+            <button class="swiper-buttons__button programs__button programs__button--next" aria-label="Посмотреть следующую программу">
+                <svg width="10"
+                  height="10"
+                  aria-hidden="true"
+                  focusable="false">
+                  <use href="/__spritemap#sprite-next"></use>
+                </svg>
+            </button>
+          </div>
+
         </div>
       </div>
     </div>

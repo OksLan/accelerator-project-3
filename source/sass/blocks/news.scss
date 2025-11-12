@@ -65,3 +65,19 @@
   }
 }
 
+.swiper.news__swiper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.news__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__pagination {
+ display: flex;  
+ align-self: center;
+}

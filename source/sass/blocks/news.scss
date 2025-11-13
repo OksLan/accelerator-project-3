@@ -70,14 +70,35 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  background-color: aliceblue;
 }
 
 .news__footer {
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  justify-content: center;
 }
 
 .news__pagination {
- display: flex;  
- align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.news__button--prev {
+  position: absolute;
+  left: 0;
+}
+
+.news__button--next {
+  position: absolute;
+  right: 0;
+}
+
+.news .swiper-pagination-bullet {
+  background-color: $primary;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
 }

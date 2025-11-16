@@ -173,7 +173,7 @@
 .slide__content {
   position: absolute;
   bottom: 58px;
-  left: 100px;
+  left: calc((100% - 1240px) / 2);
   max-width: 968px;
   width: fit-content;
 

@@ -97,23 +97,21 @@
 .news__footer {
   display: flex;
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .news__pagination {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
 .news__button--prev {
-  position: absolute;
   left: 0;
 }
 
 .news__button--next {
-  position: absolute;
   right: 0;
 }
 

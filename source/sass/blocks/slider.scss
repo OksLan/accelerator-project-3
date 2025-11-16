@@ -136,58 +136,12 @@
   }
 }
 
-// .slide__content {
-//   display: flex;
-//   flex-wrap: wrap;
-//   position: absolute;
-//   bottom: 58px;
-//   left: 100px;
-//   max-width: 968px;
-
-//   @media screen and (width < 1439px) {
-//     left: 45px;
-//     max-width: 659px;
-//   }
-
-//   @media screen and (width < 767px) {
-//     left: 15px;
-//     bottom: 20px;
-//     max-width: 290px;
-//   }
-
-//   &::after {
-//     content: "";
-//     width: 26px;
-//     height: 26px;
-//     background-image: url("../../img/sprite/angle-2.svg");
-
-//     @media screen and (width < 767px) {
-//       width: 10px;
-//       height: 10px;
-//       background-image: url("../../img/sprite/angle-5.svg");
-//       order: 2;
-//     }
-//   }
-// }
-
 .slide__content {
   position: absolute;
   bottom: 58px;
   left: calc((100% - 1240px) / 2);
   max-width: 968px;
   width: fit-content;
-
-  // display: grid !important;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: auto auto auto auto;
-  // grid-template-areas:
-  //   "pagination"
-  //   "heading"
-  //   "text" "button";
-
-  // row-gap: 0;
-  // overflow: visible;
-  // z-index: 1;
 
   display: grid !important;
   grid-template-columns: auto auto;
@@ -236,7 +190,7 @@
   width: 120px;
   height: 40px;
   bottom: 365px;
-  left: 100px;
+  left: calc((100% - 1240px) / 2);
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -257,55 +211,6 @@
   }
 }
 
-// .slider__pagination-bg {
-//   width: 120px;
-//   height: 40px;
-//   bottom: 365px;
-//   left: 100px;
-//   background-color: $white;
-//   border-radius: 20px 20px 0 0;
-//   display: flex;
-//   gap: 12px;
-//   justify-content: center;
-//   align-items: center;
-
-//   @media screen and (width < 1439px) {
-//     width: 100px;
-//     bottom: 332px;
-//     left: 45px;
-//   }
-
-//   @media screen and (width < 767px) {
-//     width: 80px;
-//     height: 28px;
-//     border-radius: 12px 12px 0 0;
-//     left: 15px;
-//     bottom: 339px;
-//   }
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 20px;
-//     height: 20px;
-//     background-image: url("../../img/sprite/angle-1.svg");
-//     top: 20px;
-//     left: 120px;
-
-//     @media screen and (width < 1439px) {
-//       left: 99px;
-//     }
-
-//     @media screen and (width < 767px) {
-//       background-image: url("../../img/sprite/angle-3.svg");
-//       width: 10px;
-//       height: 10px;
-//       top: 18px;
-//       left: 79px;
-//     }
-//   }
-// }
-
 .slider__pagination-bg {
   grid-area: pagination;
   position: relative;
@@ -321,15 +226,12 @@
 
     @media screen and (width < 1439px) {
     width: 100px;
-    // bottom: 332px;
   }
 
   @media screen and (width < 767px) {
     width: 80px;
     height: 28px;
     border-radius: 12px 12px 0 0;
-    // left: 15px;
-    // bottom: 339px;
   }
 
     &::before {
@@ -388,36 +290,6 @@
   background-color: $primary;
 }
 
-// .slide__content-heading {
-//   flex-grow: 1;
-//   background-color: $white;
-//   padding: 40px 50px 30px;
-//   border-radius: 0 30px 30px 0;
-
-//   @media screen and (width < 1439px) {
-//     padding: 30px 69px 24px 40px;
-//   }
-
-//   @media screen and (width < 767px) {
-//     padding: 20px 15px 16px 14px;
-//     border-radius: 0 16px 16px 0;
-
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       background-image: url("../../img/sprite/angle-4.svg");
-//       width: 8px;
-//       height: 10px;
-//       left: 267px;
-//       top: 167px;
-//     }
-//   }
-
-//   h2 {
-//     color: $primary;
-//   }
-// }
-
 .slide__content-heading {
   grid-area: heading;
   background-color: $white;
@@ -447,39 +319,6 @@
     color: $primary;
   }
 }
-
-// .slide__content-text {
-//   background-color: $white;
-//   padding: 0 41px 35px;
-//   border-radius: 0 0 0 30px;
-
-//   @media screen and (width < 1439px) {
-//     max-width: 593px;
-//     padding: 0 28px 35px 40px;
-//   }
-
-//   @media screen and (width < 767px) {
-//     padding: 0 14px 15px;
-//     max-width: 267px;
-//     border-radius: 0 0 16px 0;
-//   }
-
-//   p {
-//     font-size: 16px;
-//     line-height: 26px;
-//     color: $dark;
-//     max-width: 446px;
-
-//     @media screen and (width < 1439px) {
-//       line-height: 20px;
-//       max-width: 285px;
-//     }
-
-//     @media screen and (width < 767px) {
-//       max-width: 267px;
-//     }
-//   }
-// }
 
 .slide__content-text {
   grid-area: text;
@@ -515,23 +354,6 @@
   }
 }
 
-// .slide__content-button {
-//   background-color: $white;
-//   max-width: fit-content;
-//   padding-right: 56px;
-//   padding-bottom: 56px;
-//   border-radius: 0 0 30px 0;
-
-//   @media screen and (width < 1439px) {
-//     padding-right: 40px;
-//   }
-
-//   @media screen and (width < 767px) {
-//     padding: 10px 15px;
-//     border-radius: 0 0 16px 16px;
-//   }
-// }
-
 .slide__content-button {
   grid-area: button;
   align-self: start;
@@ -564,7 +386,7 @@
       bottom: 109px;
       left: 568px;
       }
-    
+
     @media screen and (width < 767px) {
       width: 10px;
       height: 10px;

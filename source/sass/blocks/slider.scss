@@ -362,6 +362,9 @@
   padding-right: 56px;
   padding-bottom: 56px;
   border-radius: 0 0 30px 0;
+  height: 100%;
+
+  position: relative;
 
   @media screen and (width < 1439px) {
     padding-right: 40px;
@@ -376,24 +379,19 @@
   &::after {
     content: "";
     position: absolute;
+    top: 0;
+    right: -25px;
     width: 26px;
     height: 26px;
-    bottom: 88px;
-    left: 787px;
     background-image: url("../../img/sprite/angle-2.svg");
-
-    @media screen and (width < 1439px) {
-      bottom: 109px;
-      left: 568px;
-      }
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @media screen and (width < 767px) {
       width: 10px;
       height: 10px;
       background-image: url("../../img/sprite/angle-5.svg");
-      bottom: 54px;
       left: 181px;
-      // order: 2;
       }
     }
 }

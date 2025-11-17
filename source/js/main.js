@@ -69,11 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = item.querySelector(".hero__nav-toggle");
     if (!sublist || !btn) return;
 
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = sublist.classList.toggle("hero__nav-sublist--open");
-      btn.classList.toggle("hero__nav-toggle--open", isOpen);
-      btn.setAttribute("aria-expanded", isOpen);
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = sublist.classList.toggle("hero__nav-sublist--open");
+    btn.classList.toggle("hero__nav-toggle--open", isOpen);
+    btn.setAttribute("aria-expanded", isOpen);
+  });
+});
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      setMenuState(false);
     });
   });
 });

@@ -159,8 +159,8 @@
   @media screen and (width < 1439px) {
     left: 45px;
     max-width: 659px;
+    left: calc((100% - 678px) / 2);
 
-    left: 45px;
     max-width: 659px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -170,9 +170,9 @@
   }
 
   @media screen and (width < 767px) {
-    left: 15px;
     bottom: 20px;
     max-width: 290px;
+    left: calc((100% - 290px) / 2);
 
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -199,7 +199,7 @@
   @media screen and (width < 1439px) {
     width: 100px;
     bottom: 335px;
-    left: 45px;
+    left: calc((100% - 678px) / 2);
   }
 
   @media screen and (width < 767px) {
@@ -208,6 +208,7 @@
     border-radius: 12px 12px 0 0;
     left: 15px;
     bottom: 339px;
+    left: calc((100% - 290px) / 2);
   }
 }
 

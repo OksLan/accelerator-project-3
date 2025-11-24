@@ -8,6 +8,7 @@ import { programCards, showPrograms } from './programs.js';
 import { reviewCards, showReviews } from './reviews.js';
 import { initPopup } from './popup.js';
 import { initForm } from './form.js';
+import { initNewsSwiper } from "./news.js";
 
 
 /* HERO slider */
@@ -222,3 +223,4 @@ document.querySelector('.footer__logo').addEventListener('click', (e) => {
 
 initPopup();
 initForm();
+initNewsSwiper();

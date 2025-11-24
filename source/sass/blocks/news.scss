@@ -196,6 +196,10 @@
       transform: none !important;
     }
 
+    .news__list .swiper-slide:nth-child(n + 3) {
+      display: none !important;
+    }
+
     .swiper-slide {
       width: 290px !important;
       margin: 0 auto;

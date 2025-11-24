@@ -1,5 +1,4 @@
 .news {
-  background-color: bisque;
   position: relative;
   display: flex;
   overflow-x: hidden;
@@ -8,7 +7,6 @@
 .news__wrapper {
   padding: 60px 0;
   overflow-x: hidden;
-
 
   @media screen and (width < 1439px) {
     padding: 50px 0;
@@ -45,6 +43,7 @@
 .news__tabs {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   @media screen and (width < 767px) {
     display: flex;
@@ -63,7 +62,6 @@
     display: none;
   }
 }
-
 
 .news__tab {
   padding: 16px 26px;
@@ -86,13 +84,13 @@
   }
 }
 
-.swiper.news__swiper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  background-color: aliceblue;
-}
+// .swiper.news__swiper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin-bottom: 40px;
+//   background-color: aliceblue;
+// }
 
 .news__footer {
   display: flex;
@@ -129,4 +127,90 @@
 
 .news-card__content-wrapper {
   position: absolute;
+}
+
+.swiper.news__swiper {
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .swiper-slide {
+    flex-shrink: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .news__swiper {
+    .swiper-wrapper {
+      gap: 32px;
+    }
+
+    .swiper-slide {
+      width: 286px !important;
+      height: 400px !important;
+    }
+
+    .swiper-slide-active {
+      width: 604px !important;
+      height: 400px !important;
+    }
+  }
+}
+
+@media screen and (width < 1439px) {
+  .news__swiper {
+    .swiper-wrapper {
+      display: grid !important;
+      grid-template-columns: repeat(2, 324px);
+      grid-auto-rows: 350px;
+      gap: 30px !important;
+      transform: none !important;
+    }
+
+    .swiper-slide {
+      width: 324px !important;
+      height: 350px !important;
+    }
+
+    .swiper-slide-active {
+      width: 324px !important;
+      height: 350px !important;
+    }
+  }
+}
+
+@media screen and (width < 767px){
+  .news__swiper {
+    .swiper-wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      gap: 20px !important;
+      transform: none !important;
+    }
+
+    .swiper-slide {
+      width: 290px !important;
+      margin: 0 auto;
+    }
+
+    .swiper-slide:nth-child(1) {
+      height: 330px !important;
+    }
+
+    .swiper-slide:nth-child(2) {
+      height: 240px !important;
+    }
+
+    .swiper-slide:nth-child(n + 3) {
+      height: auto !important;
+    }
+  }
 }

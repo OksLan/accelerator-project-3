@@ -123,6 +123,10 @@
 
 .news-card__image-wrapper {
   position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .news-card__content-wrapper {

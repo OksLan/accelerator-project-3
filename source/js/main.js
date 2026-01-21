@@ -8,7 +8,7 @@ import { programCards, showPrograms } from './programs.js';
 import { reviewCards, showReviews } from './reviews.js';
 import { initPopup } from './popup.js';
 import { initForm } from './form.js';
-import { initNewsSwiper } from "./news.js";
+// import { initNewsSwiper } from "./news.js";
 
 
 /* HERO slider */
@@ -220,7 +220,41 @@ document.querySelector('.footer__logo').addEventListener('click', (e) => {
 });
 
 
+const newsSwiper = new Swiper('.news__swiper', {
+  modules: [Navigation, Pagination],
+  direction: 'horizontal',
+  speed: 500,
+
+  breakpoints: {
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
+
+  // прогрессбар
+  pagination: {
+    el: '.news__pagination',
+    type: 'progressbar',
+  },
+
+  // стрелки
+    navigation: {
+    nextEl: '.news__button--next',
+    prevEl: '.new s__button--prev',
+    enabled: true,
+    clickable: true,
+  },
+});
 
 initPopup();
 initForm();
-initNewsSwiper();
+// initNewsSwiper();

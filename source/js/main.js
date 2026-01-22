@@ -228,6 +228,7 @@ const newsSwiper = new Swiper('.news__swiper', {
   breakpoints: {
     1440: {
       slidesPerView: 3,
+      // slidesPerView: auto,
       spaceBetween: 32,
       direction: 'horizontal',
     },

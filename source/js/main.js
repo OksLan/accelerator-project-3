@@ -219,7 +219,7 @@ document.querySelector('.footer__logo').addEventListener('click', (e) => {
   e.preventDefault(); // отменяет переход по "#"
 });
 
-
+/* NEWS */
 const newsSwiper = new Swiper('.news__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
@@ -229,22 +229,25 @@ const newsSwiper = new Swiper('.news__swiper', {
     1440: {
       slidesPerView: 3,
       spaceBetween: 32,
+      direction: 'horizontal',
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
+      direction: 'horizontal',
     },
     320: {
       slidesPerView: 1,
       spaceBetween: 10,
+      direction: 'vertical',
     },
   },
 
-  // прогрессбар
-  pagination: {
-    el: '.news__pagination',
-    type: 'progressbar',
-  },
+  // // прогрессбар
+  // pagination: {
+  //   el: '.news__pagination',
+  //   type: 'progressbar',
+  // },
 
   // стрелки
     navigation: {
@@ -257,4 +260,3 @@ const newsSwiper = new Swiper('.news__swiper', {
 
 initPopup();
 initForm();
-// initNewsSwiper();

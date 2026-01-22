@@ -206,6 +206,10 @@
   }
 }
 
+.news .swiper-slide-active {
+  width: 48% !important;
+}
+
 @media screen and (width < 1439px) {
   .news__swiper {
     .swiper-wrapper {

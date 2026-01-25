@@ -223,12 +223,15 @@ document.querySelector('.footer__logo').addEventListener('click', (e) => {
 const newsSwiper = new Swiper('.news__swiper', {
   modules: [Navigation, Pagination],
   direction: 'horizontal',
+
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+
   speed: 500,
 
   breakpoints: {
     1440: {
       slidesPerView: 3,
-      // slidesPerView: auto,
       spaceBetween: 32,
       direction: 'horizontal',
     },

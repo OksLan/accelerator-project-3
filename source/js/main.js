@@ -236,9 +236,9 @@ const newsSwiper = new Swiper('.news__swiper', {
       direction: 'horizontal',
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      direction: 'horizontal',
+      // slidesPerView: 2,
+      // spaceBetween: 30,
+      // direction: 'horizontal',
     },
     320: {
       slidesPerView: 1,
@@ -247,7 +247,7 @@ const newsSwiper = new Swiper('.news__swiper', {
     },
   },
 
-  // // прогрессбар
+  // прогрессбар
   // pagination: {
   //   el: '.news__pagination',
   //   type: 'progressbar',

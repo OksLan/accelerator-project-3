@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Плашка для текста в впуклыми углами</title>
+
+  <!-- scss -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="nebo.scss">
+
+  <style>
+  .inset-card {
+    position: relative;
+    width: 604px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .inset-card__image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .inset-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .inset-card__content-wrapper {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    width: 486px;
+    padding: 16px 20px;
+
+    background: #f0efe9;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .inset-card_date {
+    width: 78px;
+    height: 30px;
+  }
+
+  .inset-card_title {
+    width: 426px;
+    height: 76px;
+  }
+
+  .inset-card__bottom {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    width: 486px;
+    height: 63px;
+  }
+  </style>
+</head>
+
+<body>
+  <main class="inset-card">
+    <div class="inset-card__image-wrapper">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          type="image/webp"
+          srcset="
+              img/inset/01-hor@1x.webp 1x,
+              img/inset/01-hor@2x.webp 2x
+            "
+        >
+        <source
+          type="image/webp"
+          srcset="
+            img/inset/01-vert@1x.webp 1x,
+            img/inset/01-vert@2x.webp 2x
+          "
+        >
+        <img
+          class="inset-card__image"
+          src="img/inset/01-vert@1x.png"
+          srcset="
+            img/inset/01-vert@1x.png 1x,
+            img/inset/01-vert@2x.png 2x
+          "
+          alt=""
+        >
+      </picture>
+    </div>
+    <div class="inset-card__content-wrapper">
+      <div class="inset-card_date"></div>
+      <div class="inset-card_title"></div>
+      <div class="inset-card__bottom">
+        <div class="inset-card_text"></div>
+        <div class="inset-card__button">
+          <a class="button" href="#"></a>
+        </div>
+      </div>
+  </main>
+</body>
+</html>
+

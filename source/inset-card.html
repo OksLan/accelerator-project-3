@@ -7,8 +7,8 @@
   <title>Плашка для текста в впуклыми углами</title>
 
   <!-- scss -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="nebo.scss">
+  <link rel="stylesheet" href="sass/style.scss">
+  <link rel="stylesheet" href="sass/nebo.scss">
 
   <style>
   .inset-card {
@@ -33,37 +33,42 @@
 
   .inset-card__content-wrapper {
     position: absolute;
-    left: 24px;
-    bottom: 24px;
-
+    left: 0;
+    bottom: 0;
     width: 486px;
-    padding: 16px 20px;
-
     background: #f0efe9;
     border-radius: 20px;
-
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
 
   .inset-card_date {
+    background: azure;
     width: 78px;
     height: 30px;
   }
 
   .inset-card_title {
+    background: beige;
     width: 426px;
     height: 76px;
   }
 
   .inset-card__bottom {
+    background: antiquewhite;
     display: flex;
     align-items: center;
-    gap: 16px;
-
     width: 486px;
     height: 63px;
+  }
+
+  .inset-card__button {
+    width: 30px;
+    height: 30px;
+    background: pink;
+    position: relative;
+    left: 420px;
   }
   </style>
 </head>

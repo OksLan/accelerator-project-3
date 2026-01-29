@@ -36,31 +36,31 @@
     left: 0;
     bottom: 0;
     width: 486px;
-    background: #f0efe9;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    background: #f0efe9;
   }
 
-  .inset-card_date {
+  .inset-card__date {
     background: azure;
-    width: 78px;
-    height: 30px;
+    width: 94px;
+    height: 46px;
   }
 
-  .inset-card_title {
+  .inset-card__title {
     background: beige;
     width: 426px;
     height: 76px;
+    border-radius: 0 12px 0 0;
   }
 
   .inset-card__bottom {
     background: antiquewhite;
     display: flex;
     align-items: center;
-    width: 486px;
+    width: 468px;
     height: 63px;
+    border-radius: 0 12px 0 0;
   }
 
   .inset-card__button {
@@ -69,8 +69,9 @@
     background: pink;
     position: relative;
     left: 420px;
+    display: flex;
   }
-  </style>
+ </style>
 </head>
 
 <body>
@@ -104,14 +105,15 @@
       </picture>
     </div>
     <div class="inset-card__content-wrapper">
-      <div class="inset-card_date"></div>
-      <div class="inset-card_title"></div>
+      <div class="inset-card__date"></div>
+      <div class="inset-card__title"></div>
       <div class="inset-card__bottom">
-        <div class="inset-card_text"></div>
+        <div class="inset-card__text"></div>
         <div class="inset-card__button">
           <a class="button" href="#"></a>
         </div>
       </div>
+    </div>
   </main>
 </body>
 </html>

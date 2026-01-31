@@ -42,7 +42,7 @@
   }
 
   .inset-card__date {
-    background: azure;
+    background: rgb(30, 117, 41);
     width: 94px;
     height: 46px;
   }
@@ -71,6 +71,19 @@
     left: 420px;
     display: flex;
   }
+
+.date-pill {
+  clip-path: polygon(
+    0% 0%,
+    5% 10%,
+    13% 14%,
+    76% 15%,
+    84% 20%,
+    85% 89%,
+    94% 100%,
+    0% 95%);
+}
+
  </style>
 </head>
 
@@ -105,7 +118,7 @@
       </picture>
     </div>
     <div class="inset-card__content-wrapper">
-      <div class="inset-card__date"></div>
+      <div class="inset-card__date date-pill"></div>
       <div class="inset-card__title"></div>
       <div class="inset-card__bottom">
         <div class="inset-card__text"></div>

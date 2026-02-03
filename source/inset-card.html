@@ -72,7 +72,7 @@
     display: flex;
   }
 
-.date-pill {
+/* .date-pill {
   clip-path: polygon(
     0% 0%,
     5% 10%,
@@ -82,6 +82,19 @@
     85% 89%,
     94% 100%,
     0% 100%);
+} */
+
+.cut {
+  clip-path: polygon(
+    0 0,          /* левый верх */
+    16px 0,       /* идём вправо — начало среза */
+    16px 16px,    /* вниз — глубина среза */
+    94px 16px,    /* вправо до края */
+    94px 46px,    /* правый низ */
+    0 46px        /* левый низ */
+
+
+  );
 }
 
  </style>
@@ -118,7 +131,7 @@
       </picture>
     </div>
     <div class="inset-card__content-wrapper">
-      <div class="inset-card__date date-pill"></div>
+      <div class="inset-card__date cut"></div>
       <div class="inset-card__title"></div>
       <div class="inset-card__bottom">
         <div class="inset-card__text"></div>

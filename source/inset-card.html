@@ -6,7 +6,6 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Плашка для текста в впуклыми углами</title>
 
-  <!-- scss -->
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="stylesheet" href="sass/nebo.scss">
 
@@ -73,17 +72,23 @@
   }
 
 .cut {
-clip-path: polygon(
-  0 0,        /* верхний левый */
-  16px 0,     /* вправо — верхний маленький квадрат */
-  16px 16px,  /* вниз */
-  78px 16px,  /* вправо — верх большого прямоугольника */
-  78px 30px,  /* вниз */
-  94px 30px,  /* вправо — правый нижний квадрат */
-  94px 46px,  /* вниз */
-  78px 46px,  /* влево */
-  0 46px      /* левый низ */
-);
+  clip-path: polygon(
+    0 0,        /* верхний левый */
+    16px 0,     /* вправо — верхний маленький квадрат */
+    16px 16px,  /* вниз */
+    78px 16px,  /* вправо — верх большого прямоугольника */
+    78px 30px,  /* вниз */
+    94px 30px,  /* вправо — правый нижний квадрат */
+    94px 46px,  /* вниз */
+    78px 46px,  /* влево */
+    0 46px      /* левый низ */
+  );
+}
+
+.nebo {
+  --nb-r: 16px;
+  --nb-w: 42px;
+  --nb-h: 16px;
 }
 
  </style>
@@ -120,7 +125,7 @@ clip-path: polygon(
       </picture>
     </div>
     <div class="inset-card__content-wrapper">
-      <div class="inset-card__date cut"></div>
+      <div class="inset-card__date nebo nebo--tr"></div>
       <div class="inset-card__title"></div>
       <div class="inset-card__bottom">
         <div class="inset-card__text"></div>

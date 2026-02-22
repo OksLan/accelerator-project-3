@@ -222,10 +222,10 @@ document.querySelector('.footer__logo').addEventListener('click', (e) => {
 /* NEWS */
 const newsSwiper = new Swiper('.news__swiper', {
   modules: [Navigation, Pagination],
-  direction: 'horizontal',
+  // direction: 'horizontal',
 
   slidesPerView: 'auto',
-  spaceBetween: 0,
+  // spaceBetween: 0,
 
   speed: 500,
 
@@ -236,9 +236,9 @@ const newsSwiper = new Swiper('.news__swiper', {
       direction: 'horizontal',
     },
     768: {
-      // slidesPerView: 2,
-      // spaceBetween: 30,
-      // direction: 'horizontal',
+      slidesPerView: 4,
+      spaceBetween: 30,
+      direction: 'horizontal',
     },
     320: {
       slidesPerView: 1,
@@ -256,10 +256,34 @@ const newsSwiper = new Swiper('.news__swiper', {
   // стрелки
     navigation: {
     nextEl: '.news__button--next',
-    prevEl: '.new s__button--prev',
+    prevEl: '.news__button--prev',
     enabled: true,
     clickable: true,
   },
+});
+
+/* NEWS TABS */
+const tabs = document.querySelectorAll('.news__tab');
+const slides = document.querySelectorAll('.news__list-item');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.target;
+
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    slides.forEach(slide => {
+      if (slide.dataset.category === target) {
+        slide.style.display = '';
+      } else {
+        slide.style.display = 'none';
+      }
+    });
+
+    newsSwiper.update();
+    newsSwiper.slideTo(0);
+  });
 });
 
 initPopup();

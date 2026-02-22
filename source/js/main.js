@@ -221,7 +221,7 @@ document.querySelector('.footer__logo').addEventListener('click', (e) => {
 
 /* NEWS */
 const newsSwiper = new Swiper('.news__swiper', {
-  modules: [Navigation, Pagination],
+  modules: [Navigation],
   // direction: 'horizontal',
 
   slidesPerView: 'auto',
@@ -246,12 +246,6 @@ const newsSwiper = new Swiper('.news__swiper', {
       direction: 'vertical',
     },
   },
-
-  // прогрессбар
-  // pagination: {
-  //   el: '.news__pagination',
-  //   type: 'progressbar',
-  // },
 
   // стрелки
     navigation: {
@@ -284,6 +278,59 @@ tabs.forEach(tab => {
     newsSwiper.update();
     newsSwiper.slideTo(0);
   });
+});
+
+/* CUSTOM PAGINATION */
+
+const paginationContainer = document.querySelector('.news__pagination');
+
+function renderPagination(swiper) {
+  const total = swiper.slides.length;
+  const current = swiper.realIndex;
+
+  const maxVisible = 4;
+
+  let start = 0;
+  let end = total;
+
+  if (total > maxVisible) {
+    if (current <= 2) {
+      start = 0;
+      end = 4;
+    } else if (current >= total - 2) {
+      start = total - 4;
+      end = total;
+    } else {
+      start = current - 2;
+      end = current + 2;
+    }
+  }
+
+  paginationContainer.innerHTML = '';
+
+  for (let i = start; i < end; i++) {
+    const button = document.createElement('button');
+    button.classList.add('swiper-pagination-bullet');
+    button.textContent = i + 1;
+
+    if (i === current) {
+      button.classList.add('active');
+    }
+
+    button.addEventListener('click', () => {
+      swiper.slideTo(i);
+    });
+
+    paginationContainer.appendChild(button);
+  }
+}
+
+// initial render
+renderPagination(newsSwiper);
+
+// update on slide change
+newsSwiper.on('slideChange', () => {
+  renderPagination(newsSwiper);
 });
 
 initPopup();
